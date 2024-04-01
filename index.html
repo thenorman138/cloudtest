@@ -1,0 +1,763 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css">
+<link rel="stylesheet" href="/public/assets/css/main.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js" type="text/javascript"></script>
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+<script src="/public/assets/js/topSvg.js" type="text/javascript"></script>
+<script src="/public/assets/js/splitterSvg.js" type="text/javascript"></script>
+<script src="/public/assets/js/clouds.js" type="text/javascript"></script>
+<script src="/public/assets/js/herofade.js" type="text/javascript"></script>
+<script src="/public/assets/js/counters.js" type="text/javascript"></script>
+<script src="/public/assets/js/philanthropy.js" type="text/javascript"></script>
+<script src="/public/assets/js/wavytext.js" type="text/javascript"></script>
+<script src="/public/assets/js/headerimage.js" type="text/javascript"></script>
+<script src="/public/assets/js/team.js" type="text/javascript"></script>
+<script src="/public/assets/js/mountainsvg.js" type="text/javascript"></script>
+<script src="/public/assets/js/monkey.js" type="text/javascript"></script>
+<script src="/public/assets/js/footer.js" type="text/javascript"></script>
+<script src="/public/assets/js/teamtext.js" type="text/javascript"></script>
+
+
+</head>
+
+
+<!-- ---
+import { Image } from "astro:assets";
+import "@astrojs/tailwind/base.css";
+import "./public/assets/css/fonts.css";
+import circleMenu from "../assets/img/circleMenu.png";
+import TopSVG from "../assets/img/homeTopSvg.svg?raw";
+import CounterCircle from "../assets/img/counterCircle.svg?raw";
+import MountainTopSVG from "../assets/img/mountainTop.svg?raw";
+import Clouds from "../assets/img/clouds.svg?raw";
+import MountainBG from "../assets/img/mountainBackground.svg?raw";
+import Mountain from "../assets/img/mountain.svg?raw";
+import MountainFront from "../assets/img/mountainFront.png";
+import TeamLine from "../assets/img/newTeamLine.svg?raw";
+import MountainSide from "../assets/img/mountainSide.svg?raw";
+import SplitterImage from "../assets/img/splitterImage.svg?rawim<img src="/public/assets/img/splitterImage.svg?raw">
+// import MountainOverlayLogo from "../assets/img/mountainOverlayImg.svg?raw";
+import RightPlant from "../assets/img/rightPlant.svg?raw";
+import LeftPlant from "../assets/img/leftPlant.svg?raw";
+import Monkey from "../assets/img/monkey.svg?raw";
+import BottomSection from "../assets/img/bottomSection.svg?raw";
+import ButtonOutline from "../assets/img/buttonOutline.svg?raw";
+import TeamLogo from "../assets/img/teamLogo.svg?raw";
+import TeamIcon from "./public/assets/img/teamIcon.svg?raw";
+// import SiteMeta from "../components/SiteMeta.astro";
+import Header from "../components/Header.astro";
+// import Footer from "../components/Footer.astro";
+--- -->
+<body>
+
+<div class="main-container" style="margin:0 auto; max-width:100%;">
+    <!-- <Header /> -->
+    <!------------------->
+    <!-- Beg. of Hero -->
+    <!------------------->
+    <div class="title-section" style="margin-bottom:3rem;">
+        <h1 class="title-text">SUPPORTING BEAUTIFUL SPECIES AND FLOURISHING</h1>
+        <h1 class="title-text">LAND DISSIPATING BEFORE OUR EYES</h1>
+        <br />
+        <h3 class="subtitle-text">HELPING THE EARTH BREATHE</h3>
+    </div>
+    <div class="inner-menu" style="margin-top:6rem;">
+        <div class="grid grid-cols-3 gap-3">
+            <div class="inner-menu-items"></div>
+            <div class="inner-menu-items">
+                <div style="text-align: center;">
+                    <img src="./public/assets/img/circleMenu.png" alt="hand drawn circle" width="100px" height="120px" style="margin:0
+                        auto" />
+                </div>
+                WORK WITH US
+            </div>
+            <div class="inner-menu-items"></div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+            <div class="inner-menu-items">
+                <div style="text-align: center;">
+                    <img src="./public/assets/img/circleMenu.png" alt="hand drawn circle" width="100px" height="120px" style="margin:0
+                        auto" />
+                </div>
+                WHERE WE WORK
+            </div>
+            <div class="inner-menu-items"></div>
+            <div class="inner-menu-items">
+                <div style="text-align: center;">
+                    <img src="./public/assets/img/circleMenu.png" alt="hand drawn circle" width="100px" height="120px" style="margin:0
+                        auto" />
+                </div>
+                OUR STORY
+            </div>
+        </div>
+    </div>
+    <div class="first-section" style="text-align:center;">
+        <img src="./public/assets/img/headerImage.png" alt="Image"
+            style="width:100%; height: auto; margin-top:55px;opacity:0;" id="topImg" />
+    </div>
+    <div class="topSVG" style="position:relative;">
+        <div style="margin-left:-2%; margin-right:-2%;">
+            <svg id="Isolation_Mode" data-name="Isolation Mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 855.77 688.98">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: none;
+                            stroke: #072334;
+                            stroke-miterlimit: 10;
+                            stroke-width: 55.1px;
+                        }
+                    </style>
+                </defs>
+                <path id="svgPathLeft" stroke="black" stroke-width="4px" stroke-dasharray="0,688.98" class="cls-1"
+                    d="M427.33 6.3 423.99 20.51 425.74 35.06 426.12 49.54 423.55 64.07 425.25 78.56 426.06 93.05 425.02 107.59 427.73 122.02 425.6 136.57 425.69 147.44 423.26 153.45 405.27 154.26 390.47 155.9 375.95 155.47 361.42 155.26 346.88 154.63 332.35 152.52 317.8 152.35 303.25 155.07 288.71 155.18 274.14 152.61 259.6 154.22 245.06 155.02 230.51 155.15 215.94 153.95 201.4 154.15 186.81 154.43 177.44 160.37 173.73 172.54 175.29 185.11 172.74 198.84 173.41 212.73 171.42 226.49 171.82 240.36 173.13 254.22 171.56 268.03 172.23 281.86 172.75 295.67 173.22 309.47 174.6 323.18 174.52 337.17 180.97 349.55 195 352.29 209.12 351.43 223.11 352.5 237.19 352.01 251.12 354.5 265.16 354.61 279.25 353.79 293.18 356.56 307.26 356.06 321.29 356.47 335.24 358.39 349.29 358.55 363.36 358.65 371.66 362.3 375.09 370.88 372.82 385.53 374.61 400 374.28 414.53 375.89 429.04 375.33 443.58 376.3 458.1 374.76 472.63 374.83 487.16 373.26 501.67 373.78 516.21 373.09 530.73 375.59 545.33 375.02 559.87 371.58 574.28 373.73 588.93 372.45 603.43 370.18 617.83 366.91 636.4 355.82 646.62 341.53 651.13 328.09 652.68 314.72 655.62 301.12 653.27 287.57 654.27 274.16 651.91 260.61 651.49 246.24 650.53 231.85 651.2 217.49 651.26 203.11 652.6 188.78 649.91 174.41 651.73 160.06 649.97 145.69 650.48 131.33 649.91 116.96 651.13 102.61 649.47 88.22 651.47 73.87 649.76 59.5 649.91 45.12 651.07 30.75 650.81 16.48 647.76 2.04 648.83" />
+                <path id="svgPathRight" stroke="black" stroke-width="4px" stroke-dasharray="0,688.98" class="cls-1"
+                    d="M427.58 11.07 426.7 25.75 429.09 40.2 429.49 54.72 426.58 69.19 427.71 83.72 427.81 98.24 425.95 112.7 427.82 127.26 425.05 141.71 426.06 152.95 430.96 156.21 448 162.26 462.18 158.42 476.74 157.94 491.3 157.61 505.86 157.91 520.42 159.82 534.96 159.9 549.51 157.18 564.06 157.14 578.6 159.86 593.16 158.47 607.72 157.96 622.28 158.21 636.8 159.9 651.33 160.37 665.8 161.33 673.73 166.33 676 178.06 679.3 190.2 678.08 204.1 680.06 217.85 679.22 231.73 680.58 245.52 682.6 259.32 681.45 273.18 682.18 287.03 682.27 300.89 681.64 314.75 680.85 328.63 676.56 341.96 671.38 353.98 657.55 354.25 643.65 356.76 629.62 357.11 615.65 358.9 601.55 357.66 587.55 358.78 573.59 360.82 559.47 359.28 545.49 361.05 531.48 361.97 517.4 361.49 503.42 362.94 489.5 364.9 481.64 367.86 480.86 376.21 477.31 390.59 478.25 405.16 477.35 419.67 478.61 434.22 477.84 448.74 478.76 463.26 477.29 477.79 477.56 492.32 476.3 506.87 477.26 521.4 477.14 535.94 480.36 550.4 480.67 564.93 478.31 579.56 481.8 593.94 482.22 608.46 482.24 623.02 487.17 640.87 497.1 651.48 511.2 656.44 524.53 659.04 538.16 658.23 551.65 661.06 565.18 659.28 578.81 660 592.28 658.29 606.59 657.96 620.91 656.66 635.27 656.18 649.61 654.53 663.99 656.98 678.34 654.95 692.71 656.53 707.07 655.86 721.43 656.26 735.79 654.87 750.16 656.35 764.51 654.13 778.89 655.59 793.26 655.12 807.59 653.56 821.94 653.26 836.37 655.49 850.59 652.77" />
+            </svg>
+        </div>
+        <h1 class="topSvgTitle">OUR IMPACT</h1>
+        <div class="blurbContainer">
+            <h1 class="topSvgBlurbLeft">A SMALL FUND WITH BIG DREAMS</h1>
+            <h1 class="topSvgBlurbRight">
+                WE MEASURE IMPACT IN ACRES OF LAND AND VOLUME OF SEA SAVED FROM
+                DESTRUCTION, SPECIES SAFEGUARDED,PROJECTS SUPPORTED, AND DOLLARS RAISED
+                FOR BIO-CULTURAL DIVERSITY THROUGH OUR 4-PILLAR APPROACH. WE MAKE OUR
+                IMPACT THROUGH 'CONNECTING THE TREES'.
+            </h1>
+        </div>
+    </div>
+    <!------------------->
+    <!-- End of Hero -->
+    <!------------------->
+
+    <div class="spacer"></div>
+
+    <!------------------->
+    <!-- Beg. of Counters -->
+    <!------------------->
+    <div class="counter-container">
+        <div class="counter-grid grid grid-cols-5 gap-5">
+            <div class="counter-items">
+                <div class="counter-img" id="counter-img-1">
+                    <!-- <Fragment set:html={CounterCircle} /> -->
+                </div>
+                <div class="counter-text">$1.8 MILLION DIRECT DONATION</div>
+            </div>
+            <div class="counter-items">
+                <div class="counter-img counter-hide" id="counter-img-2">
+                    <!-- <Fragment set:html={CounterCircle} /> -->
+                </div>
+                <div class="counter-text">18 COUNTRIES, 29 PROJECTS</div>
+            </div>
+            <div class="counter-items">
+                <div class="counter-img" id="counter-img-3">
+                    <!-- <Fragment set:html={CounterCircle} /> -->
+                </div>
+                <div class="counter-text">
+                    $2 MILLION RAISED FROM OTHER DONORS FOR PARTNERS
+                </div>
+            </div>
+            <div class="counter-items">
+                <div class="counter-img" id="counter-img-4">
+                    <!-- <Fragment set:html={CounterCircle} /> -->
+                </div>
+                <div class="counter-text">2.1 MILLION HECTARES IMPACTED</div>
+            </div>
+            <div class="counter-items">
+                <div class="counter-img" id="counter-img-5">
+                    <!-- <Fragment set:html={CounterCircle} /> -->
+                </div>
+                <div class="counter-text">47 ENDANGERED SPECIES SUPPORTED</div>
+            </div>
+        </div>
+    </div>
+    <!------------------->
+    <!-- End of Counters -->
+    <!------------------->
+
+    <div class="spacer"></div>
+
+    <!------------------->
+    <!-- Beg. of Mtn 1 -->
+    <!------------------->
+    <div class="mountain-svg" id="mountain-svg" style="position:relative;">
+        <div style="margin-left:-2%; margin-right:-2%;">
+            <!-- <Fragment set:html={MountainTopSVG} /> -->
+            <div id="mtnSvgLineWrapper" class="section-wrapper" style="margin-top:2rem;">
+                <svg id="svgMtn" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 846.79 677">
+                    <defs>
+                        <style>
+                            .mtncls-1 {
+                                fill: none;
+                                stroke: #002235;
+                                stroke-miterlimit: 10;
+                                stroke-width: 50px;
+                            }
+                        </style>
+                    </defs>
+                    <path stroke="black" stroke-width="4px" id="mountainSvgLeft" stroke-dasharray="0, 677"
+                        class="mtncls-1"
+                        d="M3.14 30.28 20.92 28.04 38.7 28.1 56.47 30.64 74.25 27.41 92.03 29.25 109.8 25.96 127.58 26.15 145.36 26.74 163.14 28.38 180.92 29.1 198.7 29.38 216.48 30.22 234.26 27.39 252.04 28.7 269.83 26.62 287.61 26.63 305.4 27.59 323.37 32.18 341.57 34.3 358.25 41.88 374.02 51.16 387.57 63.45 401.09 76.09 411.69 91.45 418.19 108.96 421.65 127.2 422.79 145.61 422.82 163.27 421.99 180.92 424.19 198.58 422.13 216.24 424.77 233.89 424.55 251.55 424.59 269.21 424.76 286.86 422.72 304.52 422.29 322.18 422.15 339.83 421.56 357.49 424.88 375.15 421.04 392.8 424.39 410.46 422.5 428.12 422.69 445.78 424.72 463.43 422.91 481.1 423.02 498.76 420.64 516.42 422.23 534.09">
+                    </path>
+                    <path stroke="black" stroke-width="4px" id="mountainSvgRight" stroke-dasharray="0, 677"
+                        class="mtncls-1"
+                        d="M842.36 29.35 824.59 26.15 806.81 26.44 789.03 29.7 771.25 27.67 753.47 25.26 735.7 28.01 717.92 28 700.14 29.69 682.36 28.09 664.58 31.2 646.8 29.54 629.02 30.36 611.24 26.55 593.46 30.7 575.68 31.04 557.89 26.07 540.1 30.35 522.19 32.57 503.25 32.2 487.92 43.18 470.16 49.34 455.17 60.67 443.84 75.68 434.8 91.96 428.33 109.29 424.61 127.32 420.33 145.61 424.34 163.74 422.88 181.87 421.69 199.99 423.42 218.12 423.19 236.25 421.18 254.37 422.02 272.5 423.52 290.63 425.53 308.76 425.57 326.89 420.07 345.02 425.63 363.15 420.43 381.28 423.12 399.41 423.65 417.54 423.37 435.67 425.53 453.8 425.24 471.92 419.99 490.05 425.66 508.18 424.09 526.31 422.65 544.44 421.19 562.58 420.89 580.71 423.3 598.84 422.34 616.97 421.2 635.11 420.25 653.25 424.43 671.38">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <div class="mtn-text-container">
+            <div class="text-over-mountain__left">
+                COMMUNITIES FACE A 'POLYCRISIS' OF CLIMATE CHANGE, HABITAT FRAGMENTATION
+                AND LOSS, LAND CONVERSION, AND DETERIORATING LAND ETHICS. IT IS LOCAL
+                PEOPLE WHO ACTUALLY LIVE IN THE MOST ECOLOGICALLY RICH PLACES ON EARTH
+                THAT CAN REVERSE THIS. THEY REQUIRE SUPPORT TO REALIZE THEIR AUTHENTIC
+                VISIONS FOR PROTECTING THE LAND AND SEAS.
+            </div>
+            <div class="text-over-mountain__right">
+                THOUGH A SMALL FUND, WE MAKE OUR IMPACT THROUGH PROVIDING QUICK RESPONSE
+                GRANTS, CONNECTING COMMUNITIES AND NGOS TO THE RIGHT FUNDERS, AND
+                SUPPORTING LOCAL AND GLOBAL ARTISTS TO TELL STORIES THAT BUILD
+                AWARENESS.
+            </div>
+        </div>
+    </div>
+    <div class="cloud-sect" style="margin-top:-22%;">
+        <div class="cloud-container">
+            <div style="opacity:0;">
+                <img src="public/assets/img/clouds.svg?raw">
+            </div>
+            <h1 class="mountain-reveal-text">
+                FROM THE PEAKS TO THE VALLIES,<br />WE WILL NEVER SAY NO
+            </h1>
+            <div class="cloud-reveal">
+                <img class="cloud-reveal-img" src="./public/assets/img/cloud-reveal-FINAL.png"
+                    alt="Description of your image" />
+            </div>
+        </div>
+        <div class="mountain-container">
+            <div>
+                <img src="/public/assets/img/mountainBackground.svg?raw">
+            </div>
+            <div class="top-text-player" style="z-index:1">
+                <dotlottie-player src="https://lottie.host/18594928-f6d0-4720-96e2-0c53659906a5/TnkNq5ND9Z.json"
+                    background="transparent" speed="1" style="width: 100%; height: auto" direction="1" playMode="normal"
+                    loop autoplay></dotlottie-player>
+            </div>
+            <div style="margin-top: -45%;">
+                <div style="position: relative; z-index: 3;">
+                    <!-- <Fragment set:html={Mountain} /> -->
+                    <img src="/public/assets/img/mountain.svg?raw" alt="">
+                </div>
+            </div>
+            <div style="margin-top:-45%; margin-left:1%;">
+                <div class="bottom-text-player" style="z-index:5">
+                    <dotlottie-player src="https://lottie.host/52b1ec94-051e-4211-aa91-4eb47573becf/Berq6IyIPs.json"
+                        background="transparent" speed="1" style="width: 100%; height: auto" direction="1"
+                        playMode="normal" loop autoplay></dotlottie-player>
+                </div>
+                <div style="z-index: 10; position: relative;">
+                    <img width="100%" height="100%" src="./public/assets/img/mountainFront.png"
+                        alt="Description of your image" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------->
+    <!-- End of Mtn 1 -->
+    <!------------------->
+
+    <!------------------->
+    <!-- beg. of Mtn blue -->
+    <!------------------->
+    <div class="blue-sect">
+        <div class="blue-headline">
+            <h1>TRUST. SOLIDARITY. RELATIONALITY. RECIPROCITY</h1>
+        </div>
+        <div class="blue-subtitle">
+            <h3>A WORDLD OF MANY WORLDS.</h3>
+        </div>
+        <br />
+        <div class="blue-paragraph">
+            ADHERING TO INDIGENOUS VALUES OF TRUST, SOLIDARITY, RELATIONALITY, AND
+            RECIPROCITY, OUR GRANTS ARE ALWAYS GIVEN AS GENERAL SUPPORT SO THAT THE
+            COMMUNITY OR NGO CAN DECIDE ON ITS OWN WHAT ACTIONS TO PRIORITIZE FOR THE
+            GOOD OF THE WORK. WE ARE CONSTANTLY SEEKING DONORS TO SUPPORT THE GENERAL
+            FUND THAT MAKES THE QUICK RESPONSE GRANTS POSSIBLE.
+        </div>
+    </div>
+    <!------------------->
+    <!-- End of Mtn blue -->
+    <!------------------->
+
+    <!------------------->
+    <!-- Beg of Team -->
+    <!------------------->
+    <div class="team-svg" id="team-svg">
+        <div class="team-line-svg" id="team-svg-line" style="position: relative;">
+            <div class="team-svg-line-animate" id="teamTriggerDiv" style="margin-top: -2%">
+                <!-- <Fragment set:html={TeamLine} /> -->
+                <div id="section1Wrapper" class="section-wrapper">
+                    <svg id="vectorSvg1" viewBox="0 0 697.25 2268.36">
+                        <defs>
+                            <style>
+                                .teamcls {
+                                    fill: none;
+                                    stroke: #062334;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 50px;
+                                }
+                            </style>
+                        </defs>
+                        <path id="vectorPath1" class="teamcls" stroke-dasharray="0, 2268.36"
+                            d="M342.83 1.82 344.13 19.65 347.34 37.48 345.89 55.3 343.33 73.13 343.85 90.96 345.03 108.79 347.09 126.62 344.45 144.44 346.41 162.27 343.96 180.1 343.2 197.93 345.92 215.76 345.9 233.59 343.27 251.42 344.04 269.25 344.72 287.07 342.87 304.9 345.91 322.73 346.47 340.56 343.31 358.39 342.84 376.22 346.05 394.05 347.09 411.88 344.31 429.72 344.18 447.55 345.36 465.39 346.38 483.23 349.02 501.39 356.64 517.96 365.48 534.55 382.07 543.39 398.47 551.62 416.8 555.01 434.47 553.01 452.14 555.47 469.81 555.28 487.48 554.78 505.15 557.22 522.82 553.21 540.49 556.4 558.17 553.08 575.84 554.72 593.52 555.81 612.38 556.55 629.48 564.64 643.34 577.11 654.07 591.98 664.41 607.94 664.85 626.93 667.68 644.21 664.2 661.5 665.75 678.79 665.8 696.09 663.49 713.38 664.57 732.42 655.48 749.15 643.69 763.55 629.93 776.44 611.8 781.61 593.52 783.13 575.22 786.3 556.93 786.81 538.63 782.92 520.33 785.01 502.04 787.05 483.74 784.69 465.44 786.81 447.14 787.1 428.85 786.72 410.55 787.47 392.25 784.29 373.95 786.59 355.65 783.57 337.35 786.04 319.06 785.03 300.76 783.54 282.46 783.19 264.16 786.56 245.86 784.34 227.56 784.26 209.26 782.96 190.96 783.35 172.66 787.45 154.36 785.96 136.06 783.88 117.75 784.03 99.44 786.87 80.85 787.7 63.01 793.98 49.09 806.73 35.65 820.25 30.65 838.65 29.43 857.08 27.11 874.39 26.95 891.71 25.24 909.02 28.55 926.33 27.89 943.65 27.72 960.96 26.32 978.28 29.84 995.6 30.23 1014.15 37.55 1031.34 48.64 1046.4 63.54 1057.79 80.56 1066.06 99.44 1068.51 117.74 1065.99 136.03 1066.93 154.33 1065.5 172.63 1069.57 190.92 1067.69 209.22 1065.98 227.52 1066.37 245.82 1069.58 264.12 1068.85 282.41 1066.61 300.71 1069.11 319.01 1069.69 337.31 1068.27 355.61 1069.21 373.91 1069.95 392.2 1068.24 410.5 1066.38 428.8 1065.83 447.1 1068.21 465.4 1067.81 483.7 1066.48 502 1068.88 520.3 1068.24 538.6 1068.14 556.91 1067.8 575.21 1068.07 593.52 1067.28 612.32 1069.13 629.3 1077.33 645.19 1087.63 657.66 1102.27 664.46 1120.3 664.54 1139.31 666.07 1157.02 667.74 1174.73 663.62 1192.44 664.23 1210.15 664.43 1227.86 663.14 1245.57 663.1 1263.29 663.76 1281.16 671.05 1298.69 666.49 1317.99 661.07 1336.01 649.02 1350.49 634.49 1363.07 615.71 1367.36 596.91 1372.99 578.62 1371.37 560.32 1370.28 542.03 1369.25 523.73 1369.98 505.43 1369.63 487.13 1371.2 468.84 1370.65 450.54 1369.87 432.24 1370.01 413.94 1372.64 395.64 1372.85 377.34 1369.37 359.05 1369.09 340.75 1371.39 322.45 1372.93 304.16 1369.27 285.86 1371.18 267.56 1369.37 249.26 1371.75 230.96 1373.29 212.66 1370.01 194.36 1369.28 176.06 1369.59 157.76 1370.43 139.45 1370.49 121.14 1371.34 102.84 1372.78 83.77 1371.59 68 1382.42 51.83 1391.76 40.08 1406.53 31.32 1423.6 31.21 1442.76 32.06 1460.08 31.78 1477.39 32.43 1494.7 33.48 1512.01 32.22 1529.33 30.3 1546.65 30.7 1563.97 32.64 1581.29 33.56 1599.85 42.09 1616.36 51.98 1632.15 67.33 1642.78 84.48 1649.79 102.84 1654.46 121.13 1652.41 139.43 1654.35 157.73 1652.35 176.02 1651.07 194.32 1652.43 212.62 1652.22 230.92 1651.34 249.21 1654.94 267.51 1651.38 285.81 1651.26 304.11 1653.57 322.41 1654.87 340.71 1652.66 359 1651.3 377.3 1654.89 395.6 1653.12 413.89 1654.83 432.19 1651.17 450.49 1653.41 468.79 1651.13 487.09 1654.28 505.39 1651.57 523.69 1652.05 542 1653.85 560.3 1655.18 578.61 1651.05 596.91 1655.61 616.06 1653.52 632.82 1662.79 648.27 1673.64 659.44 1688.89 667.65 1706.03 669.68 1724.99 667.66 1743.76 670.48 1762.53 670.9 1781.3 670.74 1800.08 671.18 1818.86 670.07 1837.64 668.39 1856.42 665.12 1874.69 659.24 1892.4 648.52 1908.02 632.03 1917.24 615.5 1925.79 596.91 1930.16 578.86 1926.99 560.81 1927.26 542.75 1929.4 524.7 1930.72 506.64 1928.66 488.59 1927.02 470.53 1929.93 452.47 1926.13 434.41 1927.31 416.35 1928.19 398.29 1929.14 380.23 1928.57 364.68 1931.24 356.22 1944.31 351.94 1958.17 348.98 1976.37 351.17 1994.57 348.52 2012.77 352.24 2030.97 350.24 2049.17 352.65 2067.36 348.88 2085.56 348.5 2103.76 349.66 2121.96 348.68 2140.16 350.51 2158.36 350.86 2176.56 349.59 2194.76 348.89 2212.97 349.76 2231.17 349.14 2249.38 349.71 2267.59">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div class="team-container-wrap" style="margin-top: 2rem;">
+                <div class="team-container__left">
+                    <h1 class="team-title">OUR TEAM</h1>
+                    <img width="100%" height="100%" src="./public/assets/img/teamLogo.png"
+                        alt="Description of your image" />
+                </div>
+                <div class="team-container__middle"></div>
+                <div class="team-container__right">
+                    <div class="founder-title">
+                        <h1>FOUNDER/CEO</h1>
+                        <p>RAJEEV K. GOYAL,ESQ.</p>
+                    </div>
+                    <br />
+                    <div class="founder-desc">
+                        BORN ON LONG ISLAND, NEW YORK, RAJEEV GOYAL IS A BIODIVERSITY
+                        CONSERVATIONIST, AUTHOR AND NON-PROFIT LEADER WITH OVER 20 YEARS'
+                        EXPERIENCE WORKING ON THE GROUND GRAPPLLING WITH COMPLEX NATURE AND
+                        LAND CONSERVATION ISSUES IN OVER 25 COUNTRIES. A GRADUATE OF BROWN
+                        UNIVERSITY (BA, ENGLISH LITERATURE), NYU SCHOOL OF LAW (JURIS
+                        DOCTORA) AND CORNELL UNIVERSITY (MASTERS OF AGRICULTURE), HIS FIRST
+                        BOOK, THE SPRINGS OF NAMJE, TELLS THE STORY OF HIS LIFE AS A
+                        VOLUNTEER IN THE PEACE CORPS IN NEPAL. RAJEEV WAS PROFILED BY PETER
+                        HESSLER IN NEW YORKER MAGAZINE'S 'WORLD CHANGER' ISSUE.
+                    </div>
+                    <div class="team-list-container">
+                        <ul class="team-list">
+                            <li class="team-list-item">
+                                Jeffrey S. Greener<br /><span class="team-subtitle">(LEGAL ADVISOR)</span>
+                            </li>
+                            <li class="team-list-item">William Dowell</li>
+                            <li class="team-list-item">
+                                Stephanie I. Handel<br /><span class="team-subtitle">(FINANCE ADVISOR)</span>
+                            </li>
+                            <li class="team-list-item">
+                                Nitesh Singh<br /><span class="team-subtitle">(GRANTS ADMINISTRATION)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="team-blurb">
+                <h2 class="blurb">
+                    We operate with an incredibly lean team led by our founder/CEO,
+                    supported by volunteers and advisors.
+                </h2>
+            </div>
+            <div class="team-description" id="team-description">
+                <h2 class="desc" id="teamdesc">
+                    AS A 501(C)(3) NON-PROFIT ORGANIZATION REGISTERED IN THE STATE OF DE,
+                    WE ARE SUPPORTED BY AN ACCOUNTING AND LEGAL TEAM IN NEW YORK.
+                </h2>
+            </div>
+            <div class="team-block-right-1" id="team-block-right-1">
+                <div id="team-text-block-1">
+                    <div class="team-block-title1" id="team-block-title1">
+                        William Dowell <span class="team-block-subtitle">BOARD DIRECTOR</span>
+                    </div>
+                    <div class="team-block-desc1" id="team-block-desc1">
+                        William Thatcher Dowell is a renowned author, journalist, translator
+                        and editor/producer. Between 1989 to 2001, Bill served as a
+                        correspondent with Time Magazine, where he was the Southeast Asia
+                        Bureau Chief from 1995 to 1997, based in Hong Kong. He spent 14 years
+                        in the Paris Bureau as a contract stringer, and prior to that was a TV
+                        correspondent for ABC News and NBC News, where he reported on and
+                        Associate Producer of NPR's "All Things Considered." Bill is the
+                        co-author of In the Shadow of the Dragon, with Winter Nie at IMD. Most
+                        recently he was the co-editor of The Essential Edge.
+                    </div>
+                </div>
+            </div>
+            <div class="team-block-left-1" id="team-block-left-1">
+                <div id="team-text-block-2">
+                    <div class="team-block-title2" id="team-block-title2">
+                        DR. RAVINDRA GOYAL, MD. <span class="team-block-subtitle">BOARD DIRECTOR</span>
+                    </div>
+                    <div class="team-block-desc2" id="team-block-desc2">
+                        Dr. Ravindra Goyal was born in Nasirabad, Rajasthan. He studied
+                        medicine at SMS Medical College in Jaipur before immigrating to the
+                        United States in 1974. A critical care pulmonologist for 50 years, he
+                        is a donor and philanthropist to many biodiversity causes.
+                    </div>
+                    <br />
+                    <div class="team-block-title3" id="team-block-title3">
+                        Stephanie I. Handel, CPA, CFE <span class="team-block-subtitle">Finance Advisor</span>
+                    </div>
+                    <div class="team-block-desc3" id="team-block-desc3">
+                        Stephanie is a Certified Public Accountant primarily focusing on
+                        not-for-profit and governmental organizations. Stephanie graduated
+                        Summa Cum Laude from Cornell University where she earned a Bachelor of
+                        Science degree in applied economics and management. Stephanie also
+                        holds a Master of Science degree in accounting from Syracuse
+                        University.
+                    </div>
+                </div>
+            </div>
+            <div class="team-block-right-2" id="team-block-right-2">
+                <div id="team-text-block-3">
+                    <div class="team-block-title4" id="team-block-title4">
+                        NITESH SINGH <span class="team-block-subtitle">GRANTS ADMINISTRATOR</span>
+                    </div>
+                    <div class="team-block-desc4" id="team-block-desc4">
+                        Nitesh Singh is wildlife enthusiast and researcher currently working
+                        with the Vertical University project in Nepal as a conservation
+                        officer. Holding a master's degree in Environmental Science from the
+                        Central Department of Environmental Science, Tribhuvan University, he
+                        has carried out many wildlife studies at different elevational
+                        gradients of the Himalayas. Nitesh supports grant management and
+                        administration at CFF.
+                    </div>
+                    <br />
+                    <div class="team-block-title5" id="team-block-title5">
+                        LOKENDRA YAKHA <span class="team-block-subtitle">BOARD DIRECTOR</span>
+                    </div>
+                    <div class="team-block-desc5" id="team-block-desc5">
+                        Belonging to the Yakha indigenous group of eastern Nepal, Lokendra
+                        Bahadur Yakha was born in the hills of Kurule-Tenupa, Dhankuta at the
+                        edge of the Koshi river. He is the founder of Tamur Learning Grounds,
+                        a board member of the Vertical University project, and a visionary
+                        farmer and protector of all life in mountains.
+                    </div>
+                </div>
+            </div>
+            <div class="team-block-left-2" id="team-block-left-2">
+                <div id="team-text-block-4">
+                    <div class="team-block-title6" id="team-block-title6">
+                        Jeffrey S. Greener <span class="team-block-subtitle">Legal Advisor</span>
+                    </div>
+                    <div class="team-block-desc6" id="team-block-desc6">
+                        Jeff counsels many non-profit organizations, including public and
+                        private charities, and he is experienced in structuring start-ups,
+                        obtaining exemptions, and advising on compliance and governance
+                        issues. A frequent lecturer on the topics of estate, retirement, and
+                        business planning, Jeff has served as a board member and as chairman
+                        of the Alzheimer's Foundation of America. He currently is serving as
+                        Deputy Mayor of the Village of Kensington, New York.
+                    </div>
+                    <br />
+                    <div class="team-block-title7" id="team-block-title7">
+                        Charles Libor <span class="team-block-subtitle">Graphic Designer</span>
+                    </div>
+                    <div class="team-block-desc7" id="team-block-desc7">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+                        volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                        ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+                        molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+                        vero eros et accumsan et iusto odio dignissim qui blandit praesent
+                        luptatum zzril delenit augue duis dolore te feugait
+                    </div>
+                </div>
+            </div>
+            <div class="vertical-uni" id="vertical-uni">
+                <h1 class="vert-uni-text" id="vert-uni-text">THE <br />VERTICAL <br />UNIVERSITY</h1>
+            </div>
+            <div class="vertical-blurb" id="vertical-blurb">
+                <h2 class="vert-blurb-text" id="vert-blurb-text">
+                    WE FACILITATE COMMUNITY RECIPROCITY, AND HELP KEEP INDIGENOUS LAND
+                    INTACT
+                </h2>
+            </div>
+        </div>
+    </div>
+    <!------------------->
+    <!-- End of Team -->
+    <!------------------->
+
+    <!------------------->
+    <!-- Beg of Mtn 2 -->
+    <!------------------->
+
+    <div class="mountain-sect" id="mountain-sect" style="position: relative;">
+        <div class="mountain-front">
+            <img class="mtnSideFrontLayer" width="100%" height="auto"
+                src="./public/assets/img/mountainFrontCutoutFull.png" alt="Description of your image" />
+        </div>
+        <div class="mountain-back" id="mountainBack">
+            <img class="mtnSideBackLayer" width="100%" height="auto" src="./public/assets/img/mountainCutout.png"
+                alt="Description of your image" />
+        </div>
+        <img class="mtnLogo" id="mtnLogo" width="35%" height="auto" src="./public/assets/img/mountainOverlayLogo.png"
+            alt="Description of your image" />
+        <div class="blue-sect-mountain">
+            <div class="blue-light-headline">
+                <h1>
+                    PHILANTHROPY ISN'T WORKING OPTIMALLY FOR INDIGENOUS COMMUNITIES, WHO
+                    PROTECT 80% OF THE WORLD'S REMAINING BIODIVERSITY & INTACT FORESTED
+                    LANDSCAPES.
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!------------------->
+    <!-- End  of Mtn 2 -->
+    <!------------------->
+
+    <!------------------->
+    <!-- Beg of splitter -->
+    <!------------------->
+    <div class="splitter-svg" id="splitter-svg" style="position:relative;">
+        <div style="margin-left:-2%; margin-right:-2%;">
+            <!-- <Fragment set:html={SplitterImage} /> -->
+            <svg viewBox="0 0 843.54 511.14">
+                <defs>
+                    <style>
+                        .splittercls-1 {
+                            fill: none;
+                            stroke: #062334;
+                            stroke-miterlimit: 10;
+                            stroke-width: 49.45px;
+                        }
+                    </style>
+                </defs>
+                <path id="splitterSvgLeft" class="splittercls-1"
+                    d="M421.97 2.05 420.97 14.13 421.25 26.21 419.96 38.29 420.1 50.37 422.55 62.45 422 74.53 420.02 86.61 421.59 98.69 421.93 110.77 422.15 122.85 421.81 134.93 422.61 147.01 422.96 159.09 420.4 171.18 422.04 183.26 422.54 195.33 419.95 207.41 423.32 219.49 422.93 231.57 420.94 243.65 421.52 255.73 423.01 267.82 421.94 279.9 422 291.98 423.66 304.06 421.7 316.15 419.78 328.23 421.72 340.31 420.48 352.39 423.33 364.48 420.17 376.56 422.97 388.66 423.5 400.75 421.41 412.68 417.85 424.07 413.88 435.2 408.65 445.87 400.98 454.94 394.23 465.13 384.32 472.14 373.32 477.14 361.6 479.61 350.08 481.65 338.44 485.54 326.38 483.9 314.32 485.87 302.26 485.09 290.2 483.46 278.14 483.3 266.08 484.51 254.02 482.56 241.96 485.89 229.9 484 217.84 484.32 205.78 485.49 193.73 483.41 181.67 483.61 169.61 484.23 157.55 482.61 145.49 483.97 133.43 483.77 121.37 484.82 109.3 485.89 97.24 482.88 85.18 483.28 73.12 482.53 61.06 484.17 48.99 484.88 36.93 485.12 24.87 482.24 12.79 482.83 .72 483.19" />
+                <path id="splitterSvgRight" class="splittercls-1"
+                    d="M421.97 2.05 420.97 14.13 421.25 26.21 419.96 38.29 420.1 50.37 422.55 62.45 422 74.53 420.02 86.61 421.59 98.69 421.93 110.77 422.15 122.85 421.81 134.93 422.61 147.01 422.96 159.09 420.4 171.18 422.04 183.26 422.54 195.33 419.95 207.41 423.32 219.49 422.93 231.57 420.94 243.65 421.52 255.73 423.01 267.82 421.94 279.9 422 291.98 423.66 304.06 421.7 316.15 419.78 328.23 421.72 340.31 420.48 352.39 423.33 364.48 420.17 376.56 422.97 388.66 423.5 400.75 423.09 412.54 424.56 424.4 428.9 435.55 435.09 445.74 441.69 455.7 451.75 462.32 460.87 469.58 470.74 476 481.29 481.84 493.02 484.83 505.1 482.62 517.16 484.26 529.22 482.28 541.28 483.07 553.34 484.7 565.4 484.86 577.46 483.64 589.52 485.6 601.58 482.27 613.64 484.16 625.7 483.84 637.76 482.67 649.82 484.74 661.88 484.55 673.94 483.93 686 485.55 698.06 484.19 710.12 484.39 722.18 483.34 734.24 482.27 746.3 485.28 758.37 484.88 770.43 485.62 782.49 483.99 794.55 483.28 806.62 483.04 818.68 485.92 830.75 485.33 842.82 484.97" />
+            </svg>
+        </div>
+        <div class="splitter-text">
+            <div class="splitter-left-container">
+                <div class="splitter-left-text">
+                    Cloud Forest Fund seeks to evolve the way philanthropy & conservation
+                    are practiced by exploring new models for fundraising and resource
+                    galvanization that better serve human and non-human communities.
+                </div>
+            </div>
+            <div class="splitter-right-container">
+                <img class="splitter-right-img" src="./public/assets/img/splitterRightImage.png"
+                    alt="Description of your image" />
+                <h1 class="splitter">BUILDING HOMES & HABITATS</h1>
+            </div>
+        </div>
+    </div>
+    <!------------------->
+    <!-- End  of Splitter -->
+    <!------------------->
+
+    <!------------------->
+    <!-- Beg  of Monkey -->
+    <!------------------->
+    <div class="monkey-sect" id="monkey-sect">
+        <div class="plants">
+            <div class="left-plant-wrapper">
+                <!-- <Fragment set:html={LeftPlant} /> -->
+                <img src="/public/assets/img/rightPlant.svg?raw" alt="">
+            </div>
+            <div class="right-plant-wrapper">
+                <!-- <Fragment set:html={RightPlant} /> -->
+                <img src="/public/assets/img/leftPlant.svg?raw" alt="">
+            </div>
+        </div>
+        <img class="monkey-arch-text" src="./public/assets/img/archText.png" alt="Description of your image" />
+        <div class="monkey-wrapper">
+            <div class="monkey-img">
+                <!-- <Fragment set:html={Monkey} /> -->
+                <img src="/public/assets/img/monkey.svg?raw" alt="">
+            </div>
+        </div>
+    </div>
+    <!------------------->
+    <!-- End  of Monkey -->
+    <!------------------->
+
+    <!------------------->
+    <!-- Beg  of Bottom section -->
+    <!------------------->
+    <div class="bottom-svg" id="bottom-svg" style="position:relative;">
+        <div class="bottom-line-svg" style="margin-left:-2%; margin-right:-2%;">
+            <!-- <Fragment set:html={BottomSection} /> -->
+            <!-- <img src="/public/assets/img/bottomSection.svg?raw" alt=""> -->
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1117.18 2531.98">
+                <defs>
+                    <style>
+                        .footercls-1 {
+                            fill: none;
+                            stroke: #062334;
+                            stroke-miterlimit: 10;
+                            stroke-width: 49.45px;
+                        }
+                    </style>
+                </defs>
+                <g>
+                    <!-- <ellipse class="footercls-1" cx="559.48" cy="1244.95" rx="1.48" ry="2.07" /> -->
+                    <path id="footer1" stroke-dasharray="0,2531.98" class="footercls-1"
+                        d="M557.66 276.91 560.99 288.9 559.11 300.89 559.42 312.89 560.59 324.88 558.52 336.87 558.71 348.87 559.33 360.86 557.71 372.85 559.07 384.84 558.87 396.83 559.92 408.81 561 420.8 557.98 432.79 558.38 444.78 557.64 456.78 559.27 468.77 559.98 480.76 560.22 492.75 557.34 504.75 557.94 516.74 558.29 528.73 559.34 540.73 557.22 552.72 560.38 564.71 557.9 576.7 559.67 588.69 558.24 600.68 560.79 612.67 560.17 624.66 559.06 636.65 560.15 648.65 559.9 660.64 559.86 672.63 558.78 684.63 560.34 696.62 557.36 708.61 559.78 720.6 560.18 732.59 557.49 744.58 560.35 756.58 558.04 768.57 561.12 780.56 560.34 792.55 557.97 804.55 557.23 816.54 558.8 828.54 559.47 840.53 557.23 852.52 558.47 864.51 559.71 876.5 558.39 888.5 558.02 900.49 557.57 912.48 559.12 924.47 558.08 936.47 558.87 948.46 558.36 960.46 558.98 972.45 558.91 984.44 559.06 996.44 560.35 1008.43 558.66 1020.42 558.28 1032.41 560.7 1044.41 559.83 1056.4 559.23 1068.4 560 1080.39 560.39 1092.38 557.57 1104.38 559.96 1116.37 557.56 1128.36 558.15 1140.36 560.18 1152.35 559.56 1164.35 559.37 1176.34 561.14 1188.33 560.27 1200.33 560.82 1212.32 558.16 1224.31 557.94 1236.31 558.66 1248.31 559.35 1260.3 560.66 1272.29 560.83 1284.29 557.5 1296.28 558.93 1308.27 559.64 1320.27 559.9 1332.27 559.74 1344.26 558.19 1356.25 560.41 1368.25 558.44 1380.24 559.82 1392.24 559.15 1404.23 560.07 1416.23 557.33 1428.22 560.87 1440.22 558.36 1452.21 559.38 1464.21 558.02 1476.2 559.39 1488.2 559.16 1500.19 557.64 1512.19 559.79 1524.18 560.75 1536.18 557.75 1548.17 558.49 1560.17 560.76 1572.16 558.39 1584.16 557.68 1596.15 560.84 1608.15 558.47 1620.14 560.08 1632.14 557.35 1644.14 559.17 1656.13 559.53 1668.13 558.12 1680.12 557.2 1692.12 559.05 1704.11 557.97 1716.11 558.85 1728.11 559.17 1740.1 560.3 1752.1 560.01 1764.09 560.44 1776.09 561.11 1788.08 557.71 1800.08 558.68 1812.07 558.1 1824.06 558.7 1836.05 559.56 1848.05 560.23 1860.04 557.86 1872.03 557.5 1884.03 557.97 1896.02 557.57 1908.01 558.15 1920.01 559.89 1932 559.32 1944 560.7 1955.99 560 1967.99 557.29 1979.98 560.78 1991.98 559.53 2003.97 557.42 2015.97 560.56 2027.96 561.07 2039.96 560.9 2051.95 560.63 2063.95 558.96 2075.95 559.62 2087.94 559.2 2099.94 559.66 2111.94 560.41 2123.93 560.27 2135.93 558.45 2147.93 561.18 2159.92 559.74 2171.92 557.54 2183.92 557.29 2195.92 557.74 2207.92 559.4 2219.91 557.75 2231.91 558.62 2243.91 558.74 2255.91 557.35 2267.91 560.88 2279.91 559.43 2291.91 557.89 2303.91 558.77 2315.9 559.62 2327.9 558.47 2339.9 558.63 2351.89 558.15 2363.89 557.36 2375.89 557.46 2387.89 560.47 2399.89 560.45 2411.89 557.63 2423.89 557.36 2435.89 559.35 2447.89 559.89 2459.89 558.75 2471.89 557.31 2483.89 557.25 2495.9 561.04 2507.9 558.11 2519.91 558.08 2531.92" />
+                </g>
+                <path id="footer2" stroke-dasharray="0,2531.98" class="footercls-1"
+                    d="M2.1 26.55 13.9 27.56 25.7 27.28 37.51 28.56 49.31 28.42 61.12 25.97 72.92 26.53 84.73 28.51 96.53 26.93 108.33 26.59 120.14 26.38 131.95 26.71 143.75 25.92 155.57 25.56 167.38 28.12 179.28 27.32 191.08 29.37 201.25 35.92 213.27 38.67 222.71 46.23 229.73 56.06 237.28 65.16 244.32 74.95 247.52 86.55 250.09 98.19 252.6 110.08 250.64 121.62 248.71 133.15 250.66 144.68 249.42 156.22 252.27 167.75 249.11 179.29 251.91 190.83 253.38 202.99 255.04 215.24 258.83 227.17 265.54 237.78 274.06 246.93 283.12 255.58 294.93 259.98 306.07 264.97 317.83 268.7 330.16 271.44 342.22 271.89 354.26 268.82 366.31 270.46 378.36 268.49 390.41 269.27 402.47 270.9 414.52 271.07 426.57 269.85 438.62 271.8 450.68 268.47 462.73 270.36 474.79 270.05 486.84 268.87 498.89 270.95 510.95 270.75 523 270.13 535.06 271.75 547.12 270.39 559.18 270.59" />
+                <path id="footer3" stroke-dasharray="0,2531.98" class="footercls-1"
+                    d="M1115.08 26.95 1103.28 25.95 1091.48 26.23 1079.67 24.94 1067.87 25.08 1056.06 27.53 1044.26 26.98 1032.45 25 1020.65 26.57 1008.85 26.91 997.04 27.13 985.23 26.79 973.43 27.59 961.61 27.94 949.8 25.38 937.98 27.86 926.53 30.84 914.42 32.61 905.58 41.27 895.99 47.98 886.19 54.97 879.48 64.89 875.1 75.97 869.99 86.65 867.53 98.25 868.35 110.08 866.39 121.62 864.47 133.15 866.42 144.68 865.17 156.22 868.03 167.75 864.86 179.29 867.66 190.83 867.21 203.53 863.06 215.54 857.3 226.64 850.96 237.28 843.28 247.09 833.38 254.64 823.94 263.29 812.04 267.86 799.55 269.93 787.02 269.12 774.96 268.68 762.92 271.74 750.87 270.11 738.82 272.08 726.77 271.29 714.71 269.67 702.66 269.5 690.61 270.72 678.56 268.76 666.5 272.09 654.45 270.21 642.39 270.52 630.34 271.69 618.29 269.62 606.23 269.81 594.18 270.43 582.12 268.81 570.06 270.17 558 269.97" />
+            </svg>
+            <!-- <img src="/public/assets/img/footerSvg.svg?raw" > -->
+        </div>
+        <div class="bottom-left-container">
+            <div class="bottom-text-block">
+                <div class="bottom-text-block-header">
+                    REVITALISING <br />BIO-CULTURAL <br />HERITAGE
+                </div>
+                <div class="bottom-text-paragraph">
+                    In Nepal, Rajeev also witnessed the commodification of land, and the
+                    consequent accelerating pace of land grabbing and fragmentation with
+                    the advent of haphazard roads into mountains. He saw firsthand how
+                    land grabbing,conversion, and fragmentation are destroying the earth's
+                    last intact bio-cultural landscapes, to the point where even the
+                    Amazon Rainforest could one day be lost. He also saw the power of
+                    small change through the Learning Grounds model.
+                </div>
+            </div>
+            <div class="bottom-text-block">
+                <div class="bottom-text-block-header">
+                    A different <br />approach to <br />philanthropy
+                </div>
+                <div class="bottom-text-paragraph">
+                    THIS BECAME THE CLOUD FOREST FUND APPROACH TO PHILANTHROPY. SMALL
+                    FUNDS DEPLOYED AT THE RIGHT TIME CAN MAKE A PROFOUND DIFFERENCE -
+                    WHETHER TO HIRE AN INDIGENOUS LAWYER TO AID WITH COMMUNAL LAND
+                    TITLING, TO RENT A PONTOON TO TRANSPORT VILLAGERS TO AN IMPORTANT
+                    PLANNING MEETING, OR TO HIRE A DRONE TO CAPTURE AN ILLEGAL LAND
+                    INVASION THAT CAN BE USED IN COURT - ALL CAN HAVE THE NET EFFECT OF
+                    SAVING LITERALLY HUNDREDS OF THOUSANDS OF ACRES OF PRISTINE FOREST AND
+                    WETLANDS. WE HAVE SEEN THIS DYNAMIC PLAY OUT OVER AND OVER AGAIN. WHAT
+                    IS NEEDED IS A GREAT DEAL OF TIME ON THE GROUND, LISTENING TO THE
+                    MOUNTAINS AND UNDERSTANDING THE ROOT CAUSES.
+                </div>
+            </div>
+            <div class="bottom-text-block">
+                <div class="bottom-text-block-header">timing is <br />everything</div>
+                <div class="bottom-text-paragraph">
+                    Small funds deployed at the right time can make a profound difference
+                    - whether to hire an indigenous lawyer to aid with communal land
+                    titling, to rent a pontoon to transport villagers to an important
+                    planning meeting, or to hire a drone to capture an illegal land
+                    invasion that can be used in court - all can have the net effect of
+                    saving literally hundreds of thousands of acres of pristine forest and
+                    wetlands. We have seen this dynamic play out over and over
+                    again.understanding the root causes.
+                </div>
+            </div>
+        </div>
+        <div class="bottom-right-container">
+            <h1 class="bottom-right-headline">OUR APPROACH</h1>
+            <div class="bottom-text-block">
+                <div class="bottom-text-block-header">Micro-Conservation</div>
+                <div class="bottom-text-paragraph">
+                    Cloud Forest Fund's approach was inspired by the lived experiences in
+                    Nepal of our founder, Rajeev Goyal. After serving as a teacher in the
+                    Peace Corps, Rajeev pioneered the idea of a 'Vertical University'
+                    where the 'professors' of this university could be ordinary farmers,
+                    who may not have a Ph.D. or have ever set foot in a school, but
+                    possess intricate, intergenerational knowledge about local fauna and
+                    flora critical for youth to attain. Over the course of two decades,
+                    Rajeev helped establish dozens of “learning grounds,” essentially
+                    micro-conservation hubs — the “classrooms” of the Vertical University
+                    at different elevations. He observed firsthand the incredible agency,
+                    dignity and creativity of people who live deep in the forest,
+                    connected to land.
+                </div>
+            </div>
+            <div class="bottom-text-block">
+                <div class="bottom-text-block-header">
+                    Reducing <br />bottlenecks for big <br />change
+                </div>
+                <div class="bottom-text-paragraph">
+                    It is often very small bottlenecks holding back positive change, and
+                    so small grants matter a lot. Grant making must be agile,
+                    compassionate, and focused on problem solving in those ecological
+                    spaces with the greatest ecological richness. Grants should not be
+                    used to control communities and NGOs, and thus we believe in general
+                    support. We build longterm, output-focused relationships with
+                    partners, guiding them to find greater pools of support for their
+                    authentic visions. We believe that storytelling support is just as
+                    important as funds.
+                </div>
+                <br />
+                <div class="bottom-text-paragraph">
+                    WE DO NOT HAVE CALLS FOR PROPOSALS BUT WELCOME LOCAL NGOS AND
+                    COMMUNITIES THAT URGENTLY NEED SUPPORT IN PROTECTING LAND, WATERS OR
+                    BIODIVERSITY TO GET IN TOUCH VIA THE CONTACT FORM OR BY EMAIL
+                    (INFO@CLOUDFORESTFUND.ORG). WE TEND TO SUPPORT SMALLER ʻSEEDʼ LEVEL
+                    EFFORTS, WITH CAPACITY BUILDING, CO-VISIONING, FUNDING, AND
+                    CONNECTIONS TO ALIGNED DONORS WHERE LARGER SUPPORT IS NEEDED. BUT WE
+                    ALSO HELP MORE MATURE PROJECTS THAT NEED GUIDANCE ON FINDING FUNDS,
+                    DRAFTING STRATEGIES AND STORYTELLING. WE DO EVERYTHING ONLY WITH THE
+                    CONSENT OF PARTNERS.WE BELIEVE IN BUILDING LASTING FRIENDSHIPS AND
+                    DEEP TIES WITH PARTNERS, AND ALSO IN ENJOYING THE JOURNEY.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------->
+    <!-- End of bottom sect -->
+    <!------------------->
+    <div class="footerLogoSvg" id="footerLogoSvg">
+        <svg viewBox="0 0 758.57 337.81">
+            <defs>
+                <style>
+                    .complexfooter-1 {
+                        stroke-width: 12.67px;
+                    }
+    
+                    .complexfooter-1,
+                    .complexfooter-2 {
+                        fill: none;
+                        stroke: #072334;
+                        stroke-miterlimit: 10;
+                    }
+    
+                    .complexfooter-3 {
+                        fill: #072334;
+                        stroke-width: 0px;
+                    }
+    
+                    .complexfooter-2 {
+                        stroke-linecap: square;
+                        stroke-width: 23.8px;
+                    }
+                </style>
+            </defs>
+            <path stroke-dasharray="0, 3000" id="footerline1" class="complexfooter-2"
+                d="M11.91,286.97c0-4.93,4.27-10.56,6.56-14.86,4.05-7.6,8.34-15.07,12.61-22.54,3.53-6.18,7.84-11.71,11.65-17.71,3.59-5.66,7.06-10.83,11.58-15.77,4.27-4.66,9.36-9.41,13.07-14.48,4.6-6.26,7.74-13.89,11.67-20.55,4.11-6.98,8.71-13.78,13.02-20.64,4.73-7.53,8.37-15.73,13.71-22.84,5.74-7.64,10.66-15.85,16.39-23.5,4.69-6.26,9.41-11.6,13.02-18.55,2.52-4.85,5.99-8.91,8.66-13.65,2.69-4.77,4.79-9.68,7.8-14.28,3.61-5.52,7.22-10.85,8.74-17.24.59-2.47,1.29-4.17,2.94-6.21,3.93-4.85,9.46-8.07,13.85-12.46,3.18-3.18,5.64-5.82,9.38-8.36,3.23-2.19,7.58-6.06,11.55-6.88,2.62-.54,5.72,0,8.4-.03,4.78-.05,9.23-1.45,14.02-1.54,19.7-.37,39.27-1.39,59.01-1.39,17.5,0,35,0,52.51,0,5.82,0,12.78,1.14,18.47.05,1.95-.37,2.89-1.3,4.97-1.54,2.33-.27,54.08,1.54,56.44,1.54l-12.26-1.5c2.36,0,4.95-.3,7.28-.03,2.08.24,3.02,1.17,4.97,1.54,5.7,1.08,12.66-.05,18.47-.05,17.5,0,35,0,52.51,0,19.74,0,39.31,1.02,59.01,1.39,4.79.09,9.24,1.49,14.02,1.54,2.68.03,5.78-.51,8.4.03,3.97.82,8.32,4.68,11.55,6.88,3.74,2.54,6.2,5.18,9.38,8.36,4.39,4.39,9.92,7.61,13.85,12.46,1.65,2.04,2.36,3.74,2.94,6.21,1.52,6.39,5.13,11.72,8.74,17.24,3.01,4.6,5.11,9.51,7.8,14.28,2.67,4.74,6.14,8.8,8.66,13.65,3.61,6.95,8.33,12.29,13.02,18.55,5.73,7.65,10.65,15.86,16.39,23.5,5.34,7.11,8.98,15.31,13.71,22.84,4.31,6.86,8.91,13.66,13.02,20.64s7.07,14.29,11.67,20.55c3.72,5.06,8.81,9.82,13.07,14.48,4.52,4.93,7.99,10.11,11.58,15.77,3.8,6,8.11,11.53,11.65,17.71,4.28,7.47,8.57,14.94,12.61,22.54,2.29,4.3,2.69,12.16,2.7,17.09" />
+            <path stroke-dasharray="0, 3000" id="footerline2" class="complexfooter-2"
+                d="M89.06,306.23c-1.49-9.43,6.73-16.62,11.65-23.91,6.38-9.44,12.63-18.92,19.3-28.16,8.16-11.31,15.4-22.95,22.44-34.98,4.66-7.96,8.79-16.01,14.41-23.26,6.79-8.76,12.23-19.37,18.07-28.81,4.53-7.32,8.25-15.08,12.64-22.49,6.26-10.57,13.36-20.98,21.08-30.45,2.86-3.51,5.15-7.27,8.27-10.57,4.14-4.38,8.44-8.78,12.4-13.32,6.05-6.94,14.58-11.37,23.72-13.25,2.93-.6,5.92-.14,8.89-.21,5.54-.12,10.81-1.67,16.39-1.6,6.86.09,13.71.03,20.57.03,18.33,0,10.99.01,29.32,0,4.69,0,8.59-.15,12.95-1.17,3.4-.8,90.09,3.08,93.05,1.17,0,0-4.69,0,0,0,18.33.01,10.99,0,29.32,0,6.86,0,13.71.05,20.57-.03,5.58-.07,10.85,1.48,16.39,1.6,2.97.07,5.96-.4,8.89.21,9.14,1.89,17.67,6.32,23.72,13.25,3.96,4.54,8.26,8.94,12.4,13.32,3.12,3.29,5.41,7.06,8.27,10.57,7.73,9.47,14.82,19.88,21.08,30.45,4.39,7.41,8.11,15.17,12.64,22.49,5.84,9.44,11.28,20.06,18.07,28.81,5.62,7.26,9.76,15.31,14.41,23.26,7.04,12.03,14.28,23.66,22.44,34.98,6.67,9.25,12.92,18.72,19.3,28.16,4.92,7.28,13.14,14.47,11.65,23.91" />
+            <path stroke-dasharray="0, 3000" id="footerline3" class="complexfooter-2"
+                d="M578.38,317.03c1.27-9.14-8.07-31.99-12.96-39.08-5.98-8.67-10.47-17.25-14.44-27.06-4.5-11.1-9.37-22.8-15.13-33.31-2.42-4.41-5.87-8.05-8.16-12.57-4.63-9.14-8.3-18.64-13.47-27.54-2.55-4.39-5.56-8.32-8.47-12.44-2.04-2.88-3.19-5.99-6.03-8.37-5.37-4.51-8.21-11.15-14.19-15.68-1.93-1.46-4.41-3.31-6.58-4.47-2.72-1.45-6.17-1.53-9.47-2.2-3.04-.62-5.95-1.71-8.97-1.94-5.87-.43-12.01.06-17.9.06-7.62,0-15.24,0-22.87,0-7.62,0-92.32,0-99.94,0-5.9,0-12.03-.49-17.9-.06-3.02.22-5.93,1.32-8.97,1.94-3.3.67-6.74.74-9.47,2.2-2.17,1.16-4.65,3.01-6.58,4.47-5.98,4.52-8.82,11.16-14.19,15.68-2.84,2.38-3.99,5.49-6.03,8.37-2.91,4.11-5.92,8.05-8.47,12.44-5.17,8.9-8.84,18.4-13.47,27.54-2.29,4.52-5.74,8.16-8.16,12.57-5.76,10.51-10.63,22.21-15.13,33.31-3.97,9.8-8.46,18.38-14.44,27.06-4.89,7.1-18.8,34.09-17.53,43.23" />
+            <path stroke-dasharray="0, 3000" id="footerline4" class="complexfooter-2"
+                d="M262.68,324.92c-.37-10.08,2.68-29.36,7.63-37.9,1.6-2.75,3.83-5.52,5.22-8.41,1.31-2.73,1.82-5.79,3.08-8.56,3.64-7.98,7.78-15,10.15-23.52,2.98-10.73,9.44-18.44,14.57-28,2.64-4.92,4.57-10.63,7.56-15.3,2.29-3.57,5.68-4.8,9.5-6.08,6.99-2.35,105.98-1.74,113.81-1.74l-15.7-.8c7.82,0,16.53.19,23.52,2.54,3.82,1.29,7.21,2.52,9.5,6.08,2.99,4.66,4.92,10.38,7.56,15.3,5.14,9.56,11.6,17.28,14.57,28,2.37,8.53,6.51,15.55,10.15,23.52,1.27,2.77,1.77,5.83,3.08,8.56,1.39,2.89,3.62,5.66,5.22,8.41,4.96,8.54,7.97,28.36,7.6,38.44" />
+            <path stroke-dasharray="0, 3000" id="footerline5" class="complexfooter-1"
+                d="M379.24 239.83 385.49 240.19 391.75 239.68 398 240.01 404.21 240.75 410.25 241.43 416.26 242.36 421.4 244.71 426.78 246.65 431.37 249.97 436.04 253.01 440.71 255.4 444.16 258.82 445.91 260.13 445.36 261.77 441.64 264.23 436.97 268.22 433.38 271.72 429.62 275.54 425.53 279.02 419.2 282.12 412.69 284.43 406.23 285.31 399.82 286.53 393.32 287.2 386.78 287.43 380.27 287.43 388.73 287.29 382.21 286.95 375.68 287.04 369.23 286.02 362.66 285.99 356.32 284.31 349.6 282.5 343.86 278.46 339.24 275.7 335.38 271.95 332.03 268.22 327.01 264.73 323.53 261.87 322.8 260.07 324.81 258.76 328.33 255.45 333.2 253.47 337.54 249.83 342.33 246.82 347.61 244.75 352.69 242.18 358.76 241.52 364.74 240.12 371 239.97 377.26 240.43 383.5 240.63 389.75 240.29" />
+            <path stroke-dasharray="0, 3000" id="footerline6" class="complexfooter-3"
+                d="M375.14 263.65 374.94 265.91 375.17 268.17 375.14 270.46 375.58 272.7 376.72 274.75 377.28 276.93 377.72 279.22 379.18 281.02 380.65 282.72 382.46 284.02 384.57 284.64 386.64 283.92 388.32 282.54 390.22 281.18 390.98 279 391.74 276.89 393.05 274.93 392.78 272.54 393.28 270.35 394.05 268.18 394.07 265.91 393.75 263.65 393.97 261.39 393.79 259.14 393.1 256.97 393.17 254.68 393.09 252.35 391.93 250.34 391.33 248.12 389.6 246.51 388.81 244.26 386.6 243.45 384.57 243.07 382.47 243.29 380.52 244.44 379.13 246.25 378.14 248.28 377.1 250.29 376.98 252.61 376.36 254.75 375.74 256.92 375.02 259.1 374.74 261.37 375.14 263.65z" />
+        </svg>
+    </div>
+
+    <div class="pre-footer">
+        <button class="custom-button">
+            <span>Email</span>
+        </button>
+        <div class="newsletter-text">SIGN UP TO OUR NEWSLETTER</div>
+    </div>
+</div>
+
+</body>
+</html>
