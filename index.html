@@ -315,14 +315,14 @@ import Header from "../components/Header.astro";
                     <img src="/public/assets/img/mountain.svg?raw" alt="">
                 </div>
             </div>
-            <div style="margin-top:-45%; margin-left:1%;">
+            <div style="margin-top:-33%; margin-left:1%;">
                 <div class="bottom-text-player" style="z-index:5">
                     <dotlottie-player src="https://lottie.host/52b1ec94-051e-4211-aa91-4eb47573becf/Berq6IyIPs.json"
                         background="transparent" speed="1" style="width: 100%; height: auto" direction="1"
                         playMode="normal" loop autoplay></dotlottie-player>
                 </div>
                 <div style="z-index: 10; position: relative;">
-                    <img class="cloud-mountain-front-layer" width="100%" height="100%" src="./public/assets/img/mountainFront.png"
+                    <img class="cloud-mountain-front-layer" width="100%" height="100%" src="./public/assets/img/mtnFrontFinal.png"
                         alt="Description of your image" />
                 </div>
             </div>
@@ -383,8 +383,54 @@ import Header from "../components/Header.astro";
             <div class="team-container-wrap" style="margin-top: 2rem;">
                 <div class="team-container__left">
                     <h1 class="team-title">OUR TEAM</h1>
-                    <img width="100%" height="100%" src="./public/assets/img/teamLogo.png"
-                        alt="Description of your image" />
+                    <!-- <img width="100%" height="100%" src="./public/assets/img/teamLogo.png"
+                        alt="Description of your image" /> -->
+                        <svg viewBox="0 0 277.26 214.92">
+                            <defs>
+                                <style>
+                                    .teamlogocls-1 {
+                                        fill: #00abaf;
+                                    }
+                        
+                                    .teamlogocls-1,
+                                    .teamlogocls-2,
+                                    .teamlogocls-3 {
+                                        stroke-width: 0px;
+                                    }
+                        
+                                    .teamlogocls-2 {
+                                        fill: #060833;
+                                    }
+                        
+                                    .teamlogocls-3 {
+                                        fill: #dd1d47;
+                                    }
+                                </style>
+                            </defs>
+                            <path class="teamlogocls-2"
+                                d="M203.02,173.93l-16.93-20.32-28.66-21.61-20.28-19.62-20.87,17.31-20.68,29.11-19.58,17.56,19.89,15.84,14.76-18.65,28.05-26.07,28.87,29.99,18.52,15.45,16.91-18.99ZM196.96,142.18l26.73,32.08-35.96,40.41-31.13-26.03-18.49-19.2-16.33,15.16-23.29,29.69-46.73-37.22,32.08-28.77,20.86-29.36,33.25-27.58,30.02,29.04,28.99,21.78Z" />
+                            <path class="teamlogocls-2"
+                                d="M277.02,136.61l-21.06,18.28-18.21,20.7-19.66-19.62-11.73-13.57-13.72-12.57-12.22-13.37-12.97-12.64-17.73-17.89,17.81-19.67,19.09-18.46,18.88,17.41,14.05,13.54,11.08,13.74,14.29,11.88,12.48,13.21,19.62,19.03ZM245.29,143.41l8.56-7.44-7.73-7.51-12.26-12.98-14.43-11.91-11.76-14.59-12.9-12.36-7.89-7.28-8.27,8-7.32,8.1,7.19,7.25,13.36,13.03,12.13,13.28,13.95,12.81,11.83,13.7,7.24,7.22,8.3-9.32Z" />
+                            <polygon class="teamlogocls-1"
+                                points="253.85 135.97 245.29 143.41 236.99 152.73 229.75 145.51 217.92 131.81 203.97 119 191.84 105.72 178.48 92.69 171.29 85.44 178.61 77.34 186.88 69.34 194.77 76.62 207.67 88.98 219.43 103.57 233.86 115.48 246.12 128.46 253.85 135.97" />
+                            <polygon class="teamlogocls-3"
+                                points="186.09 153.61 203.02 173.93 186.11 192.92 167.59 177.47 138.72 147.48 110.67 173.55 95.91 192.2 76.02 176.36 95.6 158.8 116.28 129.69 137.15 112.38 157.43 132 186.09 153.61" />
+                            <path class="teamlogocls-2"
+                                d="M179.34,41.73l-19.78,20.7-20.32,18.87-19.09-19.8-20.81-19.35,20.29-19.85L139.67.25l19.49,22.37,20.18,19.11ZM148.73,51.11l8.42-8.82-9.55-9.1-8.18-9.38-8.67,9.52-8.72,8.53,9.25,8.62,8.57,8.88,8.88-8.25Z" />
+                            <polygon class="teamlogocls-3"
+                                points="157.15 42.29 148.73 51.11 139.85 59.36 131.28 50.48 122.03 41.86 130.75 33.33 139.42 23.81 147.6 33.19 157.15 42.29" />
+                            <path class="teamlogocls-2"
+                                d="M128.08,86.07l-20.66,17.33-11.71,14.22-26.13,26.27-13.32,12.21-18.42,19.69-19.86-20.27L.25,136.12l17.97-18.65,13.37-12.07,12.44-13.38,12.94-13,12.89-13.4,18.42-17.41,19.24,17.85,20.56,20.01ZM96.24,92.34l8.49-7.13-8-7.79-8.35-7.75-7.63,7.2-12.58,13.11-12.95,13-12.88,13.81-13.42,12.12-7.2,7.49,7.73,8.45,8.13,8.29,7.87-8.38,13.42-12.3,25.45-25.59,11.92-14.53Z" />
+                            <polygon class="teamlogocls-1"
+                                points="104.73 85.21 96.24 92.34 84.32 106.87 58.87 132.46 45.45 144.76 37.58 153.14 29.45 144.85 21.72 136.4 28.92 128.91 42.34 116.79 55.22 102.98 68.17 89.98 80.75 76.87 88.38 69.67 96.73 77.42 104.73 85.21" />
+                        </svg>
+                        <div class="team-names">
+                            <ul class="custom-team-list">
+                                <li class="left">Lokendra Yakha</li>
+                                <li class="right">WILLIAM DOWELL</li>
+                                <li class="bottom">Dr. Ravindra Goyal, MD.</li>
+                            </ul>
+                        </div>
                 </div>
                 <div class="team-container__middle"></div>
                 <div class="team-container__right">

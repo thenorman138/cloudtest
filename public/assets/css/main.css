@@ -470,6 +470,65 @@ h1,h2,h3,h4,h5,h6{
     margin: 0 auto;
 }
 
+.custom-team-list {
+    text-align: left;
+    list-style: none;
+    /* Remove default bullets */
+    padding: 0;
+    /* Remove default padding */
+}
+
+.custom-team-list li.left{
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 49%;
+    left: -4%;
+}
+.custom-team-list li.right {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 49%;
+    right: 3%;
+}
+.custom-team-list li.bottom {
+    /* transform: rotate(-90deg); */
+    position: absolute;
+    bottom:-8%;
+    left: 22.5%;
+}
+
+.custom-team-list li {
+    margin-left: 20px;
+    /* Adjust the margin as needed */
+    padding-left: 30px;
+    /* Add padding to create space for the bullet */
+    position: relative;
+    /* Required for absolute positioning */
+}
+
+.custom-team-list li:before {
+    content: "";
+    /* Required for pseudo-element */
+    background-image: url('../img/customBulletPoint.svg');
+    /* Path to your SVG file */
+    background-size: contain;
+    /* Ensure the SVG is contained within the element */
+    background-repeat: no-repeat;
+    /* Prevent repeating */
+    width: 20px;
+    /* Adjust size as needed */
+    height: 20px;
+    /* Adjust size as needed */
+    position: absolute;
+    /* Position the bullet */
+    left: 0;
+    /* Position the bullet */
+    top: 50%;
+    /* Position the bullet */
+    transform: translateY(-50%);
+    /* Position the bullet */
+}
+
 .team-container__left {
     position: absolute;
     width: 35%;
@@ -1677,7 +1736,7 @@ h1.splitter {
     
         .mtnLogoText.right {
             position: absolute;
-            right: 37%;
+            right: 38%;
             top: 32%;
             z-index: 50001;
         }
