@@ -250,7 +250,7 @@ h1,h2,h3,h4,h5,h6{
     overflow: hidden;
 }
 .cloud-reveal-img {
-    transition: opacity 3s ease;
+    transition: opacity 4s ease;
     width: 100%;
     z-index: 100000;
     width: 110%;
@@ -586,7 +586,7 @@ h1,h2,h3,h4,h5,h6{
     z-index: 1;
     opacity: 0;
     transition:
-        right 2s ease,
+        left 2s ease,
         opacity 2s ease;
 }
 
@@ -601,6 +601,13 @@ h1,h2,h3,h4,h5,h6{
     width: 35rem;
     margin: 0 auto;
     padding-top: 15rem;
+    opacity:0;
+    transition:
+            opacity 1s ease;
+}
+
+.monkey-wrapper.show{
+    opacity:1;
 }
 
 .bottom-svg {
@@ -790,6 +797,12 @@ h1.splitter {
     top: 12%;
     left: 27%;
     width: 45%;
+    opacity: 0;
+    transition: 
+        opacity 1s ease;
+}
+.monkey-arch-text.show{
+    opacity: 1;
 }
 
 .bottom-left-container {
@@ -821,11 +834,32 @@ h1.splitter {
     width: 35%;
 }
 
+.btm-lft-1,.btm-lft-2,.btm-lft-3,.btm-rt-1,.btm-rt-2{
+    opacity: 0;
+    transition:
+        opacity 1s ease;
+}
+.btm-lft-1.show,
+.btm-lft-2.show,
+.btm-lft-3.show,
+.btm-rt-1.show,
+.btm-rt-2.show {
+    opacity: 1;
+}
+
 .bottom-right-headline {
     font-size: 4vw;
     font-weight: bold;
     margin-top: 4rem;
     margin-bottom: 8rem;
+    line-height: 4.8rem;
+    opacity:0;
+    transition: 
+    opacity 1s ease;
+}
+
+.bottom-right-headline.show{
+    opacity:1;
 }
 
 .pre-footer {
@@ -881,6 +915,9 @@ h1.splitter {
 }
 
 
+#footerLogoSvg{
+    margin-top:-26%;
+}
 
 /* #team-block-title1, #team-block-title4, #team-block-title5{
     opacity:0;

@@ -23,20 +23,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to animate the drawing based on current scroll position
     function animateDrawing() {
         if (drawingStarted) {
-            console.log('drawing mountain svg now');
+            // console.log('drawing mountain svg now');
             // Establish new scroll percentage based on scroll position within mtnSvg
             // Define the offset as a fraction of the container's height
-const offsetFraction = 0.5;
+            const offsetFraction = 0.5;
 
-// Calculate the offset based on the container's height
-const offset = mtnSvg.offsetHeight * offsetFraction;
+            // Calculate the offset based on the container's height
+            const offset = mtnSvg.offsetHeight * offsetFraction;
 
-// Calculate the scroll percentage with the offset
-let mtnScrollPercentage =
-    Math.min(Math.max((window.scrollY - mtnSvg.offsetTop + offset) / (mtnSvg.offsetHeight - offset), 0), 1);
+            // Calculate the scroll percentage with the offset
+            let mtnScrollPercentage =
+                Math.min(Math.max((window.scrollY - mtnSvg.offsetTop + offset) / (mtnSvg.offsetHeight - offset), 0), 1);
 
-console.log('new scroll percentage');
-console.log(mtnScrollPercentage);
+            // console.log('new scroll percentage');
+            // console.log(mtnScrollPercentage);
 
             let drawLength = 1500 * mtnScrollPercentage * .65 ; // Total length of the path
             path2Left.style.strokeDasharray = `${drawLength}, 1500`;

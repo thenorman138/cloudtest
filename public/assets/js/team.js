@@ -22,21 +22,21 @@ window.addEventListener("scroll", function () {
 
     // Check if the target div is in the viewport
     if (sect1Top < window.innerHeight && sect1Top + sect1.offsetHeight > 0) {
-        console.log("Reached the target div!");
+        // console.log("Reached the target div!");
 
         // Calculate scroll percentage based on target div's height
         let scrollPercentage =
             Math.min(Math.max((window.scrollY - sect1.offsetTop + offset) / (sect1.offsetHeight - offset), 0), 1);
 
-        console.log('team scroll percentage');
-        console.log(scrollPercentage);
+        // console.log('team scroll percentage');
+        // console.log(scrollPercentage);
 
         // Calculate draw length based on scroll percentage
         let drawLength = 2268.36 * scrollPercentage * 2.5; // Total length of the path
         path1.style.strokeDasharray = `${drawLength}, 2268.36`;
 
         // Perform actions when the target div is reached
-        if (scrollPercentage >= 0.04) {
+        if (scrollPercentage >= 0.02) {
             teamleft.classList.add("show");
             teamright.classList.add("show");
             teamblurb.classList.add("show");
