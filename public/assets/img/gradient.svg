@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Isolation_Mode" data-name="Isolation Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 824.24 92.81">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+        stroke-width: 0px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-761.23" y1="12914.14" x2="-761.23" y2="13006.95" gradientTransform="translate(1173.35 -12914.14)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#002235"/>
+      <stop offset="1" stop-color="#231f20" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect class="cls-1" width="824.24" height="92.81" transform="translate(824.24 92.81) rotate(180)"/>
+</svg>

@@ -15,7 +15,7 @@
 
 /* Apply Futura font to body */
 body {
-    color: #072334;
+    color: #002235;
     font-family: "Futura", sans-serif;
     overflow-x: hidden;
     text-transform: uppercase;
@@ -24,7 +24,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6{
-    color: #072334;
+    color: #002235;
 }
 
 .myriad-font {
@@ -443,6 +443,18 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 18rem;
 }
 
+.gradient-overlay {
+    position: absolute;
+    /* bottom: 0; */
+    left: 0;
+    z-index: 1000;
+    top: 74%;
+    width: 100%;
+    height: 50%;
+    background-image: url(../img/gradient.svg?raw);
+    background-repeat: no-repeat;
+}
+
 .team-name__tilt-left span {
     display: inline-block;
     /* Set the display property to inline-block */
@@ -481,19 +493,19 @@ h1,h2,h3,h4,h5,h6{
 .custom-team-list li.left{
     transform: rotate(-45deg);
     position: absolute;
-    top: 49%;
+    top: 44%;
     left: -4%;
 }
 .custom-team-list li.right {
     transform: rotate(45deg);
     position: absolute;
-    top: 49%;
+    top: 44%;
     right: 3%;
 }
 .custom-team-list li.bottom {
     /* transform: rotate(-90deg); */
     position: absolute;
-    bottom:-8%;
+    bottom:-7%;
     left: 22.5%;
 }
 
@@ -584,7 +596,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 3rem;
     font-weight: bold;
     letter-spacing: 0.8rem;
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
 }
 
 .team-description {
@@ -879,9 +891,9 @@ h1.splitter {
 
 .monkey-arch-text {
     position: absolute;
-    top: 12%;
-    left: 27%;
-    width: 45%;
+    top: 15%;
+    left: 26%;
+    width: 48%;
     opacity: 0;
     transition: 
         opacity 1s ease;
@@ -890,11 +902,13 @@ h1.splitter {
     opacity: 1;
 }
 
+
+
 .bottom-left-container {
     text-align: right;
     position: absolute;
     top: 18%;
-    left: 5%;
+    left: 4.5%;
     width: 35%;
 }
 
@@ -1388,7 +1402,7 @@ h1.splitter {
             z-index: 1000;
             /* margin-top: -20%; */
             min-height: 20vh;
-            top: 96%;
+            top: 90%;
             color: white;
         }
     
@@ -1508,7 +1522,7 @@ h1.splitter {
             font-size: 3rem;
             font-weight: bold;
             letter-spacing: 0.8rem;
-            margin-bottom: 8rem;
+            margin-bottom: 3rem;
         }
     
         .team-description {
