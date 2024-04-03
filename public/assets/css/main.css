@@ -430,7 +430,8 @@ h1,h2,h3,h4,h5,h6{
     font-weight: light;
     font-size: 2.5rem;
     line-height: 3rem;
-    width: 65%;
+    min-width: 65%;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -478,7 +479,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .team-line-svg {
-    width: 85%;
+    width: 85%; 
     margin: 0 auto;
 }
 
@@ -1427,7 +1428,8 @@ h1.splitter {
             font-weight: light;
             font-size: 2rem;
             line-height: 3rem;
-            width: 85%;
+            min-width: 85%;
+            max-width: 100%;
             margin: 0 auto;
         }
     
