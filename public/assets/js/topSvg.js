@@ -36,38 +36,36 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener(
         "scroll",
         debounce(function () {
-            // Delay the execution of the animation by 1 second
-            setTimeout(function () {
-                var scrollPercentage = 7 * ((window.scrollY || window.pageYOffset) / (document.documentElement.scrollHeight - window.innerHeight));
+var scrollPercentage = 9 * ((Math.max(0, window.scrollY - 7 * parseFloat(getComputedStyle(document.documentElement).fontSize))) / (document.documentElement.scrollHeight - window.innerHeight));
 
-                // Length to offset the dashes
-                var drawLeft = pathLengthLeft * scrollPercentage;
-                var drawRight = pathLengthRight * scrollPercentage;
+            // Length to offset the dashes
+            var drawLeft = pathLengthLeft * scrollPercentage;
+            var drawRight = pathLengthRight * scrollPercentage;
 
-                // Draw in reverse
-                pathLeft.style.strokeDashoffset = Math.max(0, pathLengthLeft - drawLeft);
-                pathRight.style.strokeDashoffset = Math.max(0, pathLengthRight - drawRight);
+            // Draw in reverse
+            pathLeft.style.strokeDashoffset = Math.max(0, pathLengthLeft - drawLeft);
+            pathRight.style.strokeDashoffset = Math.max(0, pathLengthRight - drawRight);
 
-                // console.log(scrollPercentage);
+            // console.log(scrollPercentage);
 
-                // Fade in div smoothly when the line is about 15% drawn
-                if (scrollPercentage >= 0.29 && !fadeInStarted) {
-                    fadeInStarted = true;
-                    fadeInDivSmoothly(impactFade);
-                    fadeInDivSmoothly(impactninety1);
-                    fadeInDivSmoothly(impactninety2);
-                }
+            // Fade in div smoothly when the line is about 15% drawn
+            if (scrollPercentage >= 0.29 && !fadeInStarted) {
+                fadeInStarted = true;
+                fadeInDivSmoothly(impactFade);
+                fadeInDivSmoothly(impactninety1);
+                fadeInDivSmoothly(impactninety2);
+            }
 
-                if (scrollPercentage >= 0.57) {
-                    blurbFade1.classList.add('show');
-                    blurbFade2.classList.add('show');
-                }
+            if (scrollPercentage >= 0.57) {
+                blurbFade1.classList.add('show');
+                blurbFade2.classList.add('show');
+            }
 
-                // Post scrollPercentage to other script if it's over 0.99
-                if (scrollPercentage > 0.99) {
-                    window.postMessage({ type: 'scrollPercentage', value: scrollPercentage }, '*');
-                }
-            }, 2000); // Delay the execution by 1 second
+            // Post scrollPercentage to other script if it's over 0.99
+            if (scrollPercentage > 0.99) {
+                window.postMessage({ type: 'scrollPercentage', value: scrollPercentage }, '*');
+            }
+
         }, 10)
     );
 

@@ -36,7 +36,7 @@ window.addEventListener("scroll", function () {
         path1.style.strokeDasharray = `${drawLength}, 2268.36`;
 
         // Perform actions when the target div is reached
-        if (scrollPercentage >= 0.02) {
+        if (scrollPercentage >= 0.015) {
             teamleft.classList.add("show");
             teamright.classList.add("show");
             teamblurb.classList.add("show");

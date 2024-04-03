@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     Math.min(Math.max((window.scrollY - monkeysvg.offsetTop + offset) / (monkeysvg.offsetHeight - offset), 0), 1);
 
                 // console.log('monkey scroll percentage');
-                // console.log(monkeyScrollpercent);
+                console.log(monkeyScrollpercent);
 
                 let drawLength = 2532 * monkeyScrollpercent * 7 ; // Total length of the path
                 footer2.style.strokeDasharray = `${drawLength}, 2532`;
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     plant1.classList.add("show");
                     plant2.classList.add("show");
                 }
-                if (monkeyScrollpercent >= 0.10) {
+                if (monkeyScrollpercent >= 0.04) {
                     monkey.classList.add("show");
                     arch.classList.add("show");
 
@@ -81,23 +81,23 @@ document.addEventListener("DOMContentLoaded", function () {
                         if (clampedScrollPercentage >= 0.12) {
                             btmheadline.classList.add("show");
                         }
-                        if (clampedScrollPercentage >= 0.18) {
+                        if (clampedScrollPercentage >= 0.15) {
                             btmlft1.classList.add("show");
                         }
-                        if (clampedScrollPercentage >= 0.21) {
+                        if (clampedScrollPercentage >= 0.18) {
                             btmrt1.classList.add("show");
                         }
-                        if (clampedScrollPercentage >= 0.31) {
+                        if (clampedScrollPercentage >= 0.28) {
                             btmlft2.classList.add("show");
                         }
-                        if (clampedScrollPercentage >= 0.41) {
+                        if (clampedScrollPercentage >= 0.38) {
                             btmrt2.classList.add("show");
                         }
-                        if (clampedScrollPercentage >= 0.58) {
+                        if (clampedScrollPercentage >= 0.55) {
                             btmlft3.classList.add("show");
                         }
 
-                        if (clampedScrollPercentage > 0.99) {
+                        if (clampedScrollPercentage > 0.60) {
                             window.postMessage({ type: 'straightFooterPercentage', value: clampedScrollPercentage }, '*');
                             console.log('should trigger footer now');
                         }
