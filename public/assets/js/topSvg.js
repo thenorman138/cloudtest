@@ -1,19 +1,19 @@
-// Debounce function
-function debounce(func, wait) {
-    let timeout;
-    return function () {
-        const context = this,
-            args = arguments;
-        const later = function () {
-            timeout = null;
-            func.apply(context, args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
 document.addEventListener("DOMContentLoaded", function () {
+    // Debounce function
+    function debounce(func, wait) {
+        let timeout;
+        return function () {
+            const context = this,
+                args = arguments;
+            const later = function () {
+                timeout = null;
+                func.apply(context, args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
     var pathLeft = document.querySelector('#svgPathLeft');
     var pathRight = document.querySelector('#svgPathRight');
 
@@ -26,11 +26,18 @@ document.addEventListener("DOMContentLoaded", function () {
     pathLeft.style.strokeDashoffset = pathLengthLeft;
     pathRight.style.strokeDashoffset = pathLengthRight;
 
+    var impactFade = document.querySelector('.impact-fade-in-div');
+    var impactninety1 = document.querySelector('.ninety-left');
+    var impactninety2 = document.querySelector('.ninety-right');
+    var blurbFade1 = document.querySelector('.topSvgBlurbLeft');
+    var blurbFade2 = document.querySelector('.topSvgBlurbRight');
+    var fadeInStarted = false;
+
     window.addEventListener(
         "scroll",
         debounce(function () {
-            var scrollPercentage = 7 * ((window.scrollY || window.pageYOffset) / (document.documentElement.scrollHeight - window.innerHeight));
-    
+            var scrollPercentage = 9 * ((window.scrollY || window.pageYOffset) / (document.documentElement.scrollHeight - window.innerHeight));
+
             // Length to offset the dashes
             var drawLeft = pathLengthLeft * scrollPercentage;
             var drawRight = pathLengthRight * scrollPercentage;
@@ -39,6 +46,37 @@ document.addEventListener("DOMContentLoaded", function () {
             pathLeft.style.strokeDashoffset = Math.max(0, pathLengthLeft - drawLeft);
             pathRight.style.strokeDashoffset = Math.max(0, pathLengthRight - drawRight);
 
+            console.log(scrollPercentage);
+
+            // Fade in div smoothly when the line is about 15% drawn
+            if (scrollPercentage >= 0.26 && !fadeInStarted) {
+                fadeInStarted = true;
+                fadeInDivSmoothly(impactFade);
+                fadeInDivSmoothly(impactninety1);
+                fadeInDivSmoothly(impactninety2);
+            }
+
+            if (scrollPercentage >= 0.57) {
+                blurbFade1.classList.add('show');
+                blurbFade2.classList.add('show');
+            }
+
+            // Post scrollPercentage to other script if it's over 0.99
+            if (scrollPercentage > 0.99) {
+                window.postMessage({ type: 'scrollPercentage', value: scrollPercentage }, '*');
+            }
+
         }, 10)
     );
+
+    function fadeInDivSmoothly(element) {
+        var opacity = 0;
+        var interval = setInterval(function () {
+            opacity += 0.05; // Adjust the increment value as needed for the desired speed
+            element.style.opacity = opacity;
+            if (opacity >= 1) {
+                clearInterval(interval);
+            }
+        }, 50); // Adjust the interval duration for smoother or faster animation
+    }
 });

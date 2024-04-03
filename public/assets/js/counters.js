@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const options = {
         root: null,
         rootMargin: "0px",
-        threshold: 0.5, // Trigger when 50% of the target is visible
+        threshold: 0.9, // Trigger when 50% of the target is visible
     };
 
     // Create a new Intersection Observer

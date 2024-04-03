@@ -17,11 +17,16 @@
 
 /* Apply Futura font to body */
 body {
+    color: #072334;
     font-family: "Futura", sans-serif;
     overflow-x: hidden;
     text-transform: uppercase;
 
     /* Fallback font family */
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: #072334;
 }
 
 .myriad-font {
@@ -32,13 +37,19 @@ body {
     text-align: center;
 }
 
-.title-text,
-.subtitle-text {
+.title-text{
+    line-height: 2.5rem;
     font-family: "Futura";
     font-weight: bold;
     text-align: center;
 }
-
+.subtitle-text{
+    line-height: 1rem;
+    margin-top: 1rem;
+    font-family: "Futura";
+    text-align: center;
+    font-weight: 50;
+}
 .title-text {
     font-size: 2rem;
     letter-spacing: 0.1rem !important;
@@ -70,6 +81,45 @@ body {
     }
 }
 
+.hero-fade-in {
+    opacity: 0;
+    animation: heroFade 2s ease-in-out forwards;
+}
+
+@keyframes heroFade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.topImgContainer {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    overflow-x: hidden;
+    /* Hide horizontal overflow */
+}
+
+#topImg {
+    position: relative;
+    margin-left:-2%;
+    margin-right:-2%;
+}
+
+.top-hero-line{
+    margin-left: -2%;
+    margin-right: -2%;
+    margin-top:-12%;
+}
+
+.impact-fade-in-div{
+    opacity:0;
+}
+
 .cloud-fade-out {
     opacity: 0 !important;
 }
@@ -86,6 +136,22 @@ body {
     left: 50%;
     top: 38%;
     transform: translate(-50%, -50%);
+}
+
+.ninety-left{
+    opacity: 0;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 35%;
+    left:3%;
+}
+
+.ninety-right{
+    opacity: 0;
+    transform: rotate(90deg);
+    position: absolute;
+    top:35%;
+    right:5%;
 }
 
 .topSvgBlurbLeft {
@@ -183,20 +249,23 @@ body {
     display: inline-block;
     overflow: hidden;
 }
-
 .cloud-reveal-img {
     transition: opacity 3s ease;
     width: 100%;
+    z-index: 100000;
+    width: 110%;
+    display: inline-block;
+    overflow: hidden;
 }
 
 .mountain-container {
-    width: 150%;
+    /* width: 150%; */
     /* Adjust as needed */
-    margin-left: -25%;
+    margin-left: -5%;
     /* Half of the excess width to keep it centered */
-    margin-right: -25%;
+    margin-right: -5%;
     /* Half of the excess width to keep it centered */
-    margin-top: -40%;
+    margin-top: -55%;
     opacity: 0;
     transform: translateY(75rem);
     transition:
@@ -212,23 +281,27 @@ body {
     font-weight: bold;
     position: absolute;
     z-index: 100;
-    top: 58%;
+    top: 45%;
     /* Position the element 50% from the top */
     left: 50%;
     /* Position the element 50% from the left */
     transform: translate(-50%, -58%);
 }
 
+.cloud-mountain-front-layer{
+    margin-left:-2%;
+}
+
 .text-over-mountain__left {
     left: -100%;
     position: absolute;
-    width: 18%;
+    width: 25%;
     text-align: left;
     margin: 0 auto;
     font-size: 1.2rem;
     line-height: 2.2rem;
     letter-spacing: 0.2rem;
-    top: 20%;
+    top: 23%;
     opacity: 0;
     transition:
         left 2s ease,
@@ -237,13 +310,13 @@ body {
 
 .text-over-mountain__left.show {
     opacity: 1;
-    left: 12%;
+    left: 10%;
 }
 
 .text-over-mountain__right {
     right: -100%;
     position: absolute;
-    width: 25%;
+    width: 35%;
     text-align: left;
     margin: 0 auto;
     font-size: 2.4rem;
@@ -258,7 +331,7 @@ body {
 
 .text-over-mountain__right.show {
     opacity: 1;
-    right: 10%;
+    right: 4%;
 }
 
 .mountain-container.fade-in {
@@ -342,6 +415,7 @@ body {
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 0.2rem;
+    color:white !important;
 }
 
 .blue-subtitle {
@@ -439,6 +513,7 @@ body {
     opacity: 1;
     right: 0;
 }
+
 
 .founder-title {
     font-size: 2rem;
@@ -550,9 +625,18 @@ body {
 
 .team-blurb {
     position: absolute;
-    top: 18%;
     width: 40%;
-    right: 60%;
+    left: -100%;
+    opacity: 0;
+        transition:
+            left 2s ease,
+            opacity 2s ease;
+}
+
+.team-blurb.show{
+    opacity:1;
+    left:2%;
+    top:19%;
 }
 
 .team-blurb .blurb {

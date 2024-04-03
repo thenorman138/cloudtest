@@ -24,17 +24,17 @@
     }
 
     // Call this function for left fade
-    function handleLeftFade() {
-        handleFade(".blurbContainer", ".topSvgBlurbLeft");
-        // handleFade(".mtn-text-container", ".text-over-mountain__left");
-    }
+    // function handleLeftFade() {
+    //     handleFade(".blurbContainer", ".topSvgBlurbLeft");
+    //     // handleFade(".mtn-text-container", ".text-over-mountain__left");
+    // }
 
-    // Call this function for right fade
-    function handleRightFade() {
-        handleFade(".blurbContainer", ".topSvgBlurbRight");
-        // handleFade(".mtn-text-container", ".text-over-mountain__right");
-    }
+    // // Call this function for right fade
+    // function handleRightFade() {
+    //     handleFade(".blurbContainer", ".topSvgBlurbRight");
+    //     // handleFade(".mtn-text-container", ".text-over-mountain__right");
+    // }
 
-    // Add scroll event listeners
-    window.addEventListener("scroll", handleLeftFade);
-    window.addEventListener("scroll", handleRightFade);
+    // // Add scroll event listeners
+    // window.addEventListener("scroll", handleLeftFade);
+    // window.addEventListener("scroll", handleRightFade);
