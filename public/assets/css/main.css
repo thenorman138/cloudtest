@@ -125,7 +125,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .cloud-fade-in {
-    animation: fadeIn 1s ease-in-out forwards;
+    animation: fadeIn 3s ease-in-out forwards;
     opacity: 1 !important;
 }
 
@@ -156,13 +156,13 @@ h1,h2,h3,h4,h5,h6{
 
 .topSvgBlurbLeft {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 4rem;
     position: absolute;
-    max-width: 15rem;
+    max-width: 28rem;
     text-align: right;
     left: -100%;
     /* Start off-screen */
-    top: 68%;
+    top: 66%;
     opacity: 0;
     transition:
         left 2s ease,
@@ -170,19 +170,19 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .topSvgBlurbLeft.show {
-    left: 15%;
+    left: 7%;
     /* Ending position */
     opacity: 1;
 }
 
 .topSvgBlurbRight {
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 1.6rem;
     position: absolute;
-    max-width: 15rem;
+    max-width: 35rem;
     text-align: left;
     right: -100%;
-    top: 70%;
+    top: 64%;
     opacity: 0;
     transition:
         right 2s ease,
@@ -191,7 +191,7 @@ h1,h2,h3,h4,h5,h6{
 
 .topSvgBlurbRight.show {
     opacity: 1;
-    right: 15%;
+    right: 4%;
 }
 
 .spacer {
@@ -661,7 +661,7 @@ h1,h2,h3,h4,h5,h6{
     width: 75%;
     height: auto;
     text-align: left;
-    top: 40%;
+    top: 39%;
     right: 10%;
     margin: 0 auto;
 }
@@ -681,7 +681,7 @@ h1,h2,h3,h4,h5,h6{
     width: 75%;
     height: auto;
     text-align: left;
-    top: 63%;
+    top: 64%;
     right: 10%;
     margin: 0 auto;
 }
@@ -850,13 +850,13 @@ h1.splitter {
 .bottom-text-player {
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 1;
 }
 
 .top-text-player {
     width: 100%;
     position: absolute !important;
-    top: -15%;
+    top: 8%;
 }
 
 #team-text-block-1,

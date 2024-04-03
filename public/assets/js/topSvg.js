@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(scrollPercentage);
 
             // Fade in div smoothly when the line is about 15% drawn
-            if (scrollPercentage >= 0.26 && !fadeInStarted) {
+            if (scrollPercentage >= 0.29 && !fadeInStarted) {
                 fadeInStarted = true;
                 fadeInDivSmoothly(impactFade);
                 fadeInDivSmoothly(impactninety1);

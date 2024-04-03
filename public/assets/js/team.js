@@ -56,7 +56,7 @@ window.addEventListener("scroll", function () {
         if (scrollPercentage >= 0.78) {
             block4.classList.add("show");
         }
-        if (scrollPercentage >= 0.85) {
+        if (scrollPercentage >= 0.89) {
             vertuni.classList.add("show");
             vertblurb.classList.add("show");
         }
