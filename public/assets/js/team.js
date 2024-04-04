@@ -32,7 +32,7 @@ window.addEventListener("scroll", function () {
         // console.log(scrollPercentage);
 
         // Calculate draw length based on scroll percentage
-        let drawLength = 2268.36 * scrollPercentage * 2.5; // Total length of the path
+        let drawLength = 2268.36 * scrollPercentage * 2.25; // Total length of the path
         path1.style.strokeDasharray = `${drawLength}, 2268.36`;
 
         // Perform actions when the target div is reached

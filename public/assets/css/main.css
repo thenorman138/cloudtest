@@ -256,6 +256,11 @@ h1,h2,h3,h4,h5,h6{
     overflow: hidden;
 }
 
+.cloud-opacity-none{
+    opacity:0;
+}
+
+
 .mountain-container {
     /* width: 150%; */
     /* Adjust as needed */
@@ -272,13 +277,13 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .mountain-reveal-text {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1s ease;
     text-align: center;
     font-size: 3vw;
     font-weight: bold;
     position: absolute;
-    z-index: 100;
+    z-index: -1;
     top: 45%;
     /* Position the element 50% from the top */
     left: 50%;

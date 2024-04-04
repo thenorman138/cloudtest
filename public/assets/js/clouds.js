@@ -3,6 +3,7 @@
         const mountainContainer = document.querySelector(".mountain-container");
         const cloudReveal = document.querySelector(".cloud-reveal-img");
         const cloudRevealText = document.querySelector(".mountain-reveal-text");
+        const topCloud = document.querySelector(".top-cloud-reveal-img");
 
         function fadeInMountain() {
             const cloudSectRect = cloudSect.getBoundingClientRect();
@@ -20,6 +21,7 @@
             if (window.scrollY > triggerPoint) {
                 cloudRevealText.classList.add("cloud-fade-in");
                 cloudReveal.classList.add("cloud-fade-out");
+                topCloud.classList.add("cloud-opacity-none");
             } else {
                 cloudRevealText.classList.remove("cloud-fade-out");
                 cloudReveal.classList.remove("cloud-fade-in");
