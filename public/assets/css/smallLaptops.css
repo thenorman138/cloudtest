@@ -299,7 +299,7 @@
 
     .text-over-mountain__right.show {
         opacity: 1;
-        right: 5%;
+        right: 7%;
     }
 
     .mountain-container.fade-in {
@@ -375,12 +375,13 @@
         z-index: 1000;
         /* margin-top: -20%; */
         min-height: 20vh;
-        top: 88%;
+        top: 76%;
         color: white;
     }
 
     .blue-headline {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        width:100%;
         font-weight: bold;
         letter-spacing: 0.2rem;
         color: white !important;
@@ -388,10 +389,12 @@
 
     .blue-subtitle {
         font-size: 1.4rem;
+        font-weight: lighter;
     }
 
     .blue-paragraph {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        line-height:1.3rem;
         width: 90%;
         margin: 0 auto;
     }
@@ -485,31 +488,32 @@
 
 
     .founder-title {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .founder-desc {
-        line-height: 1.3rem;
+        line-height: 1.1rem;
+        font-size:.8rem;
     }
 
     .team-title {
-        font-size: 3rem;
+        font-size: 2.4rem;
         font-weight: bold;
-        letter-spacing: 0.8rem;
-        margin-bottom: 3rem;
+        letter-spacing: 0.4rem;
+        margin-bottom: 1.5rem;
     }
 
     .team-description {
         position: absolute;
-        top: 26%;
+        top: 27%;
         right: 12%;
     }
 
     .team-description #teamdesc {
         font-weight: bold;
-        font-size: 3vw;
+        font-size: 1.7rem;
         letter-spacing: 0.1rem;
-        line-height: 3rem;
+        line-height: 2rem;
         opacity: 0;
         transition:
             right 2s ease,
@@ -528,22 +532,22 @@
     .custom-team-list li.left {
         transform: rotate(-45deg);
         position: absolute;
-        top: 50%;
-        left: -6%;
+        top: 42%;
+        left: -14%;
     }
 
     .custom-team-list li.right {
         transform: rotate(45deg);
         position: absolute;
-        top: 50%;
-        right: 0%;
+        top: 42%;
+        right: -6%;
     }
 
     .custom-team-list li.bottom {
         /* transform: rotate(-90deg); */
         position: absolute;
-        bottom: -7%;
-        left: 16.5%;
+        bottom: -9%;
+        left: 10.5%;
     }
 
     .custom-team-list li {
@@ -584,7 +588,7 @@
     }
 
     .splitter-svg {
-        margin-top: -14%;
+        margin-top: -34%;
     }
 
     .monkey-sect {
@@ -594,7 +598,7 @@
 
     .left-plant-wrapper {
         position: absolute;
-        top: -9%;
+        top: -2%;
         right: -100%;
         width: 20rem;
         z-index: 1;
@@ -611,7 +615,7 @@
 
     .right-plant-wrapper {
         position: absolute;
-        top: -10%;
+        top: -7%;
         left: -100%;
         width: 21rem;
         z-index: 1;
@@ -677,12 +681,12 @@
     .team-blurb.show {
         opacity: 1;
         left: 2%;
-        top: 19%;
+        top: 17%;
     }
 
     .team-blurb .blurb {
         font-weight: bold;
-        font-size: 2vw;
+        font-size: 1.2rem;
         letter-spacing: 0.1rem;
         line-height: 2rem;
     }
@@ -730,7 +734,7 @@
     .team-block-subtitle {}
 
     .team-block-title {
-        font-size: 1vw;
+        font-size: 1.2rem !important;
         margin-bottom: 0.2rem;
     }
 
@@ -768,10 +772,14 @@
 
     .mtnLogo {
         position: absolute;
-        top: -14%;
+        top: -18%;
         left: 40%;
         z-index: 50000;
         opacity: 1;
+    }
+
+    .mtnLogoContainer{
+        line-height:1.2rem;
     }
 
     .mtnLogoText {
@@ -779,30 +787,31 @@
     }
 
     .mtnLogoText.left {
+        text-align: right;
         position: absolute;
-        left: 35%;
-        top: 30%;
+        left: 33%;
+        top: 26%;
         z-index: 50001;
     }
 
     .mtnLogoText.right {
         position: absolute;
-        right: 37%;
-        top: 30%;
+        right: 36%;
+        top: 26%;
         z-index: 50001;
     }
 
     .mtnLogoText.bottom {
         position: absolute;
-        left: 40.5%;
-        top: 45%;
+        left: 39.5%;
+        top: 40%;
         z-index: 50001;
     }
 
 
     .splitter-left-container {
         position: absolute;
-        top: 20%;
+        top: 28%;
         left: -100%;
         width: 35%;
         opacity: 0;
@@ -823,7 +832,7 @@
 
     .splitter-right-container {
         position: absolute;
-        top: 20%;
+        top: 28%;
         right: -100%;
         width: 60%;
         text-align: center;
@@ -856,9 +865,9 @@
 
     .monkey-arch-text {
         position: absolute;
-        top: 12%;
+        top: 20%;
         left: 27%;
-        width: 45%;
+        width: 47%;
         opacity: 0;
         transition:
             opacity 1s ease;
@@ -881,12 +890,14 @@
     .bottom-text-block-header {
         font-weight: bold;
         font-size: 2vw;
+        line-height:1.8rem;
     }
 
     .bottom-text-paragraph {
         margin-top: 1rem;
         margin-bottom: 6rem;
         font-size: 1.4vw;
+        line-height:1.4rem;
     }
 
     .bottom-right-container {
@@ -919,8 +930,8 @@
         font-size: 4vw;
         font-weight: bold;
         margin-top: 4rem;
-        margin-bottom: 8rem;
-        line-height: 4.8rem;
+        margin-bottom: 4rem;
+        line-height: 3.4rem;
         opacity: 0;
         transition:
             opacity 1s ease;
@@ -995,6 +1006,7 @@
 
     .team-desc-blk {
         font-size: .8rem;
+        line-height:.9rem;
     }
 }
 
