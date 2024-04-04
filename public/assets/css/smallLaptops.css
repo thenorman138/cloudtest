@@ -1154,7 +1154,7 @@
             }
         
             .topSvgBlurbRight {
-                font-weight: bold;
+                font-weight: lighter;
                 font-size: 1.2rem;
                 position: absolute;
                 max-width: 35%;
@@ -1274,13 +1274,13 @@
             .text-over-mountain__left {
                 left: -100%;
                 position: absolute;
-                width: 40%;
+                width: 28%;
                 text-align: left;
                 margin: 0 auto;
                 font-size: 1.2rem;
-                line-height: 2.2rem;
-                letter-spacing: 0.2rem;
-                top: 23%;
+                line-height: 1.8rem;
+                    letter-spacing: 0.1rem;
+                top: 20%;
                 opacity: 0;
                 transition:
                     left 2s ease,
@@ -1289,19 +1289,19 @@
         
             .text-over-mountain__left.show {
                 opacity: 1;
-                left: 2.5%;
+                left: 8.5%;
             }
         
             .text-over-mountain__right {
                 right: -100%;
                 position: absolute;
-                width: 40%;
+                width: 28%;
                 text-align: left;
                 margin: 0 auto;
                 font-size: 1.6rem;
-                line-height: 3.2rem;
-                letter-spacing: 0.2rem;
-                top: 20%;
+                line-height: 2.2rem;
+                    letter-spacing: 0.1rem;
+                top: 18%;
                 opacity: 0;
                 transition:
                     right 2s ease,
@@ -1310,7 +1310,7 @@
         
             .text-over-mountain__right.show {
                 opacity: 1;
-                right: 2%;
+                right: 6%;
             }
         
             .mountain-container.fade-in {
