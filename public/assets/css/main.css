@@ -283,7 +283,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 3vw;
     font-weight: bold;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     top: 45%;
     /* Position the element 50% from the top */
     left: 50%;
