@@ -1,4 +1,4 @@
-@media only screen and (min-width: 14.01in) and (max-width: 16in) {
+@media only screen and (min-width: 14.01in) and (max-width: 17.2in) {
     .title-text {
         line-height: 2.5rem;
         font-family: "Futura";
@@ -373,7 +373,7 @@
         z-index: 1000;
         /* margin-top: -20%; */
         min-height: 20vh;
-        top: 85%;
+        top: 110%;
         color: white;
     }
 
@@ -399,7 +399,7 @@
         font-size: 2rem;
         line-height: 3rem;
         min-width: 85%;
-        max-width: 100%;
+        max-width: 88%;
         margin: 0 auto;
     }
 
