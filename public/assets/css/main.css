@@ -174,7 +174,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .topSvgBlurbRight {
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 1.6rem;
     position: absolute;
     max-width: 35rem;
@@ -405,7 +405,7 @@ h1,h2,h3,h4,h5,h6{
     z-index: 1000;
     /* margin-top: -20%; */
     min-height: 20vh;
-    top: 108%;
+    top: 102%;
     color: white;
 }
 
@@ -603,15 +603,15 @@ h1,h2,h3,h4,h5,h6{
 
 .team-description {
     position: absolute;
-    top: 27%;
+    top: 28%;
     right: 12%;
 }
 
 .team-description #teamdesc {
     font-weight: bold;
-    font-size: 3vw;
-    letter-spacing: 0.1rem;
-    line-height: 3rem;
+    font-size: 2.7rem;
+        letter-spacing: 0.1rem;
+        line-height: 2.9rem;
     opacity: 0;
     transition:
         right 2s ease,

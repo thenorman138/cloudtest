@@ -122,11 +122,12 @@
         font-weight: bold;
         font-size: 4rem;
         position: absolute;
+        line-height: 4rem;
         max-width: 28rem;
         text-align: right;
         left: -100%;
         /* Start off-screen */
-        top: 64%;
+        top: 66%;
         opacity: 0;
         transition:
             left 1s ease,
@@ -140,10 +141,10 @@
     }
 
     .topSvgBlurbRight {
-        font-weight: bold;
+        font-weight: lighter;
         font-size: 1.2rem;
         position: absolute;
-        max-width: 35%;
+        max-width: 30%;
         text-align: left;
         right: -100%;
         top: 68%;
@@ -155,7 +156,7 @@
 
     .topSvgBlurbRight.show {
         opacity: 1;
-        right: 1%;
+        right: 5%;
     }
 
     .spacer {
@@ -366,13 +367,13 @@
 
     .blue-sect-mountain {
         text-align: center;
-        padding: 4rem;
+        padding: 1rem;
         /* position: relative; */
         position: absolute;
         z-index: 1000;
         /* margin-top: -20%; */
         min-height: 20vh;
-        top: 90%;
+        top: 85%;
         color: white;
     }
 
@@ -498,15 +499,15 @@
 
     .team-description {
         position: absolute;
-        top: 27%;
+        top: 29%;
         right: 12%;
     }
 
     .team-description #teamdesc {
         font-weight: bold;
-        font-size: 3vw;
-        letter-spacing: 0.1rem;
-        line-height: 3rem;
+        font-size: 1.7rem;
+            letter-spacing: 0.1rem;
+            line-height: 2rem;
         opacity: 0;
         transition:
             right 2s ease,
