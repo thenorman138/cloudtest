@@ -373,7 +373,7 @@
         z-index: 1000;
         /* margin-top: -20%; */
         min-height: 20vh;
-        top: 107%;
+        top: 88%;
         color: white;
     }
 
@@ -390,7 +390,7 @@
 
     .blue-paragraph {
         font-size: 1.1rem;
-        width: 65%;
+        width: 90%;
         margin: 0 auto;
     }
 
@@ -487,7 +487,7 @@
     }
 
     .founder-desc {
-        line-height: 1.6rem;
+        line-height: 1.3rem;
     }
 
     .team-title {
@@ -499,7 +499,7 @@
 
     .team-description {
         position: absolute;
-        top: 27%;
+        top: 26%;
         right: 12%;
     }
 
@@ -526,14 +526,14 @@
     .custom-team-list li.left {
         transform: rotate(-45deg);
         position: absolute;
-        top: 43%;
+        top: 50%;
         left: -6%;
     }
 
     .custom-team-list li.right {
         transform: rotate(45deg);
         position: absolute;
-        top: 43%;
+        top: 50%;
         right: 0%;
     }
 
@@ -541,7 +541,7 @@
         /* transform: rotate(-90deg); */
         position: absolute;
         bottom: -7%;
-        left: 18.5%;
+        left: 16.5%;
     }
 
     .custom-team-list li {
@@ -582,7 +582,7 @@
     }
 
     .splitter-svg {
-        margin-top: -10%;
+        margin-top: -14%;
     }
 
     .monkey-sect {
@@ -592,9 +592,9 @@
 
     .left-plant-wrapper {
         position: absolute;
-        top: -11%;
+        top: -9%;
         right: -100%;
-        width: 28rem;
+        width: 20rem;
         z-index: 1;
         opacity: 0;
         transition:
@@ -609,9 +609,9 @@
 
     .right-plant-wrapper {
         position: absolute;
-        top: -13%;
+        top: -10%;
         left: -100%;
-        width: 28rem;
+        width: 21rem;
         z-index: 1;
         opacity: 0;
         transition:
@@ -627,7 +627,7 @@
     .monkey-wrapper {
         position: relative;
         z-index: 10000;
-        width: 35rem;
+        width: 25rem;
         margin: 0 auto;
         padding-top: 15rem;
         opacity: 0;
@@ -640,7 +640,7 @@
     }
 
     .bottom-svg {
-        margin-top: -37%;
+        margin-top: -36%;
         z-index: 1000;
     }
 
@@ -720,7 +720,7 @@
         width: 75%;
         height: auto;
         text-align: left;
-        top: 64%;
+        top: 63%;
         right: 10%;
         margin: 0 auto;
     }
@@ -737,7 +737,7 @@
         width: 75%;
         height: auto;
         text-align: left;
-        top: 88%;
+        top: 89%;
         left: 10%;
         margin: 0 auto;
     }
@@ -745,7 +745,7 @@
     .vert-uni-text {
         font-weight: bold;
         font-size: 4vw;
-        line-height: 4rem;
+        line-height: 3.4rem;
     }
 
     .vertical-blurb {
@@ -766,7 +766,7 @@
 
     .mtnLogo {
         position: absolute;
-        top: -12%;
+        top: -14%;
         left: 40%;
         z-index: 50000;
         opacity: 1;
@@ -779,28 +779,28 @@
     .mtnLogoText.left {
         position: absolute;
         left: 35%;
-        top: 32%;
+        top: 30%;
         z-index: 50001;
     }
 
     .mtnLogoText.right {
         position: absolute;
-        right: 38%;
-        top: 32%;
+        right: 37%;
+        top: 30%;
         z-index: 50001;
     }
 
     .mtnLogoText.bottom {
         position: absolute;
-        left: 42.5%;
-        top: 50%;
+        left: 40.5%;
+        top: 45%;
         z-index: 50001;
     }
 
 
     .splitter-left-container {
         position: absolute;
-        top: 35%;
+        top: 20%;
         left: -100%;
         width: 35%;
         opacity: 0;
@@ -821,7 +821,7 @@
 
     .splitter-right-container {
         position: absolute;
-        top: 35%;
+        top: 20%;
         right: -100%;
         width: 60%;
         text-align: center;

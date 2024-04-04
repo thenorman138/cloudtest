@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log('drawing monkey svg now');
                 // Establish new scroll percentage based on scroll position within monkeysvg
                 // Define the offset as a fraction of the container's height
-                const offsetFraction = 0.2;
+                const offsetFraction = 0.7;
 
                 // Calculate the offset based on the container's height
                 const offset = monkeysvg.offsetHeight * offsetFraction;
@@ -106,14 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         }
-        
     });
 
-
-    
-    // Call this function for left fade
-    // function handleTextFade() {
-    //     handleFade(".plants", ".left-plant-wrapper", 1000);
-    //     handleFade(".plants", ".right-plant-wrapper", 1000);
-    // }
 });
