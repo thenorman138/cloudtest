@@ -1,5 +1,6 @@
 /* Add media queries for different screen sizes */
-@media only screen and (max-width: 14in) {
+@media (min-width: 11in) and (max-width: 13.9in) {
+    /* Styles for MacBook Air and 13-inch laptops */
     .title-text {
         line-height: 2.5rem;
         font-family: "Futura";
@@ -128,7 +129,7 @@
         left: -100%;
         line-height: 3.5rem;
         /* Start off-screen */
-        top: 64%;
+        top: 65%;
         opacity: 0;
         transition:
             left 1s ease,
@@ -143,7 +144,7 @@
 
     .topSvgBlurbRight {
         font-weight: lighter;
-        font-size: 1rem;
+        font-size: 1.1rem;
         position: absolute;
         max-width: 30%;
         text-align: left;
@@ -265,9 +266,9 @@
         min-width:28%;
         text-align: left;
         margin: 0 auto;
-        font-size: 1rem;
-        line-height: 1.8rem;
-        letter-spacing: 0.1rem;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        letter-spacing: 0rem;
         top: 15%;
         opacity: 0;
         transition:
@@ -283,13 +284,13 @@
     .text-over-mountain__right {
         right: -100%;
         position: absolute;
-        min-width: 28%;
-        width:28%;
+        min-width: 24%;
+        width:24%;
         text-align: left;
         margin: 0 auto;
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         line-height: 2.2rem;
-        letter-spacing: 0.1rem;
+        letter-spacing: 0rem;
         top: 14%;
         opacity: 0;
         transition:
@@ -373,9 +374,8 @@
         /* position: relative; */
         position: absolute;
         z-index: 1000;
-        /* margin-top: -20%; */
         min-height: 20vh;
-        top: 80%;
+        top: 98%;
         color: white;
     }
 
@@ -401,10 +401,10 @@
 
     .blue-light-headline {
         font-weight: light;
-        font-size: 1.4rem;
-        line-height: 1.7rem;
-        min-width: 85%;
-        max-width: 90%;
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+        min-width: 80%;
+        max-width: 85%;
         margin: 0 auto;
     }
 
@@ -492,8 +492,8 @@
     }
 
     .founder-desc {
-        line-height: 1.1rem;
-        font-size:.8rem;
+        line-height: 1.5rem;
+        font-size:1rem;
     }
 
     .team-title {
@@ -505,7 +505,7 @@
 
     .team-description {
         position: absolute;
-        top: 27%;
+        top: 28%;
         right: 12%;
     }
 
@@ -588,7 +588,7 @@
     }
 
     .splitter-svg {
-        margin-top: -34%;
+        margin-top: -28%;
     }
 
     .monkey-sect {
@@ -598,9 +598,9 @@
 
     .left-plant-wrapper {
         position: absolute;
-        top: -2%;
+        top: -11%;
         right: -100%;
-        width: 20rem;
+        width: 22rem;
         z-index: 1;
         opacity: 0;
         transition:
@@ -615,9 +615,9 @@
 
     .right-plant-wrapper {
         position: absolute;
-        top: -7%;
+        top: -16%;
         left: -100%;
-        width: 21rem;
+        width: 23rem;
         z-index: 1;
         opacity: 0;
         transition:
@@ -646,7 +646,7 @@
     }
 
     .bottom-svg {
-        margin-top: -36%;
+        margin-top: -34%;
         z-index: 1000;
     }
 
@@ -716,7 +716,7 @@
         width: 75%;
         height: auto;
         text-align: left;
-        top: 75%;
+        top: 76%;
         left: 10%;
         margin: 0 auto;
     }
@@ -726,7 +726,7 @@
         width: 75%;
         height: auto;
         text-align: left;
-        top: 63%;
+        top: 64%;
         right: 10%;
         margin: 0 auto;
     }
@@ -751,7 +751,7 @@
     .vert-uni-text {
         font-weight: bold;
         font-size: 4vw;
-        line-height: 3.4rem;
+        line-height: 3.9rem;
     }
 
     .vertical-blurb {
@@ -759,7 +759,7 @@
         width: 45%;
         height: auto;
         text-align: left;
-        line-height: 2.7rem;
+        line-height: 3rem;
         top: 90%;
         left: 65%;
         margin: 0 auto;
@@ -772,7 +772,7 @@
 
     .mtnLogo {
         position: absolute;
-        top: -18%;
+        top: -12%;
         left: 40%;
         z-index: 50000;
         opacity: 1;
@@ -790,30 +790,30 @@
         text-align: right;
         position: absolute;
         left: 33%;
-        top: 26%;
+        top: 31.8%;
         z-index: 50001;
     }
 
     .mtnLogoText.right {
         position: absolute;
-        right: 36%;
-        top: 26%;
+        right: 37%;
+        top: 32%;
         z-index: 50001;
     }
 
     .mtnLogoText.bottom {
         position: absolute;
-        left: 39.5%;
-        top: 40%;
+        left: 40.5%;
+        top: 48.5%;
         z-index: 50001;
     }
 
 
     .splitter-left-container {
         position: absolute;
-        top: 28%;
+        top: 47%;
         left: -100%;
-        width: 35%;
+        width: 38%;
         opacity: 0;
         transition:
             left 1s ease,
@@ -822,17 +822,17 @@
 
     .splitter-left-container.show {
         opacity: 1;
-        left: 5%;
+        left: 6%;
     }
 
     .splitter-left-text {
-        font-size: 2vw;
+        font-size: 1.3rem;
         font-weight: bold;
     }
 
     .splitter-right-container {
         position: absolute;
-        top: 28%;
+        top: 43%;
         right: -100%;
         width: 60%;
         text-align: center;
@@ -844,11 +844,11 @@
 
     .splitter-right-container.show {
         opacity: 1;
-        left: 48%;
+        left: 46%;
     }
 
     .splitter-right-img {
-        width: 45%;
+        width: 36%;
         height: auto;
         margin: 0 auto;
     }
@@ -865,9 +865,9 @@
 
     .monkey-arch-text {
         position: absolute;
-        top: 20%;
+        top: 12%;
         left: 27%;
-        width: 47%;
+        width: 46%;
         opacity: 0;
         transition:
             opacity 1s ease;
