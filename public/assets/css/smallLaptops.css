@@ -126,6 +126,7 @@
         max-width: 23rem;
         text-align: right;
         left: -100%;
+        line-height: 3.5rem;
         /* Start off-screen */
         top: 64%;
         opacity: 0;
@@ -135,19 +136,19 @@
     }
 
     .topSvgBlurbLeft.show {
-        left: 5%;
+        left: 2%;
         /* Ending position */
         opacity: 1;
     }
 
     .topSvgBlurbRight {
-        font-weight: bold;
+        font-weight: lighter;
         font-size: 1rem;
         position: absolute;
-        max-width: 35%;
+        max-width: 30%;
         text-align: left;
         right: -100%;
-        top: 68%;
+        top: 65%;
         opacity: 0;
         transition:
             right 1s ease,
@@ -156,7 +157,7 @@
 
     .topSvgBlurbRight.show {
         opacity: 1;
-        right: 1%;
+        right: 5%;
     }
 
     .spacer {
@@ -164,13 +165,13 @@
     }
 
     .counter-items {
-        padding: 3rem;
+        padding: 1rem;
         font-weight: bold;
         text-align: center;
     }
 
     .counter-text {
-        margin-top: 1rem;
+        margin-top: 0rem !important;
     }
 
     .cloud-container {
