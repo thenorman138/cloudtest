@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         const clampedScrollPercentage = Math.min(Math.max(scrollPercentage, 0), 1);
 
                         // Calculate the draw length based on the scroll percentage
-                        const newDrawLength = 25032 * clampedScrollPercentage * .08;
+                        const newDrawLength = 25032 * clampedScrollPercentage * .09;
                         // console.log('bottom line percentage');
                         // console.log(clampedScrollPercentage);
                         // Apply the stroke dasharray to footer1
