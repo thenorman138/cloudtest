@@ -1,0 +1,40 @@
+/* MacBook 11-inch */
+@media only screen and (max-width: 1366px) {
+    /* Your CSS styles for this viewport size */
+}
+
+/* MacBook 13-inch */
+@media only screen and (max-width: 1280px) {
+    /* Your CSS styles for this viewport size */
+}
+
+/* MacBook 15-inch */
+@media only screen and (max-width: 1440px) {
+    /* Your CSS styles for this viewport size */
+    .blue-sect-mountain{
+        top:125%;
+    }
+    .splitter-left-text{
+        font-size:1.7rem;
+    }
+    .splitter-left-container{
+        top:45%;
+    }
+    .bottom-svg{
+        margin-top:-34%;
+    }
+    .monkey-arch-text{
+        top:19%;
+    }
+    .splitter-right-container{
+        top:42%;
+    }
+    .footerLogoSvg{
+        margin-top:-3% !important;
+    }
+}
+
+/* MacBook 16-inch */
+@media only screen and (max-width: 1536px) {
+    /* Your CSS styles for this viewport size */
+}
