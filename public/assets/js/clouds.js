@@ -1,34 +1,32 @@
-    document.addEventListener("DOMContentLoaded", function () {
-        const cloudSect = document.querySelector(".cloud-sect");
-        const mountainContainer = document.querySelector(".mountain-container");
-        const cloudReveal = document.querySelector(".cloud-reveal-img");
-        const cloudRevealText = document.querySelector(".mountain-reveal-text");
-        const topCloud = document.querySelector(".top-cloud-reveal-img");
+document.addEventListener("DOMContentLoaded", function () {
+    const cloudSect = document.querySelector(".cloud-sect");
+    const cloudRevealText = document.querySelector(".mountain-reveal-text");
+    const topCloud = document.querySelector(".top-cloud-reveal-img");
+    const topCloud2 = document.querySelector(".top-cloud-reveal-img-2");
 
-        function fadeInMountain() {
-            const cloudSectRect = cloudSect.getBoundingClientRect();
-            const triggerPoint =
-                cloudSectRect.top + window.scrollY - window.innerHeight / 2;
+    let ticking = false; // Flag to prevent multiple executions
 
-            if (window.scrollY > triggerPoint) {
-                mountainContainer.classList.add("fade-in");
-                mountainContainer.classList.add("move-up");
-            } else {
-                mountainContainer.classList.remove("fade-in");
-                mountainContainer.classList.remove("move-up");
-            }
+    function fadeInMountain() {
+        if (!ticking) {
+            // Ensure that the function is not already running
+            requestAnimationFrame(function() {
+                const scrollPosition = window.scrollY;
+                const cloudSectHeight = cloudSect.offsetHeight;
+                const opacity = 2.5 - (scrollPosition / cloudSectHeight);
 
-            if (window.scrollY > triggerPoint) {
-                cloudRevealText.classList.add("cloud-fade-in");
-                cloudReveal.classList.add("cloud-fade-out");
-                topCloud.classList.add("cloud-opacity-none");
-            } else {
-                cloudRevealText.classList.remove("cloud-fade-out");
-                cloudReveal.classList.remove("cloud-fade-in");
-            }
+                // Adjust opacity of topCloud based on scroll position
+                topCloud.style.opacity = opacity.toFixed(2); // Limit opacity to two decimal places
+                topCloud2.style.opacity = opacity.toFixed(2);
+
+                ticking = false; // Reset the flag
+            });
+
+            ticking = true; // Set the flag to indicate that the function is running
         }
+    }
 
-        window.addEventListener("scroll", fadeInMountain);
-        window.addEventListener("resize", fadeInMountain);
-        fadeInMountain(); // Initial check on page load
-    });
+    window.addEventListener("scroll", fadeInMountain);
+    window.addEventListener("resize", fadeInMountain);
+
+    fadeInMountain(); // Initial check on page load
+});

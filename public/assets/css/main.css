@@ -298,8 +298,8 @@ h1,h2,h3,h4,h5,h6{
     margin-right: -5%;
     /* Half of the excess width to keep it centered */
     margin-top: -55%;
-    opacity: 0;
-    transform: translateY(75rem);
+    opacity: 1;
+    /* transform: translateY(75rem); */
     transition:
         opacity 0.2s ease,
         transform 0.2s ease;
@@ -366,10 +366,10 @@ h1,h2,h3,h4,h5,h6{
     right: 5%;
 }
 
-.mountain-container.fade-in {
+/* .mountain-container.fade-in {
     opacity: 1;
     transform: translateY(0);
-}
+} */
 
 .mountain-front {
     position: relative;
