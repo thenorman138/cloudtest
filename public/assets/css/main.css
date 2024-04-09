@@ -149,7 +149,7 @@ h1,h2,h3,h4,h5,h6{
 
 .topSvgTitle {
     font-weight: bold;
-    font-size: 4vw;
+    font-size: 6vw;
     position: absolute;
     left: 50%;
     top: 38%;
@@ -231,7 +231,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .counter-text {
-    /* margin-top: 1rem; */
+    margin-top: -16%;
     font-size:1.5vw;
 }
 
@@ -446,7 +446,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .blue-headline {
-    font-size: 2vw;
+    font-size: 2.4vw;
     font-weight: bold;
     letter-spacing: 0.2rem;
     color:white !important;
@@ -459,7 +459,7 @@ h1,h2,h3,h4,h5,h6{
 
 .blue-paragraph {
     font-size: 1.1vw;
-    width: 65%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -749,7 +749,7 @@ h1,h2,h3,h4,h5,h6{
 .team-list-item {
     letter-spacing: 0.1rem;
     line-height: 110%;
-    font-size: 1vw;
+    font-size: 1.4vw;
     /* padding: 0.5rem; */
     margin-bottom: .75vh;
 }
