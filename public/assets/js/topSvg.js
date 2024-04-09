@@ -77,6 +77,6 @@ var scrollPercentage = 9 * ((Math.max(0, window.scrollY - 7 * parseFloat(getComp
             if (opacity >= 1) {
                 clearInterval(interval);
             }
-        }, 50); // Adjust the interval duration for smoother or faster animation
+        }, 80); // Adjust the interval duration for smoother or faster animation
     }
 });
