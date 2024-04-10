@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             requestAnimationFrame(function() {
                 const scrollPosition = window.scrollY;
                 const cloudSectHeight = cloudSect.offsetHeight;
-                const opacity = 2.5 - (scrollPosition / cloudSectHeight);
+                const opacity = 2.1 - (scrollPosition / cloudSectHeight);
 
                 // Adjust opacity of topCloud based on scroll position
                 topCloud.style.opacity = opacity.toFixed(2); // Limit opacity to two decimal places

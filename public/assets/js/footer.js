@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('message', function(event) {
         if (event.data && event.data.type === 'straightFooterPercentage') {
             var footerscrollpercent = event.data.value;
-            console.log('here is footer scroll percent');
-            console.log(footerscrollpercent);
+            // console.log('here is footer scroll percent');
+            // console.log(footerscrollpercent);
             // Check if the scroll percentage is over 0.99 and drawing hasn't started yet
             if (!drawingStarted && footerscrollpercent > 0.99) {
                 console.log("footer scroll percentage over 0.99, triggering action...");
@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function animateFooter() {
-        console.log('animating footer');
+        // console.log('animating footer');
         const footerBottom = footerLogo.offsetTop + footerLogo.offsetHeight;
         const scrollPercentage = (window.scrollY + window.innerHeight - footerLogo.offsetTop) / (window.innerHeight + footerLogo.offsetHeight);
 
         const newDrawLength = 3000 * scrollPercentage * .75;
 
         footerline1.style.strokeDasharray = `${newDrawLength}, 3000`;
-        console.log(newDrawLength);
+        // console.log(newDrawLength);
         footerline2.style.strokeDasharray = `${newDrawLength}, 3000`;
         footerline3.style.strokeDasharray = `${newDrawLength}, 3000`;
         footerline4.style.strokeDasharray = `${newDrawLength}, 3000`;

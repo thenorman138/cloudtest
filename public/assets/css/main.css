@@ -291,6 +291,7 @@ h1,h2,h3,h4,h5,h6{
 
 
 .mountain-container {
+    position: relative;
     /* width: 150%; */
     /* Adjust as needed */
     margin-left: -5%;
@@ -1059,13 +1060,13 @@ h1.splitter {
 .bottom-text-player {
     width: 100%;
     position: absolute;
-    top: 1;
+    top: 47%;
 }
 
 .top-text-player {
     width: 100%;
     position: absolute !important;
-    top: 8%;
+    top: 5%;
 }
 
 #team-text-block-1,
