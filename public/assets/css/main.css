@@ -126,6 +126,7 @@ h1,h2,h3,h4,h5,h6{
     position: relative;
     margin-left:-2%;
     margin-right:-2%;
+    max-width:105%;
 }
 
 .top-hero-line{
@@ -466,10 +467,9 @@ h1,h2,h3,h4,h5,h6{
 
 .blue-light-headline {
     font-weight: light;
-    font-size: 2.5vw;
+    font-size: 2.7vw;
     line-height: 110%;
-    min-width: 65%;
-    max-width: 100%;
+    width:78%;
     margin: 0 auto;
 }
 
@@ -495,11 +495,11 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .team-logo-container{
-    width:30vw;
+    width:33vw;
 }
 
 .team-logo__left{
-    width:26vw;
+    width:33vw;
     margin:0 auto;
 }
 
@@ -541,22 +541,22 @@ h1,h2,h3,h4,h5,h6{
 .custom-team-list li.left{
     transform: rotate(-45deg);
     position: absolute;
-    top: 41%;
+    top: 39%;
     left: -8%;
     font-size:1.4vw;
 }
 .custom-team-list li.right {
     transform: rotate(45deg);
     position: absolute;
-    top: 41%;
-    right: 0%;
+    top: 39%;
+    right: -12%;
     font-size:1.4vw;
 }
 .custom-team-list li.bottom {
     /* transform: rotate(-90deg); */
     position: absolute;
-    bottom:-11%;
-    left: 10.5%;
+    bottom:-10%;
+    left: 18.5%;
     font-size:1.4vw;
 }
 
@@ -652,14 +652,15 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .team-description {
+    width:86%;
     position: absolute;
-    top: 27%;
-    right: 12%;
+    top: 27.5%;
+    left: 6%;
 }
 
 .team-description #teamdesc {
     font-weight: bold;
-    font-size: 2.7vw;
+    font-size: 2.5vw;
         letter-spacing: 0.1rem;
         line-height: 120%;
     opacity: 0;
@@ -674,7 +675,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .team-desc-blk{
-    font-size:1vw;
+    font-size:1.2vw;
     line-height: 110%;
 }
 
@@ -683,7 +684,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .monkey-sect {
-    margin-top: -14%;
+    margin-top: -20%;
     position: relative;
 }
 
@@ -726,7 +727,7 @@ h1,h2,h3,h4,h5,h6{
     z-index: 10000;
     width: 35rem;
     margin: 0 auto;
-    padding-top: 35%;
+    padding-top: 34%;
     opacity:0;
     transition:
             opacity 1s ease;
@@ -761,7 +762,7 @@ h1,h2,h3,h4,h5,h6{
 
 .team-blurb {
     position: absolute;
-    width: 40%;
+    width: 32%;
     left: -100%;
     opacity: 0;
         transition:
@@ -771,13 +772,13 @@ h1,h2,h3,h4,h5,h6{
 
 .team-blurb.show{
     opacity:1;
-    left:2%;
+    left:6%;
     top:19%;
 }
 
 .team-blurb .blurb {
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 2.3vw;
     letter-spacing: 0.1rem;
     line-height: 110%;
 }
@@ -835,43 +836,44 @@ h1,h2,h3,h4,h5,h6{
     height: auto;
     text-align: left;
     top: 88%;
-    left: 10%;
+    left: 2%;
     margin: 0 auto;
 }
 
 .vert-uni-text {
     font-weight: bold;
-    font-size: 4vw;
-    line-height: 120%;
+    font-size: 5.3vw;
+    line-height: 110%;
 }
 
 .vertical-blurb {
     position: absolute;
-    width: 45%;
+    width: 35%;
     height: auto;
     text-align: left;
-    top: 88%;
+    top: 89%;
     left: 65%;
     margin: 0 auto;
 }
 
 .vert-blurb-text {
     font-weight: bold;
-    font-size: 3.4vw;
+    font-size: 3.5vw;
+    line-height: 110%;
 }
 
 .mtnLogoContainer{
     position: absolute;
-    width: 25%;
-    bottom: 55%;
-    left: 37%;
+    width: 35%;
+    bottom: 56.5%;
+    left: 33%;
     height: 25%;
 }
 
 .mtnLogo {
     position: absolute;
     top: -5%;
-    width: 12vw;
+    width: 18vw;
     left: 24%;
     z-index: 50000;
     opacity: 1;
@@ -883,27 +885,30 @@ h1,h2,h3,h4,h5,h6{
 
 .mtnLogoText.left{
     position: absolute;
-    left: 12%;
-    top: 11%;
+    left: 6%;
+    top: 25%;
     z-index: 50001;
-    font-size:1.3vw;
+    text-align: right;
+    line-height: 100%;
+    font-size:1.2vw;
 }
 
 .mtnLogoText.right {
     position: absolute;
-    right: 1%;
-    top: 11%;
+    left:79%;
+    top: 25%;
     z-index: 50001;
-    font-size:1.3vw;
+    line-height: 110%;
+    font-size:1.2vw;
 }
 
 .mtnLogoText.bottom {
     position: absolute;
-    left: 22.5%;
-    top: 68%;
+    left: 30%;
+    top: 80%;
     z-index: 50001;
     width: 100%;
-    font-size:1.3vw;
+    font-size:1.2vw;
 }
 
 
@@ -962,7 +967,7 @@ h1.splitter {
 }
 
 .monkey-img img{
-    width:36vw;
+    width:40vw;
     margin:0 auto;
 }
 
