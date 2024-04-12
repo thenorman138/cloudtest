@@ -43,9 +43,9 @@ import circleMenu from "../assets/img/circleMenu.png";
 import TopSVG from "../assets/img/homeTopSvg.svg?raw";
 import CounterCircle from "../assets/img/counterCircle.svg?raw";
 import MountainTopSVG from "../assets/img/mountainTop.svg?raw";
-import Clouds from "../assets/img/clouds.svg?raw";
-import MountainBG from "../assets/img/mountainBackground.svg?raw";
-import Mountain from "../assets/img/mountain.svg?raw";
+import Clouds from "../assets/img/clouds.webp";
+import MountainBG from "../assets/img/mountainBackground.webp";
+import Mountain from "../assets/img/mountain.webp";
 import MountainFront from "../assets/img/mountainFront.png";
 import TeamLine from "../assets/img/newTeamLine.svg?raw";
 import MountainSide from "../assets/img/mountainSide.svg?raw";
@@ -240,24 +240,24 @@ import Header from "../components/Header.astro";
     <div class="cloud-sect" style="margin-top:-55%;">
         <div class="cloud-container">
             <div style="opacity:1;">
-                <img src="public/assets/img/clouds.svg?raw">
+                <img src="public/assets/img/clouds.webp">
             </div>
             <div style="margin-top:-12%;">
                 <div style="opacity:0;">
-                    <img src="public/assets/img/clouds.svg?raw">
+                    <img src="public/assets/img/clouds.webp">
                 </div>
                 <div class="cloud-reveal" style="z-index:-5;">
-                    <img class="cloud-reveal-img" src="./public/assets/img/cloud-reveal-FINAL.png" alt="Description of your image" />
+                    <img class="cloud-reveal-img" src="./public/assets/img/cloud-reveal-FINAL.webp" alt="Description of your image" />
                 </div>
                 <h1 class="mountain-reveal-text">
                     FROM THE PEAKS TO THE VALLIES,<br />WE WILL NEVER SAY NO
                 </h1>
                 <div class="cloud-reveal">
-                    <img class="cloud-reveal-img top-cloud-reveal-img" src="./public/assets/img/cloud-reveal-FINAL.png"
+                    <img class="cloud-reveal-img top-cloud-reveal-img" src="./public/assets/img/cloud-reveal-FINAL.webp"
                         alt="Description of your image" />
                 </div>
                 <div class="cloud-reveal">
-                    <img class="cloud-reveal-img top-cloud-reveal-img-2" src="./public/assets/img/cloud-reveal-FINAL.png"
+                    <img class="cloud-reveal-img top-cloud-reveal-img-2" src="./public/assets/img/cloud-reveal-FINAL.webp"
                         alt="Description of your image" />
                 </div>
                 
@@ -265,7 +265,7 @@ import Header from "../components/Header.astro";
         </div>
         <div class="mountain-container" id="mtn-container">
             <div style="position: relative;">
-                <img src="/public/assets/img/mountainBackground.svg?raw" style="width: 100%;" />
+                <img src="/public/assets/img/mountainBackground.webp" style="width: 100%;" />
                 <div class="gradient-overlay"></div>
             </div>
             <div class="top-text-player" id="top-wavy" style="z-index:1">
@@ -276,7 +276,7 @@ import Header from "../components/Header.astro";
             <div style="margin-top: -45%;">
                 <div style="position: relative; z-index: 3;">
                     <!-- <Fragment set:html={Mountain} /> -->
-                    <img src="/public/assets/img/mountain.svg?raw" alt="">
+                    <img src="/public/assets/img/mountain.webp" alt="">
                 </div>
             </div>
             <div style="margin-top:-33%; margin-left:1%;">
@@ -284,7 +284,7 @@ import Header from "../components/Header.astro";
                     <dotlottie-player src="https://lottie.host/114fe753-4fb8-4fe9-a5b1-1673bfa4e6e8/GE3qivXby2.json" background="transparent" speed="1" style="width: 100%; height: auto" direction="1" playMode="normal" ></dotlottie-player>
                 </div>
                 <div style="z-index: 10; position: relative;">
-                    <img class="cloud-mountain-front-layer" width="100%" height="100%" src="./public/assets/img/mtnFrontFinal.png"
+                    <img class="cloud-mountain-front-layer" width="100%" height="100%" src="./public/assets/img/mtnFrontFinal.webp"
                         alt="Description of your image" />
                 </div>
             </div>
@@ -657,11 +657,11 @@ import Header from "../components/Header.astro";
         <div class="plants">
             <div class="left-plant-wrapper">
                 <!-- <Fragment set:html={LeftPlant} /> -->
-                <img src="/public/assets/img/rightPlant.svg?raw" alt="">
+                <img src="/public/assets/img/rightPlant.webp" alt="">
             </div>
             <div class="right-plant-wrapper">
                 <!-- <Fragment set:html={RightPlant} /> -->
-                <img src="/public/assets/img/leftPlant.svg?raw" alt="">
+                <img src="/public/assets/img/leftPlant.webp" alt="">
             </div>
         </div>
         <div class="arch-text-container monkey-arch-text">
@@ -732,7 +732,7 @@ import Header from "../components/Header.astro";
         <div class="monkey-wrapper">
             <div class="monkey-img">
                 <!-- <Fragment set:html={Monkey} /> -->
-                <img src="/public/assets/img/monkeyFinal.png" alt="">
+                <img src="/public/assets/img/monkeyFinal.webp" alt="">
             </div>
         </div>
     </div>
@@ -1642,24 +1642,24 @@ var scrollPercentage = 9 * ((Math.max(0, window.scrollY - 7 * parseFloat(getComp
 
 <!-- WAVYTEXT -->
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
 
-    const topLottiePlayer = document.getElementById("top-wavy").querySelector("dotlottie-player");
-    const bottomLottiePlayer = document.getElementById("bottom-wavy").querySelector("dotlottie-player");
+            const topLottiePlayer = document.getElementById("top-wavy").querySelector("dotlottie-player");
+            const bottomLottiePlayer = document.getElementById("bottom-wavy").querySelector("dotlottie-player");
 
-    topLottiePlayer.stop();
-    bottomLottiePlayer.stop();
+            topLottiePlayer.stop();
+            bottomLottiePlayer.stop();
 
-    $(window).scroll(function () {
-        
-    if ($(window).scrollTop() >= $(
-        '.bottom-text-player').offset().top + $('.bottom-text-player').
-            outerHeight() - window.innerHeight) {
+            $(window).scroll(function () {
 
-        topLottiePlayer.play();
-        bottomLottiePlayer.play();
-        // window.alert('You reached the end of the DIV');
-    }
-    }); 
-});
+                if ($(window).scrollTop() >= $(
+                    '.bottom-text-player').offset().top + $('.bottom-text-player').
+                        outerHeight() - window.innerHeight) {
+
+                    topLottiePlayer.play();
+                    bottomLottiePlayer.play();
+                    // window.alert('You reached the end of the DIV');
+                }
+            });
+        });
 </script>
