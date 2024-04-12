@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const bottomLottiePlayer = document.getElementById("bottom-wavy").querySelector("dotlottie-player");
 
     topLottiePlayer.stop();
-        bottomLottiePlayer.stop();
+    bottomLottiePlayer.stop();
 
     $(window).scroll(function () {
         

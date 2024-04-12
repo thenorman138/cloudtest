@@ -17,7 +17,7 @@
 <script src=
 "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
     </script>
-<script src="/public/assets/js/topSvg.js" type="text/javascript"></script>
+<!-- <script src="/public/assets/js/topSvg.js" type="text/javascript"></script>
 <script src="/public/assets/js/splitterSvg.js" type="text/javascript"></script>
 <script src="/public/assets/js/clouds.js" type="text/javascript"></script>
 <script src="/public/assets/js/herofade.js" type="text/javascript"></script>
@@ -29,7 +29,7 @@
 <script src="/public/assets/js/mountainsvg.js" type="text/javascript"></script>
 <script src="/public/assets/js/monkey.js" type="text/javascript"></script>
 <script src="/public/assets/js/footer.js" type="text/javascript"></script>
-<script src="/public/assets/js/teamtext.js" type="text/javascript"></script>
+<script src="/public/assets/js/teamtext.js" type="text/javascript"></script> -->
 
 
 </head>
@@ -920,3 +920,746 @@ import Header from "../components/Header.astro";
 </body>
 </html>
 
+
+
+
+<!-- ALL JAVASCRIPT BLOCKS -->
+
+<!-- CLOUDS -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+            const cloudSect = document.querySelector(".cloud-sect");
+            const cloudRevealText = document.querySelector(".mountain-reveal-text");
+            const topCloud = document.querySelector(".top-cloud-reveal-img");
+            const topCloud2 = document.querySelector(".top-cloud-reveal-img-2");
+
+            let ticking = false; // Flag to prevent multiple executions
+
+            function fadeInMountain() {
+                if (!ticking) {
+                    // Ensure that the function is not already running
+                    requestAnimationFrame(function () {
+                        const scrollPosition = window.scrollY;
+                        const cloudSectHeight = cloudSect.offsetHeight;
+                        const opacity = 2.1 - (scrollPosition / cloudSectHeight);
+
+                        // Adjust opacity of topCloud based on scroll position
+                        topCloud.style.opacity = opacity.toFixed(2); // Limit opacity to two decimal places
+                        topCloud2.style.opacity = opacity.toFixed(2);
+
+                        ticking = false; // Reset the flag
+                    });
+
+                    ticking = true; // Set the flag to indicate that the function is running
+                }
+            }
+
+            window.addEventListener("scroll", fadeInMountain);
+            window.addEventListener("resize", fadeInMountain);
+
+            fadeInMountain(); // Initial check on page load
+        });
+</script>
+
+<!-- COUNTERS -->
+<Script>
+    document.addEventListener("DOMContentLoaded", function () {
+            // Function to handle intersection
+            function handleIntersection(entries, observer) {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        // Play the animation for the current target
+                        playAnimation(index);
+                        // Unobserve the target to prevent unnecessary triggers
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }
+
+            // Options for the Intersection Observer
+            const options = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.9, // Trigger when 50% of the target is visible
+            };
+
+            // Create a new Intersection Observer
+            const observer = new IntersectionObserver(handleIntersection, options);
+
+            // Target elements
+            const svgContainers = [
+                document.getElementById("counter-img-1"),
+                document.getElementById("counter-img-2"),
+                document.getElementById("counter-img-3"),
+                document.getElementById("counter-img-4"),
+                document.getElementById("counter-img-5"),
+            ];
+
+            console.log(svgContainers);
+            // Load animations for each target element
+            const animations = svgContainers.map((svgContainer, index) => {
+                if (svgContainer) { // Add this check
+                    const animItem = bodymovin.loadAnimation({
+                        wrapper: svgContainer,
+                        animType: "svg",
+                        loop: false,
+                        autoplay: false,
+                        path: `https://lottie.host/45a33ab5-2a21-4ad4-89f7-3d7f10157461/w0mxsxxNj3.json`, // Adjust path accordingly
+                    });
+                    // Start observing each target element
+                    observer.observe(svgContainer);
+                    return animItem;
+                } else {
+                    return null; // Return null if element is null
+                }
+            });
+
+            // Function to play the animation for the given index
+            function playAnimation(index) {
+                svgContainers[index].classList.remove("counter-hide");
+                animations[index].goToAndPlay(0, true);
+                // Event listener for animation completion
+                animations[index].addEventListener("complete", () => {
+                    svgContainers[index].classList.add("counter-hide");
+                });
+            }
+        });
+</Script>
+
+<!-- FOOTER -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the footer elements
+    var footerLogo = document.getElementById("footerLogoSvg");
+    var footerline1 = document.querySelector("#footerline1");
+    var footerline2 = document.querySelector("#footerline2");
+    var footerline3 = document.querySelector("#footerline3");
+    var footerline4 = document.querySelector("#footerline4");
+    var footerline5 = document.querySelector("#footerline5");
+    var footerline6 = document.querySelector("#footerline6");
+
+    var drawingStarted = false;
+
+    // Listen for the message from the first JavaScript file
+    window.addEventListener('message', function(event) {
+        if (event.data && event.data.type === 'straightFooterPercentage') {
+            var footerscrollpercent = event.data.value;
+            // console.log('here is footer scroll percent');
+            // console.log(footerscrollpercent);
+            // Check if the scroll percentage is over 0.99 and drawing hasn't started yet
+            if (!drawingStarted && footerscrollpercent > 0.99) {
+                console.log("footer scroll percentage over 0.99, triggering action...");
+                drawingStarted = true;
+            }
+            // Animate the drawing based on the current scroll position
+            animateFooter();
+        }
+    });
+
+    function animateFooter() {
+        // console.log('animating footer');
+        const footerBottom = footerLogo.offsetTop + footerLogo.offsetHeight;
+        const scrollPercentage = (window.scrollY + window.innerHeight - footerLogo.offsetTop) / (window.innerHeight + footerLogo.offsetHeight);
+
+        const newDrawLength = 3000 * scrollPercentage * .75;
+
+        footerline1.style.strokeDasharray = `${newDrawLength}, 3000`;
+        // console.log(newDrawLength);
+        footerline2.style.strokeDasharray = `${newDrawLength}, 3000`;
+        footerline3.style.strokeDasharray = `${newDrawLength}, 3000`;
+        footerline4.style.strokeDasharray = `${newDrawLength}, 3000`;
+        footerline5.style.strokeDasharray = `${newDrawLength}, 3000`;
+        footerline6.style.strokeDasharray = `${newDrawLength}, 3000`;
+    }
+
+
+    // Add scroll event listener outside of message event listener
+    window.addEventListener("scroll", function () {
+        animateFooter();
+    });
+});
+
+</script>
+
+<!-- HEADERIMAGE -->
+<script>
+    
+</script>
+
+<!-- HEROFADE -->
+<script>
+       // Function to check if an element is in the viewport
+    function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to handle fade animation for elements within a container
+    function handleFade(containerSelector, elementSelector) {
+        var containers = document.querySelectorAll(containerSelector);
+        containers.forEach(function (container) {
+            if (isInViewport(container)) {
+                var elements = container.querySelectorAll(elementSelector);
+                elements.forEach(function (element) {
+                    element.classList.add("show");
+                });
+            }
+        });
+    }
+
+    // Call this function for left fade
+    // function handleLeftFade() {
+    //     handleFade(".blurbContainer", ".topSvgBlurbLeft");
+    //     // handleFade(".mtn-text-container", ".text-over-mountain__left");
+    // }
+
+    // // Call this function for right fade
+    // function handleRightFade() {
+    //     handleFade(".blurbContainer", ".topSvgBlurbRight");
+    //     // handleFade(".mtn-text-container", ".text-over-mountain__right");
+    // }
+
+    // // Add scroll event listeners
+    // window.addEventListener("scroll", handleLeftFade);
+    // window.addEventListener("scroll", handleRightFade);
+ 
+</script>
+
+<!-- MAINFADES -->
+<script>
+    
+</script>
+
+<!-- MONKEY -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("scroll", function () {
+        // Get the coordinates of the target div
+        var monkeysvg = document.getElementById("bottom-svg");
+        var monkeysvgTop = monkeysvg.getBoundingClientRect().top;
+        var footer1 = document.querySelector("#footer1");
+        var footer2 = document.querySelector("#footer2");
+        var footer3 = document.querySelector("#footer3");
+
+        var plant1 = document.querySelector(".left-plant-wrapper");
+        var plant2 = document.querySelector(".right-plant-wrapper");
+        var monkey = document.querySelector(".monkey-wrapper");
+        var arch = this.document.querySelector(".monkey-arch-text");
+
+        drawingStarted = false;
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.type === 'splitterScrollPercentage') {
+                var splitscrollpercent = event.data.value;
+                // Check if the scroll percentage is over 0.99 and drawing hasn't started yet
+                if (!drawingStarted && splitscrollpercent > 0.99) {
+                    console.log("splitter scroll percentage over 0.99, triggering action...");
+                    drawingStarted = true;
+                }
+                // Animate the drawing based on the current scroll position
+                animateDrawing();
+            }
+        });
+
+        // Function to animate the drawing based on current scroll position
+        function animateDrawing() {
+            if (drawingStarted) {
+                console.log('drawing monkey svg now');
+                // Establish new scroll percentage based on scroll position within monkeysvg
+                // Define the offset as a fraction of the container's height
+                const offsetFraction = 0.7;
+
+                // Calculate the offset based on the container's height
+                const offset = monkeysvg.offsetHeight * offsetFraction;
+
+                // Calculate the scroll percentage with the offset
+                let monkeyScrollpercent =
+                    Math.min(Math.max((window.scrollY - monkeysvg.offsetTop + offset) / (monkeysvg.offsetHeight - offset), 0), 1);
+
+                // console.log('monkey scroll percentage');
+                console.log(monkeyScrollpercent);
+
+                let drawLength = 2532 * monkeyScrollpercent * 7 ; // Total length of the path
+                footer2.style.strokeDasharray = `${drawLength}, 2532`;
+                footer3.style.strokeDasharray = `${drawLength}, 2532`;
+                // Add classes based on current scroll position
+                if (monkeyScrollpercent >= 0.015) {
+                    plant1.classList.add("show");
+                    plant2.classList.add("show");
+                }
+                if (monkeyScrollpercent >= 0.04) {
+                    monkey.classList.add("show");
+                    arch.classList.add("show");
+
+                    // Define the scroll event listener inside the if block
+                    window.addEventListener("scroll", function () {
+                        var btmheadline = document.querySelector(".bottom-right-headline");
+                        var btmrt1 = document.querySelector(".btm-rt-1");
+                        var btmlft1 = document.querySelector(".btm-lft-1");
+                        var btmrt2 = document.querySelector(".btm-rt-2");
+                        var btmlft2 = document.querySelector(".btm-lft-2");
+                        var btmlft3 = document.querySelector(".btm-lft-3");
+                        // Calculate the scroll percentage
+                        const scrollPercentage = (window.scrollY - monkeysvg.offsetTop) / (monkeysvg.offsetHeight - window.innerHeight);
+
+                        // Ensure the scroll percentage is within the range [0, 1]
+                        const clampedScrollPercentage = Math.min(Math.max(scrollPercentage, 0), 1);
+
+                        // Calculate the draw length based on the scroll percentage
+                        const newDrawLength = 25032 * clampedScrollPercentage * .09;
+                        // console.log('bottom line percentage');
+                        // console.log(clampedScrollPercentage);
+                        // Apply the stroke dasharray to footer1
+                        footer1.style.strokeDasharray = `${newDrawLength}, 25032`;
+
+                        if (clampedScrollPercentage >= 0.12) {
+                            btmheadline.classList.add("show");
+                        }
+                        if (clampedScrollPercentage >= 0.15) {
+                            btmlft1.classList.add("show");
+                        }
+                        if (clampedScrollPercentage >= 0.18) {
+                            btmrt1.classList.add("show");
+                        }
+                        if (clampedScrollPercentage >= 0.28) {
+                            btmlft2.classList.add("show");
+                        }
+                        if (clampedScrollPercentage >= 0.38) {
+                            btmrt2.classList.add("show");
+                        }
+                        if (clampedScrollPercentage >= 0.55) {
+                            btmlft3.classList.add("show");
+                        }
+
+                        if (clampedScrollPercentage > 0.60) {
+                            window.postMessage({ type: 'straightFooterPercentage', value: clampedScrollPercentage }, '*');
+                            console.log('should trigger footer now');
+                        }
+
+                    });
+                }
+            }
+        }
+    });
+
+});
+
+</script>
+
+<!-- MOUNTAIN -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    var mtntext1 = document.querySelector('.text-over-mountain__left');
+    var mtntext2 = document.querySelector('.text-over-mountain__right');
+    var path2Left = document.querySelector("#mountainSvgLeft");
+    var path2Right = document.querySelector("#mountainSvgRight");
+    var mtnSvg = document.getElementById("mountain-svg");
+    var drawingStarted = false;
+
+    // Listen for the message from the first JavaScript file
+    window.addEventListener('message', function(event) {
+        if (event.data && event.data.type === 'scrollPercentage') {
+            var scrollPercentage = event.data.value;
+            // Check if the scroll percentage is over 0.99 and drawing hasn't started yet
+            if (!drawingStarted && scrollPercentage > 0.99) {
+                console.log("Scroll percentage over 0.99, triggering action...");
+                drawingStarted = true;
+            }
+            // Animate the drawing based on the current scroll position
+            animateDrawing();
+        }
+    });
+
+    // Function to animate the drawing based on current scroll position
+    function animateDrawing() {
+        if (drawingStarted) {
+            // console.log('drawing mountain svg now');
+            // Establish new scroll percentage based on scroll position within mtnSvg
+            // Define the offset as a fraction of the container's height
+            const offsetFraction = 0.5;
+
+            // Calculate the offset based on the container's height
+            const offset = mtnSvg.offsetHeight * offsetFraction;
+
+            // Calculate the scroll percentage with the offset
+            let mtnScrollPercentage =
+                Math.min(Math.max((window.scrollY - mtnSvg.offsetTop + offset) / (mtnSvg.offsetHeight - offset), 0), 1);
+
+            // console.log('new scroll percentage');
+            // console.log(mtnScrollPercentage);
+
+            let drawLength = 1500 * mtnScrollPercentage * .65 ; // Total length of the path
+            path2Left.style.strokeDasharray = `${drawLength}, 1500`;
+            path2Right.style.strokeDasharray = `${drawLength}, 1500`;
+            // Add classes based on current scroll position
+            if (mtnScrollPercentage >= 0.6) {
+                mtntext1.classList.add("show");
+                mtntext2.classList.add("show");
+            }
+        }
+    }
+
+
+
+});
+
+
+
+
+
+    // window.addEventListener("scroll", function () {
+    //     // Get the coordinates of the target div
+    //     var mtnSvg = document.getElementById("mountain-svg");
+    //     var mtnSvgTop = mtnSvg.getBoundingClientRect().top;
+    //     var path2Left = document.querySelector("#mountainSvgLeft");
+    //     var path2Right = document.querySelector("#mountainSvgRight");
+
+    //     // Check if a portion of the target div (e.g., 10% from the top) is in the viewport
+    //     if (
+    //         mtnSvgTop < window.innerHeight * 0.99 &&
+    //         mtnSvgTop + mtnSvg.offsetHeight > 0.01 * window.innerHeight
+    //     ) {
+    //         console.log("Reached the target div!");
+    //         handleTextFade();
+
+    //         // Calculate scroll percentage based on target div's height
+    //         let scrollPercentage =
+    //             (window.scrollY - (mtnSvg.offsetTop - 0.1 * window.innerHeight)) /
+    //             (0.8 * window.innerHeight);
+
+    //         // Calculate draw length based on scroll percentage
+    //         let drawLength = 1500 * scrollPercentage * 3.5; // Total length of the path
+    //         path2Left.style.strokeDasharray = `${drawLength}, 1500`;
+    //         path2Right.style.strokeDasharray = `${drawLength}, 1500`;
+    //         // Perform actions when the target div is reached
+
+    //         // Fade in div smoothly when the line is about x% drawn
+    //         if (scrollPercentage >= 0.26 ) {
+
+
+    //         }
+
+    //         if (scrollPercentage >= 0.11 ) {
+    //             console.log('mountain text should show now');
+    //             mtntext1.classList.add("show");
+    //             mtntext2.classList.add("show");
+    //         }
+
+    //         //reveal text
+    //         // Function to handle fade animation for elements within a container
+    //         function handleFade(containerSelector, elementSelector, delay) {
+    //             var containers = document.querySelectorAll(containerSelector);
+    //             containers.forEach(function (container) {
+    //                 var elements = container.querySelectorAll(elementSelector);
+    //                 elements.forEach(function (element, index) {
+    //                     setTimeout(function () {
+    //                         element.classList.add("show");
+    //                     }, index * delay); // Apply delay based on index
+    //                 });
+    //             });
+    //         }
+
+    //         // Call this function for left fade
+    //         function handleTextFade() {
+    //             // handleFade(".mtn-text-container", ".text-over-mountain__left", 1000);
+    //             // handleFade(".mtn-text-container", ".text-over-mountain__right", 1000);
+    //         }
+    //     }
+    // });
+
+// });
+
+</script>
+
+<!-- PHILANTHROPY -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("scroll", function () {
+        const mountainSect = document.getElementById("mountain-sect");
+        if (mountainSect) { // Ensure the element exists
+            var mountainRectTop = mountainSect.getBoundingClientRect().top;
+            // Get the mountain-back container
+            const mountainBack = document.getElementById("mountainBack");
+            const mountainLogo = document.getElementById("mtnLogo");
+
+            // Check if a portion of the target div (e.g., 10% from the top) is in the viewport
+            if (
+                mountainRectTop < window.innerHeight * 0.9 &&
+                mountainRectTop + mountainSect.offsetHeight > 0.1 * window.innerHeight
+            ) {
+                console.log(mountainSect);
+                mountainBack.classList.add("slide-up");
+                mountainLogo.classList.add("fade-in");
+            } else {
+                // mountainBack.classList.remove("slide-up");
+                // mountainLogo.classList.remove("fade-in");
+            }
+        } else {
+            console.log('no mountain element');
+        }
+    });
+});
+
+</script>
+
+<!-- SPLITTER -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("scroll", function () {
+        // Get the coordinates of the target div
+        var splitSvg = document.getElementById("splitter-svg");
+        var splitSvgTop = splitSvg.getBoundingClientRect().top;
+        var splitLeft = document.querySelector("#splitterSvgLeft");
+        var splitRight = document.querySelector("#splitterSvgRight");
+
+        var splitcont1 = this.document.querySelector(".splitter-left-container");
+        var splitcont2 = this.document.querySelector(".splitter-right-container");
+
+        // Check if a portion of the target div (e.g., 10% from the top) is in the viewport
+        if (
+            splitSvgTop < window.innerHeight * 0.95 &&
+            splitSvgTop + splitSvg.offsetHeight > 0.05 * window.innerHeight
+        ) {
+            // console.log("Reached the target div!");
+            // handleTextFade();
+
+            const offsetFraction = 0.18;
+
+            // Calculate the offset based on the container's height
+            const offset = splitSvg.offsetHeight * offsetFraction;
+
+            // Calculate the scroll percentage with the offset
+            let scrollPercentage =
+                Math.min(Math.max((window.scrollY - splitSvg.offsetTop + offset) / (splitSvg.offsetHeight - offset), 0), 1);
+
+
+            // Calculate draw length based on scroll percentage
+            let drawLength = 900 * scrollPercentage; // Total length of the path
+            splitLeft.style.strokeDasharray = `${drawLength}, 900`;
+            splitRight.style.strokeDasharray = `${drawLength}, 900`;
+
+            if (scrollPercentage >= 0.15) {
+                splitcont1.classList.add("show");
+                splitcont2.classList.add("show");
+            }
+
+            if (scrollPercentage > 0.99) {
+                window.postMessage({ type: 'splitterScrollPercentage', value: scrollPercentage }, '*');
+            }
+        }
+    });
+
+    //reveal text
+    // Function to handle fade animation for elements within a container
+    // function handleFade(containerSelector, elementSelector, delay) {
+    //     var containers = document.querySelectorAll(containerSelector);
+    //     containers.forEach(function (container) {
+    //         var elements = container.querySelectorAll(elementSelector);
+    //         elements.forEach(function (element, index) {
+    //             setTimeout(function () {
+    //                 element.classList.add("show");
+    //             }, index * delay); // Apply delay based on index
+    //         });
+    //     });
+    // }
+
+    // Call this function for left fade
+    function handleTextFade() {
+        // handleFade(".splitter-text", ".splitter-left-container", 1000);
+        // handleFade(".splitter-text", ".splitter-right-container", 1000);
+    }
+});
+
+</script>
+
+<!-- TEAM -->
+<script>
+    window.addEventListener("scroll", function () {
+    // Get the coordinates of the target div
+    var sect1 = document.getElementById("team-svg");
+    var sect1Top = sect1.getBoundingClientRect().top;
+    var path1 = document.querySelector("#vectorPath1");
+    var teamleft = document.querySelector(".team-container__left");
+    var teamright = document.querySelector(".team-container__right");
+    var teamdesc = document.querySelector("#teamdesc");
+    var block1 = document.querySelector("#team-text-block-1");
+    var block2 = document.querySelector("#team-text-block-2");
+    var block3 = document.querySelector("#team-text-block-3");
+    var block4 = document.querySelector("#team-text-block-4");
+    var vertuni = document.querySelector("#vert-uni-text");
+    var vertblurb = document.querySelector("#vert-blurb-text");
+    var teamblurb = document.querySelector(".team-blurb");
+
+    // Define the offset as a fraction of the container's height
+    const offsetFraction = 0.07;
+
+    // Calculate the offset based on the container's height
+    const offset = sect1.offsetHeight * offsetFraction;
+
+    // Check if the target div is in the viewport
+    if (sect1Top < window.innerHeight && sect1Top + sect1.offsetHeight > 0) {
+        // console.log("Reached the target div!");
+
+        // Calculate scroll percentage based on target div's height
+        let scrollPercentage =
+            Math.min(Math.max((window.scrollY - sect1.offsetTop + offset) / (sect1.offsetHeight - offset), 0), 1);
+
+        // console.log('team scroll percentage');
+        // console.log(scrollPercentage);
+
+        // Calculate draw length based on scroll percentage
+        let drawLength = 2268.36 * scrollPercentage * 2.25; // Total length of the path
+        path1.style.strokeDasharray = `${drawLength}, 2268.36`;
+
+        // Perform actions when the target div is reached
+        if (scrollPercentage >= 0.015) {
+            teamleft.classList.add("show");
+            teamright.classList.add("show");
+            teamblurb.classList.add("show");
+        }
+        if (scrollPercentage >= 0.20) {
+            teamdesc.classList.add("show");
+        }
+        if (scrollPercentage >= 0.34) {
+            block1.classList.add("show");
+        }
+        if (scrollPercentage >= 0.50) {
+            block2.classList.add("show");
+        }
+        if (scrollPercentage >= 0.63) {
+            block3.classList.add("show");
+        }
+        if (scrollPercentage >= 0.78) {
+            block4.classList.add("show");
+        }
+        if (scrollPercentage >= 0.89) {
+            vertuni.classList.add("show");
+            vertblurb.classList.add("show");
+        }
+
+    }
+});
+
+</script>
+
+<!-- TEAM -->
+<script>
+    
+</script>
+
+<!-- TOPSVG -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Debounce function
+    function debounce(func, wait) {
+        let timeout;
+        return function () {
+            const context = this,
+                args = arguments;
+            const later = function () {
+                timeout = null;
+                func.apply(context, args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    var pathLeft = document.querySelector('#svgPathLeft');
+    var pathRight = document.querySelector('#svgPathRight');
+
+    var pathLengthLeft = pathLeft.getTotalLength();
+    var pathLengthRight = pathRight.getTotalLength();
+
+    pathLeft.style.strokeDasharray = pathLengthLeft;
+    pathRight.style.strokeDasharray = pathLengthRight;
+
+    pathLeft.style.strokeDashoffset = pathLengthLeft;
+    pathRight.style.strokeDashoffset = pathLengthRight;
+
+    var impactFade = document.querySelector('.impact-fade-in-div');
+    var impactninety1 = document.querySelector('.ninety-left');
+    var impactninety2 = document.querySelector('.ninety-right');
+    var blurbFade1 = document.querySelector('.topSvgBlurbLeft');
+    var blurbFade2 = document.querySelector('.topSvgBlurbRight');
+    var fadeInStarted = false;
+
+    window.addEventListener(
+        "scroll",
+        debounce(function () {
+var scrollPercentage = 9 * ((Math.max(0, window.scrollY - 7 * parseFloat(getComputedStyle(document.documentElement).fontSize))) / (document.documentElement.scrollHeight - window.innerHeight));
+
+            // Length to offset the dashes
+            var drawLeft = pathLengthLeft * scrollPercentage;
+            var drawRight = pathLengthRight * scrollPercentage;
+
+            // Draw in reverse
+            pathLeft.style.strokeDashoffset = Math.max(0, pathLengthLeft - drawLeft);
+            pathRight.style.strokeDashoffset = Math.max(0, pathLengthRight - drawRight);
+
+            // console.log(scrollPercentage);
+
+            // Fade in div smoothly when the line is about 15% drawn
+            if (scrollPercentage >= 0.29 && !fadeInStarted) {
+                fadeInStarted = true;
+                fadeInDivSmoothly(impactFade);
+                fadeInDivSmoothly(impactninety1);
+                fadeInDivSmoothly(impactninety2);
+            }
+
+            if (scrollPercentage >= 0.57) {
+                blurbFade1.classList.add('show');
+                blurbFade2.classList.add('show');
+            }
+
+            // Post scrollPercentage to other script if it's over 0.99
+            if (scrollPercentage > 0.99) {
+                window.postMessage({ type: 'scrollPercentage', value: scrollPercentage }, '*');
+            }
+
+        }, 10)
+    );
+
+    function fadeInDivSmoothly(element) {
+        var opacity = 0;
+        var interval = setInterval(function () {
+            opacity += 0.05; // Adjust the increment value as needed for the desired speed
+            element.style.opacity = opacity;
+            if (opacity >= 1) {
+                clearInterval(interval);
+            }
+        }, 80); // Adjust the interval duration for smoother or faster animation
+    }
+});
+
+</script>
+
+<!-- WAVYTEXT -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+    const topLottiePlayer = document.getElementById("top-wavy").querySelector("dotlottie-player");
+    const bottomLottiePlayer = document.getElementById("bottom-wavy").querySelector("dotlottie-player");
+
+    topLottiePlayer.stop();
+    bottomLottiePlayer.stop();
+
+    $(window).scroll(function () {
+        
+    if ($(window).scrollTop() >= $(
+        '.bottom-text-player').offset().top + $('.bottom-text-player').
+            outerHeight() - window.innerHeight) {
+
+        topLottiePlayer.play();
+        bottomLottiePlayer.play();
+        // window.alert('You reached the end of the DIV');
+    }
+    }); 
+});
+</script>
