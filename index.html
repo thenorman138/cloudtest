@@ -1072,7 +1072,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // console.log('here is footer scroll percent');
             // console.log(footerscrollpercent);
             // Check if the scroll percentage is over 0.99 and drawing hasn't started yet
-            if (!drawingStarted && footerscrollpercent > 0.60) {
+            if (!drawingStarted && footerscrollpercent > 0.54) {
                 console.log("footer scroll percentage over 0.99, triggering action...");
                 drawingStarted = true;
             }
@@ -1315,7 +1315,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 btmlft3.classList.add("show");
             }
 
-            if (bottomScrollpercent >= .60) {
+            if (bottomScrollpercent >= .54) {
 
                 window.postMessage({ type: 'straightFooterPercentage', value: bottomScrollpercent }, '*');
                 // console.log('should be drawing footer now');
