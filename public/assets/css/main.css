@@ -278,7 +278,7 @@ h1,h2,h3,h4,h5,h6{
     overflow: hidden;
 }
 .cloud-reveal-img {
-    transition: opacity 5s ease;
+    /* transition: opacity 5s ease; */
     width: 100%;
     z-index: 100000;
     width: 110%;
@@ -652,7 +652,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .team-description {
-    width:86%;
+    width:85%;
     position: absolute;
     top: 27.5%;
     left: 6%;
@@ -690,10 +690,10 @@ h1,h2,h3,h4,h5,h6{
 
 .left-plant-wrapper {
     position: absolute;
-    bottom:39%;
+    bottom:92%;
     right: -100%;
     width: 28vw;
-    z-index: 1;
+    z-index: -1;
     opacity: 0;
     transition:
         right 2s ease,
@@ -707,10 +707,10 @@ h1,h2,h3,h4,h5,h6{
 
 .right-plant-wrapper {
     position: absolute;
-    bottom:38%;
+    bottom:86%;
     left: -100%;
     width: 30vw;
-    z-index: 1;
+    z-index: -1;
     opacity: 0;
     transition:
         left 2s ease,
@@ -725,7 +725,7 @@ h1,h2,h3,h4,h5,h6{
 .monkey-wrapper {
     position: relative;
     z-index: 10000;
-    width: 35rem;
+    width: 42rem;
     margin: 0 auto;
     padding-top: 34%;
     opacity:0;
@@ -738,7 +738,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .bottom-svg {
-    margin-top: -33%;
+    margin-top: -32.5%;
     z-index: 1000;
 }
 
@@ -808,7 +808,7 @@ h1,h2,h3,h4,h5,h6{
     width: 75%;
     height: auto;
     text-align: left;
-    top: 76%;
+    top: 75%;
     left: 10%;
     margin: 0 auto;
 }
@@ -973,7 +973,7 @@ h1.splitter {
 
 .monkey-arch-text {
     position: absolute;
-    bottom:20%;
+    bottom:15%;
     left: 27%;
     width: 45vw;
     opacity: 0;
@@ -989,11 +989,18 @@ h1.splitter {
 .bottom-left-container {
     text-align: right;
     position: absolute;
-    top: 18%;
+    top: 14%;
     left: 4.5%;
     width: 35%;
 }
 
+#bottomlineSvg{
+    width:7.5vw;
+    margin:0 auto;
+}
+#bottom-containers{
+    margin-top:-6%;
+}
 .bottom-text-block {}
 
 .bottom-text-block-header {
@@ -1010,7 +1017,7 @@ h1.splitter {
 .bottom-right-container {
     text-align: left;
     position: absolute;
-    top: 15%;
+    top: 6%;
     right: 5%;
     width: 35%;
 }
@@ -1097,7 +1104,8 @@ h1.splitter {
 
 
 #footerLogoSvg{
-    margin-top:-5%;
+    margin-top:10%;
+    background-color: white;
 }
 
 
