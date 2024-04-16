@@ -70,12 +70,12 @@ import Header from "../components/Header.astro";
     <!-- Beg. of Hero -->
     <!------------------->
     <div class="hero-fade-in">
-        <div class="title-section" style="margin-bottom:2.4rem;">
+        <div class="title-section" style="margin-bottom:6.5rem;">
             <h1 class="title-text">SUPPORTING BEAUTIFUL SPECIES AND FLOURISHING</h1>
             <h1 class="title-text">LAND DISSIPATING BEFORE OUR EYES</h1>
             <h3 class="subtitle-text">HELPING THE EARTH BREATHE</h3>
         </div>
-        <div class="inner-menu" style="margin-top:6rem;">
+        <!-- <div class="inner-menu" style="margin-top:6rem;">
             <div class="grid grid-cols-3 gap-3">
                 <div class="inner-menu-items"></div>
                 <div class="inner-menu-items">
@@ -104,7 +104,7 @@ import Header from "../components/Header.astro";
                     <div style="margin-top:1rem;">OUR STORY</div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="first-section" style="text-align:center;">
             <!-- <img src="./public/assets/img/headerImage.png" alt="Image"
                 style="width:100%; height: auto; margin-top:55px;opacity:0;" id="topImg" /> -->
@@ -199,7 +199,7 @@ import Header from "../components/Header.astro";
     <!------------------->
     <!-- Beg. of Mtn 1 -->
     <!------------------->
-    <div class="mountain-svg" id="mountain-svg" style="position:relative;">
+    <div class="mountain-svg" id="mountain-svg" style="position:relative; z-index:-10">
         <div style="margin-left:-2%; margin-right:-2%;">
             <!-- <Fragment set:html={MountainTopSVG} /> -->
             <div id="mtnSvgLineWrapper" class="section-wrapper" style="margin-top:2rem;">
@@ -237,14 +237,20 @@ import Header from "../components/Header.astro";
             </div>
         </div>
     </div>
-    <div class="cloud-sect" style="margin-top:-55%;">
+    <div class="cloud-sect" style="margin-top:-80%;">
         <div class="cloud-container">
-            <div style="opacity:1;">
+            <!-- <div style="opacity:1;">
                 <img src="public/assets/img/clouds.webp">
-            </div>
+            </div> -->
             <div style="margin-top:-12%;">
                 <div style="opacity:0;">
                     <img src="public/assets/img/clouds.webp">
+                </div>
+                <div class="cloud-reveal-bg" style="z-index:-5;">
+                    <img class="cloud-reveal-img" src="./public/assets/img/cloud-reveal-FINAL.webp" alt="Description of your image" />
+                </div>
+                <div class="cloud-reveal-bg" style="z-index:-5;">
+                    <img class="cloud-reveal-img" src="./public/assets/img/cloud-reveal-FINAL.webp" alt="Description of your image" />
                 </div>
                 <div class="cloud-reveal" style="z-index:-5;">
                     <img class="cloud-reveal-img" src="./public/assets/img/cloud-reveal-FINAL.webp" alt="Description of your image" />
@@ -253,11 +259,11 @@ import Header from "../components/Header.astro";
                     FROM THE PEAKS TO THE VALLIES,<br />WE WILL NEVER SAY NO
                 </h1>
                 <div class="cloud-reveal">
-                    <img class="cloud-reveal-img top-cloud-reveal-img" src="./public/assets/img/cloud-reveal-FINAL.webp"
+                    <img class="cloud-reveal-img top-cloud-reveal-img" src="./public/assets/img/cloud-reveal-toplayer-FINAL.webp"
                         alt="Description of your image" />
                 </div>
                 <div class="cloud-reveal">
-                    <img class="cloud-reveal-img top-cloud-reveal-img-2" src="./public/assets/img/cloud-reveal-FINAL.webp"
+                    <img class="cloud-reveal-img top-cloud-reveal-img-2" src="./public/assets/img/cloud-reveal-toplayer-FINAL.webp"
                         alt="Description of your image" />
                 </div>
                 
@@ -944,6 +950,7 @@ import Header from "../components/Header.astro";
 <!-- CLOUDS -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        const mtnCont = document.querySelector(".mountain-container");
         const cloudSect = document.querySelector(".cloud-sect");
         const cloudRevealText = document.querySelector(".mountain-reveal-text");
         const topCloud = document.querySelector(".top-cloud-reveal-img");
@@ -951,7 +958,7 @@ import Header from "../components/Header.astro";
 
         const options = {
             root: null, // Use the viewport as the root
-            threshold: 0.5 // Trigger when 50% of the element is in view
+            threshold: .2 // Trigger when 50% of the element is in view
         };
 
         function fadeInMountain(entries, observer) {
@@ -967,7 +974,7 @@ import Header from "../components/Header.astro";
                     window.addEventListener("scroll", () => {
                         const scrollPosition = window.scrollY;
                         const cloudSectHeight = cloudSect.offsetHeight;
-                        let opacity = 4 - (scrollPosition / (cloudSectHeight * 0.6)); // Adjust the factor here
+                        let opacity = 4 - (scrollPosition / (cloudSectHeight * 0.46)); // Adjust the factor here
 
                         // Ensure opacity stays within the range [0, 1]
                         opacity = Math.min(Math.max(opacity, 0), 1);
@@ -980,7 +987,7 @@ import Header from "../components/Header.astro";
         }
 
         const observer = new IntersectionObserver(fadeInMountain, options);
-        observer.observe(cloudRevealText); // Start observing the target element
+        observer.observe(mtnCont); // Start observing the target element
     });
 </script>
 
@@ -1298,21 +1305,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (bottomScrollpercent >= 0.08) {
                 btmheadline.classList.add("show");
+            }else if (bottomScrollpercent < 0.08) {
+                btmheadline.classList.remove("show");
             }
             if (bottomScrollpercent >= 0.14) {
                 btmlft1.classList.add("show");
+            }else if (bottomScrollpercent < 0.14) {
+                btmlft1.classList.remove("show");
             }
             if (bottomScrollpercent >= 0.15) {
                 btmrt1.classList.add("show");
+            }else if (bottomScrollpercent < 0.15) {
+                btmrt1.classList.remove("show");
             }
             if (bottomScrollpercent >= 0.36) {
                 btmlft2.classList.add("show");
+            }else if (bottomScrollpercent < 0.36) {
+                btmlft2.classList.remove("show");
             }
             if (bottomScrollpercent >= 0.42) {
                 btmrt2.classList.add("show");
+            }else if (bottomScrollpercent < 0.42) {
+                btmrt2.classList.remove("show");
             }
             if (bottomScrollpercent >= 0.58) {
                 btmlft3.classList.add("show");
+            }else if(bottomScrollpercent < 0.58) {
+                btmlft3.classList.remove("show");
             }
 
             if (bottomScrollpercent >= .54) {
@@ -1453,6 +1472,10 @@ document.addEventListener("DOMContentLoaded", function () {
             if (scrollPercentage >= 0.15) {
                 splitcont1.classList.add("show");
                 splitcont2.classList.add("show");
+            }else if (scrollPercentage < 0.15) {
+                splitcont1.classList.remove("show");
+                splitcont2.classList.remove("show");
+
             }
 
             if (scrollPercentage > 0.99) {
@@ -1509,24 +1532,48 @@ document.addEventListener("DOMContentLoaded", function () {
             teamright.classList.add("show");
             teamblurb.classList.add("show");
         }
+        else if (scrollPercentage < 0.015) {
+            teamleft.classList.remove("show");
+            teamright.classList.remove("show");
+            teamblurb.classList.remove("show");
+        }
         if (scrollPercentage >= 0.20) {
             teamdesc.classList.add("show");
+        }
+        else if (scrollPercentage < 0.20) {
+            teamdesc.classList.remove("show");
         }
         if (scrollPercentage >= 0.34) {
             block1.classList.add("show");
         }
+        else if (scrollPercentage < 0.34) {
+            block1.classList.remove("show");
+        }
         if (scrollPercentage >= 0.50) {
             block2.classList.add("show");
+        }
+        else if (scrollPercentage < 0.50) {
+            block2.classList.remove("show");
         }
         if (scrollPercentage >= 0.63) {
             block3.classList.add("show");
         }
+        else if (scrollPercentage < 0.63) {
+            block3.classList.remove("show");
+        }
         if (scrollPercentage >= 0.78) {
             block4.classList.add("show");
+        }
+        else if (scrollPercentage < 0.78) {
+            block4.classList.remove("show");
         }
         if (scrollPercentage >= 0.89) {
             vertuni.classList.add("show");
             vertblurb.classList.add("show");
+        }
+        else if (scrollPercentage < 0.89) {
+            vertuni.classList.remove("show");
+            vertblurb.classList.remove("show");
         }
 
     }
@@ -1579,7 +1626,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener(
             "scroll",
             debounce(function () {
-                var scrollPercentage = 9 * ((Math.max(0, window.scrollY - 7 * parseFloat(getComputedStyle(document.documentElement).fontSize))) / (document.documentElement.scrollHeight - window.innerHeight));
+                var scrollPercentage = 10 * ((Math.max(0, window.scrollY - 7 * parseFloat(getComputedStyle(document.documentElement).fontSize))) / (document.documentElement.scrollHeight - window.innerHeight));
 
                 // Length to offset the dashes
                 var drawLeft = pathLengthLeft * scrollPercentage;
@@ -1600,6 +1647,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (scrollPercentage >= 0.57) {
                     blurbFade1.classList.add('show');
                     blurbFade2.classList.add('show');
+                }else if (scrollPercentage < 0.57) {
+                    blurbFade1.classList.remove('show');
+                    blurbFade2.classList.remove('show');
                 }
 
                 // Post scrollPercentage to other script if it's over 0.99
@@ -1620,6 +1670,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }, 40); // Decreased interval duration for smoother animation
         }
+        
     });
 
 
