@@ -1064,6 +1064,7 @@ import Header from "../components/Header.astro";
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         var drawingStarted = false;
+        var lastScrollTop = 0;
 
         window.addEventListener('message', function (event) {
             if (event.data && event.data.type === 'straightFooterPercentage') {
@@ -1073,6 +1074,10 @@ import Header from "../components/Header.astro";
                     console.log("footer scroll percentage over 0.54, triggering action...");
                     drawingStarted = true;
                     animateFooter();
+                } else if (drawingStarted && footerscrollpercent < 0.9) {
+                    console.log("footer scroll percentage less than 0.9, triggering reverse action...");
+                    drawingStarted = false;
+                    reverseAnimateFooter();
                 }
             }
         });
@@ -1080,11 +1085,17 @@ import Header from "../components/Header.astro";
         // Add scroll event listener outside of message event listener
         window.addEventListener("scroll", function () {
             if (drawingStarted) {
-                animateFooter();
+                var currentScrollTop = window.scrollY;
+
+                // Determine scroll direction
+                var scrollDirection = currentScrollTop > lastScrollTop ? 'down' : 'up';
+                lastScrollTop = currentScrollTop;
+
+                animateFooter(scrollDirection);
             }
         });
 
-        function animateFooter() {
+        function animateFooter(direction) {
             // Set transition duration
             var transitionDuration = '0.5s'; // Adjust the duration as needed
 
@@ -1092,7 +1103,25 @@ import Header from "../components/Header.astro";
             var revealDivs = document.querySelectorAll('.svg-reveal-left, .svg-reveal-right');
             revealDivs.forEach(function (div) {
                 div.style.transition = 'width ' + transitionDuration;
-                div.style.width = '0px';
+                if (direction === 'down') {
+                    // Collapse the divs
+                    div.style.width = '0px';
+                } else {
+                    // Expand the divs to their original width
+                    div.style.width = '50%'; // Adjust this to the original width
+                }
+            });
+        }
+
+        function reverseAnimateFooter() {
+            // Set transition duration
+            var transitionDuration = '0.5s'; // Adjust the duration as needed
+
+            // Apply transition to reveal divs
+            var revealDivs = document.querySelectorAll('.svg-reveal-left, .svg-reveal-right');
+            revealDivs.forEach(function (div) {
+                div.style.transition = 'width ' + transitionDuration;
+                div.style.width = '50%'; // Expand the divs to their original width
             });
         }
     });
