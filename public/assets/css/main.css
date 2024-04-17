@@ -135,10 +135,6 @@ h1,h2,h3,h4,h5,h6{
     margin-top:-9%;
 }
 
-.impact-fade-in-div{
-    opacity:0;
-}
-
 .cloud-fade-out {
     opacity: 0 !important;
 }
@@ -157,6 +153,14 @@ h1,h2,h3,h4,h5,h6{
     transform: translate(-50%, -50%);
 }
 
+.impact-fade-in-div {
+    opacity: 0;
+    transition:opacity 1s ease;
+}
+.impact-fade-in-div.show{
+    opacity:1;
+}
+
 .ninety-left{
     opacity: 0;
     transform: rotate(-90deg);
@@ -164,6 +168,10 @@ h1,h2,h3,h4,h5,h6{
     top: 35%;
     font-size:1.3vw;
     left:2%;
+    transition:opacity 1s ease;
+}
+.ninety-left.show{
+    opacity:1;
 }
 
 .ninety-right{
@@ -173,6 +181,10 @@ h1,h2,h3,h4,h5,h6{
     top:35%;
     font-size:1.3vw;
     right:4%;
+    transition:opacity 1s ease;
+}
+.ninety-right.show{
+    opacity:1;
 }
 
 .topSvgBlurbLeft {
@@ -241,7 +253,7 @@ h1,h2,h3,h4,h5,h6{
 .cloud-container {
     overflow: hidden;
     margin-top: 4rem;
-    min-height: 120vh;
+    min-height: 160vh;
     position: relative;
     /* background-color: white; */
     width: 150%;
@@ -411,7 +423,7 @@ h1,h2,h3,h4,h5,h6{
     top: 100%;
     /* Initially hide below the mountain-sect container */
     width: 100%;
-    z-index: 1;
+    z-index: 0;
     left: 17%;
     transition: top 1s ease;
     /* Add transition for smooth sliding animation */
@@ -613,16 +625,15 @@ h1,h2,h3,h4,h5,h6{
     text-align: center;
     top: 2%;
     margin: 0 auto;
-    left: -100%;
+    left: 0;
     opacity: 0;
     transition:
-        left 2s ease,
         opacity 2s ease;
 }
 
 .team-container__left.show {
     opacity: 1;
-    left: 0;
+    
 }
 
 .team-container__middle {
@@ -636,16 +647,14 @@ h1,h2,h3,h4,h5,h6{
     text-align: left;
     top: 3%;
     margin: 0 auto;
-    right: -100%;
+    right: 0;
     opacity: 0;
     transition:
-        right 2s ease,
         opacity 2s ease;
 }
 
 .team-container__right.show {
     opacity: 1;
-    right: 0;
 }
 
 
@@ -661,7 +670,7 @@ h1,h2,h3,h4,h5,h6{
 .team-title {
     position: relative;
     left:6.5%;
-    font-size: 3vw;
+    font-size: 3.6vw;
     font-weight: bold;
     letter-spacing: 0.5vw;
     margin-bottom: 3rem;
@@ -681,13 +690,11 @@ h1,h2,h3,h4,h5,h6{
         line-height: 120%;
     opacity: 0;
     transition:
-        right 2s ease,
         opacity 2s ease;
-    left:-100%;
+    right: 0;
 }
 #teamdesc.show {
     opacity: 1;
-    right: 0;
 }
 
 .team-desc-blk{
@@ -696,6 +703,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .splitter-svg {
+    background-color:white;
     margin-top: -10%;
 }
 
@@ -712,8 +720,8 @@ h1,h2,h3,h4,h5,h6{
     z-index: -1;
     opacity: 0;
     transition:
-        right 2s ease,
-        opacity 2s ease;
+        right 1.5s ease,
+        opacity 1.5s ease;
 }
 
 .left-plant-wrapper.show {
@@ -729,8 +737,8 @@ h1,h2,h3,h4,h5,h6{
     z-index: -1;
     opacity: 0;
     transition:
-        left 2s ease,
-        opacity 2s ease;
+        left 1.5s ease,
+        opacity 1.5s ease;
 }
 
 .right-plant-wrapper.show {
@@ -779,22 +787,20 @@ h1,h2,h3,h4,h5,h6{
 .team-blurb {
     position: absolute;
     width: 32%;
-    left: -100%;
+    left: 6%;
+    top: 19%;
     opacity: 0;
         transition:
-            left 2s ease,
             opacity 2s ease;
 }
 
 .team-blurb.show{
     opacity:1;
-    left:6%;
-    top:19%;
 }
 
 .team-blurb .blurb {
     font-weight: bold;
-    font-size: 2.3vw;
+    font-size: 2.1vw;
     letter-spacing: 0.1rem;
     line-height: 110%;
 }
@@ -932,17 +938,15 @@ h1,h2,h3,h4,h5,h6{
 .splitter-left-container {
     position: absolute;
     top: 35%;
-    left: -100%;
+    left: 5%;
     width: 35%;
     opacity: 0;
     transition:
-        left 1s ease,
         opacity 1s ease;
 }
 
 .splitter-left-container.show {
     opacity: 1;
-    left: 5%;
 }
 
 .splitter-left-text {
@@ -953,18 +957,16 @@ h1,h2,h3,h4,h5,h6{
 .splitter-right-container {
     position: absolute;
     top: 35%;
-    right: -100%;
+    left: 48%;
     width: 60%;
     text-align: center;
     opacity: 0;
     transition:
-        right 2s ease,
         opacity 2s ease;
 }
 
 .splitter-right-container.show {
     opacity: 1;
-    left: 48%;
 }
 
 .splitter-right-img {
@@ -1066,6 +1068,25 @@ h1.splitter {
 
 .bottom-right-headline.show{
     opacity:1;
+}
+
+.svg-reveal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: white;
+    z-index: 1;
+    transition: width 0.5s ease;
+    /* Adjust the transition duration as needed */
+}
+
+.svg-reveal-left {
+    left: 0;
+}
+
+.svg-reveal-right {
+    right: 0;
 }
 
 .pre-footer {
