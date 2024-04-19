@@ -325,7 +325,7 @@ h1,h2,h3,h4,h5,h6{
     /* Half of the excess width to keep it centered */
     margin-right: -5%;
     /* Half of the excess width to keep it centered */
-    margin-top: -55%;
+    margin-top: -70vh;
     opacity: 1;
     /* transform: translateY(75rem); */
     transition:
@@ -337,11 +337,11 @@ h1,h2,h3,h4,h5,h6{
     opacity: 1;
     transition: opacity 1s ease;
     text-align: center;
-    font-size: 3vw;
+    font-size: 4vw;
     font-weight: bold;
     position: absolute;
     z-index: 1;
-    top: 57%;
+    top: 58%;
     /* Position the element 50% from the top */
     left: 50%;
     /* Position the element 50% from the left */
@@ -349,7 +349,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .cloud-mountain-front-layer{
-    margin-left:-2%;
+    margin-left:2%;
 }
 
 .text-over-mountain__left {
@@ -1148,3 +1148,95 @@ h1.splitter {
 }
 
 
+/* Testing for stroke animation */
+.complexfooter-2{
+    display:none;
+}
+.path-test {
+    display:block;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 1s linear forwards;
+}
+
+@keyframes dash {
+    from {
+            stroke-dashoffset: 1000;
+            /* Start with full dash length */
+        }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.path-test-reverse {
+    display:block;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: reverse-dash 1s linear forwards;
+}
+
+@keyframes reverse-dash {
+    from {
+        stroke-dashoffset: -1000;
+        /* Start with full dash length */
+    }
+
+    to {
+        stroke-dashoffset: 0;
+        /* Gradually offset the dash to 0 */
+    }
+}
+
+
+.un-draw-left {
+    display: block;
+
+    stroke:white;
+    transition:stroke 1s;
+}
+
+.un-draw-right {
+    display: block;
+
+    stroke:white;
+    transition:stroke 1s;
+}
+
+.un-draw-eye {
+    display: none;
+
+    animation: undraw-right 1s linear forwards;
+}
+
+@keyframes undraw-right {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: -1000;
+    }
+}
+
+/* New keyframes for un-drawing from left to right */
+@keyframes undraw-left {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: 1000;
+    }
+}
+
+.whiteMask {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    z-index: 9999;
+    /* Ensure it's above other content */
+    transition: height 0.5s ease;
+    /* Smooth transition for height change */
+}

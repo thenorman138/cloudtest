@@ -221,7 +221,7 @@ import Header from "../components/Header.astro";
                 </svg>
             </div>
         </div>
-        <div class="mtn-text-container">
+        <div class="mtn-text-container" style="margin-bottom:15%;">
             <div class="text-over-mountain__left over-mtn-fade">
                 COMMUNITIES FACE A 'POLYCRISIS' OF CLIMATE CHANGE, HABITAT FRAGMENTATION
                 AND LOSS, LAND CONVERSION, AND DETERIORATING LAND ETHICS. IT IS LOCAL
@@ -255,9 +255,11 @@ import Header from "../components/Header.astro";
                 <div class="cloud-reveal" style="z-index:-5;">
                     <img class="cloud-reveal-img" src="./public/assets/img/cloud-reveal-FINAL.webp" alt="Description of your image" />
                 </div>
-                <h1 class="mountain-reveal-text">
-                    FROM THE PEAKS TO THE VALLIES,<br />WE WILL NEVER SAY NO
-                </h1>
+                <div class="mtn-reveal-text-container">
+                    <h1 class="mountain-reveal-text">
+                        FROM THE PEAKS TO THE VALLIES,<br />WE WILL NEVER SAY NO
+                    </h1>
+                </div>
                 <div class="cloud-reveal">
                     <img class="cloud-reveal-img top-cloud-reveal-img" src="./public/assets/img/cloud-reveal-toplayer-FINAL.webp"
                         alt="Description of your image" />
@@ -276,21 +278,21 @@ import Header from "../components/Header.astro";
             </div>
             <div class="top-text-player" id="top-wavy" style="z-index:1">
                 <dotlottie-player src="https://lottie.host/18594928-f6d0-4720-96e2-0c53659906a5/TnkNq5ND9Z.json"
-                    background="transparent" speed="1" style="width: 100%; height: auto" direction="1" playMode="normal"
+                    background="transparent" speed="1" style="width: 100%; height: auto" direction="1" playMode="normal" loop
                     ></dotlottie-player>
             </div>
-            <div style="margin-top: -45%;">
+            <div style="margin-top: -45%; width:100%; position:relative;">
                 <div style="position: relative; z-index: 3;">
                     <!-- <Fragment set:html={Mountain} /> -->
-                    <img src="/public/assets/img/mountain.webp" alt="">
+                    <img src="/public/assets/img/mountain.webp" style="width: 100%;" alt="">
                 </div>
             </div>
-            <div style="margin-top:-33%; margin-left:1%;">
+            <div style="margin-top:-33%; width:100%;">
                 <div class="bottom-text-player" id="bottom-wavy" style="z-index:5">
-                    <dotlottie-player src="https://lottie.host/114fe753-4fb8-4fe9-a5b1-1673bfa4e6e8/GE3qivXby2.json" background="transparent" speed="1" style="width: 100%; height: auto" direction="1" playMode="normal" ></dotlottie-player>
+                    <dotlottie-player src="https://lottie.host/114fe753-4fb8-4fe9-a5b1-1673bfa4e6e8/GE3qivXby2.json" background="transparent" speed="1" style="width: 100%; height: auto" direction="1" playMode="normal"  loop></dotlottie-player>
                 </div>
-                <div style="z-index: 10; position: relative;">
-                    <img class="cloud-mountain-front-layer" width="100%" height="100%" src="./public/assets/img/mtnFrontFinal.webp"
+                <div style="z-index: 10; position: relative; left:-2%;">
+                    <img class="cloud-mountain-front-layer" style="width: 100%;" src="./public/assets/img/mtnFrontFinal.webp"
                         alt="Description of your image" />
                 </div>
             </div>
@@ -568,7 +570,7 @@ import Header from "../components/Header.astro";
     <div class="mountain-sect" id="mountain-sect" style="position: relative;">
         <div class="mountain-front">
         <!-- HIKERS -->
-        <img src="./public/assets/img/hikersFinal__OF.png" class="mtnSideFrontLayer" width="3390px;" />
+        <img src="./public/assets/img/hikersFinalHiRes.png" class="mtnSideFrontLayer" width="3390px;" />
         <!-- END OF HIKERS -->
         <div class="blue-sect-mountain">
             <div class="blue-light-headline">
@@ -889,43 +891,54 @@ import Header from "../components/Header.astro";
             </div>
         </div>
         <div class="footerSvgBackground" style=" margin-top:-1%; position:relative;">
-            <div class="svg-reveal svg-reveal-left"></div>
-            <div class="svg-reveal svg-reveal-right"></div>
             <svg viewBox="0 0 758.57 337.81">
-                <defs>
-                    <style>
-                        .complexfooter-1 {
-                            stroke-width: 12.67px;
-                        }
-                        .complexfooter-1,
-                        .complexfooter-2 {
-                            fill: none;
-                            stroke: #072334;
-                            stroke-miterlimit: 10;
-                        }
-                        .complexfooter-3 {
-                            fill: #072334;
-                            stroke-width: 0px;
-                        }
-                        .complexfooter-2 {
-                            stroke-linecap: square;
-                            stroke-width: 23.8px;
-                        }
-                    </style>
-                </defs>
-                <path  id="footerline1" class="complexfooter-2"
-                    d="M11.91,286.97c0-4.93,4.27-10.56,6.56-14.86,4.05-7.6,8.34-15.07,12.61-22.54,3.53-6.18,7.84-11.71,11.65-17.71,3.59-5.66,7.06-10.83,11.58-15.77,4.27-4.66,9.36-9.41,13.07-14.48,4.6-6.26,7.74-13.89,11.67-20.55,4.11-6.98,8.71-13.78,13.02-20.64,4.73-7.53,8.37-15.73,13.71-22.84,5.74-7.64,10.66-15.85,16.39-23.5,4.69-6.26,9.41-11.6,13.02-18.55,2.52-4.85,5.99-8.91,8.66-13.65,2.69-4.77,4.79-9.68,7.8-14.28,3.61-5.52,7.22-10.85,8.74-17.24.59-2.47,1.29-4.17,2.94-6.21,3.93-4.85,9.46-8.07,13.85-12.46,3.18-3.18,5.64-5.82,9.38-8.36,3.23-2.19,7.58-6.06,11.55-6.88,2.62-.54,5.72,0,8.4-.03,4.78-.05,9.23-1.45,14.02-1.54,19.7-.37,39.27-1.39,59.01-1.39,17.5,0,35,0,52.51,0,5.82,0,12.78,1.14,18.47.05,1.95-.37,2.89-1.3,4.97-1.54,2.33-.27,54.08,1.54,56.44,1.54l-12.26-1.5c2.36,0,4.95-.3,7.28-.03,2.08.24,3.02,1.17,4.97,1.54,5.7,1.08,12.66-.05,18.47-.05,17.5,0,35,0,52.51,0,19.74,0,39.31,1.02,59.01,1.39,4.79.09,9.24,1.49,14.02,1.54,2.68.03,5.78-.51,8.4.03,3.97.82,8.32,4.68,11.55,6.88,3.74,2.54,6.2,5.18,9.38,8.36,4.39,4.39,9.92,7.61,13.85,12.46,1.65,2.04,2.36,3.74,2.94,6.21,1.52,6.39,5.13,11.72,8.74,17.24,3.01,4.6,5.11,9.51,7.8,14.28,2.67,4.74,6.14,8.8,8.66,13.65,3.61,6.95,8.33,12.29,13.02,18.55,5.73,7.65,10.65,15.86,16.39,23.5,5.34,7.11,8.98,15.31,13.71,22.84,4.31,6.86,8.91,13.66,13.02,20.64s7.07,14.29,11.67,20.55c3.72,5.06,8.81,9.82,13.07,14.48,4.52,4.93,7.99,10.11,11.58,15.77,3.8,6,8.11,11.53,11.65,17.71,4.28,7.47,8.57,14.94,12.61,22.54,2.29,4.3,2.69,12.16,2.7,17.09" />
-                <path  id="footerline2" class="complexfooter-2"
-                    d="M89.06,306.23c-1.49-9.43,6.73-16.62,11.65-23.91,6.38-9.44,12.63-18.92,19.3-28.16,8.16-11.31,15.4-22.95,22.44-34.98,4.66-7.96,8.79-16.01,14.41-23.26,6.79-8.76,12.23-19.37,18.07-28.81,4.53-7.32,8.25-15.08,12.64-22.49,6.26-10.57,13.36-20.98,21.08-30.45,2.86-3.51,5.15-7.27,8.27-10.57,4.14-4.38,8.44-8.78,12.4-13.32,6.05-6.94,14.58-11.37,23.72-13.25,2.93-.6,5.92-.14,8.89-.21,5.54-.12,10.81-1.67,16.39-1.6,6.86.09,13.71.03,20.57.03,18.33,0,10.99.01,29.32,0,4.69,0,8.59-.15,12.95-1.17,3.4-.8,90.09,3.08,93.05,1.17,0,0-4.69,0,0,0,18.33.01,10.99,0,29.32,0,6.86,0,13.71.05,20.57-.03,5.58-.07,10.85,1.48,16.39,1.6,2.97.07,5.96-.4,8.89.21,9.14,1.89,17.67,6.32,23.72,13.25,3.96,4.54,8.26,8.94,12.4,13.32,3.12,3.29,5.41,7.06,8.27,10.57,7.73,9.47,14.82,19.88,21.08,30.45,4.39,7.41,8.11,15.17,12.64,22.49,5.84,9.44,11.28,20.06,18.07,28.81,5.62,7.26,9.76,15.31,14.41,23.26,7.04,12.03,14.28,23.66,22.44,34.98,6.67,9.25,12.92,18.72,19.3,28.16,4.92,7.28,13.14,14.47,11.65,23.91" />
-                <path  id="footerline3" class="complexfooter-2"
-                    d="M578.38,317.03c1.27-9.14-8.07-31.99-12.96-39.08-5.98-8.67-10.47-17.25-14.44-27.06-4.5-11.1-9.37-22.8-15.13-33.31-2.42-4.41-5.87-8.05-8.16-12.57-4.63-9.14-8.3-18.64-13.47-27.54-2.55-4.39-5.56-8.32-8.47-12.44-2.04-2.88-3.19-5.99-6.03-8.37-5.37-4.51-8.21-11.15-14.19-15.68-1.93-1.46-4.41-3.31-6.58-4.47-2.72-1.45-6.17-1.53-9.47-2.2-3.04-.62-5.95-1.71-8.97-1.94-5.87-.43-12.01.06-17.9.06-7.62,0-15.24,0-22.87,0-7.62,0-92.32,0-99.94,0-5.9,0-12.03-.49-17.9-.06-3.02.22-5.93,1.32-8.97,1.94-3.3.67-6.74.74-9.47,2.2-2.17,1.16-4.65,3.01-6.58,4.47-5.98,4.52-8.82,11.16-14.19,15.68-2.84,2.38-3.99,5.49-6.03,8.37-2.91,4.11-5.92,8.05-8.47,12.44-5.17,8.9-8.84,18.4-13.47,27.54-2.29,4.52-5.74,8.16-8.16,12.57-5.76,10.51-10.63,22.21-15.13,33.31-3.97,9.8-8.46,18.38-14.44,27.06-4.89,7.1-18.8,34.09-17.53,43.23" />
-                <path  id="footerline4" class="complexfooter-2"
-                    d="M262.68,324.92c-.37-10.08,2.68-29.36,7.63-37.9,1.6-2.75,3.83-5.52,5.22-8.41,1.31-2.73,1.82-5.79,3.08-8.56,3.64-7.98,7.78-15,10.15-23.52,2.98-10.73,9.44-18.44,14.57-28,2.64-4.92,4.57-10.63,7.56-15.3,2.29-3.57,5.68-4.8,9.5-6.08,6.99-2.35,105.98-1.74,113.81-1.74l-15.7-.8c7.82,0,16.53.19,23.52,2.54,3.82,1.29,7.21,2.52,9.5,6.08,2.99,4.66,4.92,10.38,7.56,15.3,5.14,9.56,11.6,17.28,14.57,28,2.37,8.53,6.51,15.55,10.15,23.52,1.27,2.77,1.77,5.83,3.08,8.56,1.39,2.89,3.62,5.66,5.22,8.41,4.96,8.54,7.97,28.36,7.6,38.44" />
-                <path  id="footerline5" class="complexfooter-1"
-                    d="M379.24 239.83 385.49 240.19 391.75 239.68 398 240.01 404.21 240.75 410.25 241.43 416.26 242.36 421.4 244.71 426.78 246.65 431.37 249.97 436.04 253.01 440.71 255.4 444.16 258.82 445.91 260.13 445.36 261.77 441.64 264.23 436.97 268.22 433.38 271.72 429.62 275.54 425.53 279.02 419.2 282.12 412.69 284.43 406.23 285.31 399.82 286.53 393.32 287.2 386.78 287.43 380.27 287.43 388.73 287.29 382.21 286.95 375.68 287.04 369.23 286.02 362.66 285.99 356.32 284.31 349.6 282.5 343.86 278.46 339.24 275.7 335.38 271.95 332.03 268.22 327.01 264.73 323.53 261.87 322.8 260.07 324.81 258.76 328.33 255.45 333.2 253.47 337.54 249.83 342.33 246.82 347.61 244.75 352.69 242.18 358.76 241.52 364.74 240.12 371 239.97 377.26 240.43 383.5 240.63 389.75 240.29" />
-                <path  id="footerline6" class="complexfooter-3"
-                    d="M375.14 263.65 374.94 265.91 375.17 268.17 375.14 270.46 375.58 272.7 376.72 274.75 377.28 276.93 377.72 279.22 379.18 281.02 380.65 282.72 382.46 284.02 384.57 284.64 386.64 283.92 388.32 282.54 390.22 281.18 390.98 279 391.74 276.89 393.05 274.93 392.78 272.54 393.28 270.35 394.05 268.18 394.07 265.91 393.75 263.65 393.97 261.39 393.79 259.14 393.1 256.97 393.17 254.68 393.09 252.35 391.93 250.34 391.33 248.12 389.6 246.51 388.81 244.26 386.6 243.45 384.57 243.07 382.47 243.29 380.52 244.44 379.13 246.25 378.14 248.28 377.1 250.29 376.98 252.61 376.36 254.75 375.74 256.92 375.02 259.1 374.74 261.37 375.14 263.65z" />
-            </svg>
+    <defs>
+        <style>
+            .complexfooter-1 {
+                stroke-width: 12.67px;
+            }
+            .complexfooter-1,
+            .complexfooter-2 {
+                fill: none;
+                stroke: #072334;
+                stroke-miterlimit: 10;
+            }
+            .complexfooter-3 {
+                fill: #072334;
+                stroke-width: 0px;
+            }
+            .complexfooter-2 {
+                stroke-linecap: square;
+                stroke-width: 18.8px;
+            }
+            .pupil {
+                fill: #072334 !important;
+                stroke-width:12px !important;
+            }
+            .eye1 {
+        fill: #002235;
+        stroke-width: 0px;
+      }
+
+      .eye2 {
+        fill: none;
+        stroke: #002235;
+        stroke-miterlimit: 10;
+        stroke-width: 12.67px;
+      }
+        </style>
+    </defs>
+  <path id="footerline1" fill="white" stroke="black" stroke-width="4" class="normal-draw complexfooter-2" d="M381.22,12.6c14.3.44,29.45.94,30.7.94l-12.26-1.5c2.36,0,4.95-.3,7.28-.03,2.08.24,3.02,1.17,4.97,1.54,5.7,1.08,12.66-.05,18.47-.05,17.5,0,35,0,52.51,0,19.74,0,39.31,1.02,59.01,1.39,4.79.09,9.24,1.49,14.02,1.54,2.68.03,5.78-.51,8.4.03,3.97.82,8.32,4.68,11.55,6.88,3.74,2.54,6.2,5.18,9.38,8.36,4.39,4.39,9.92,7.61,13.85,12.46,1.65,2.04,2.36,3.74,2.94,6.21,1.52,6.39,5.13,11.72,8.74,17.24,3.01,4.6,5.11,9.51,7.8,14.28,2.67,4.74,6.14,8.8,8.66,13.65,3.61,6.95,8.33,12.29,13.02,18.55,5.73,7.65,10.65,15.86,16.39,23.5,5.34,7.11,8.98,15.31,13.71,22.84,4.31,6.86,8.91,13.66,13.02,20.64s7.07,14.29,11.67,20.55c3.72,5.06,8.81,9.82,13.07,14.48,4.52,4.93,7.99,10.11,11.58,15.77,3.8,6,8.11,11.53,11.65,17.71,4.28,7.47,8.57,14.94,12.61,22.54,2.29,4.3,2.69,12.16,2.7,17.09"/>
+  <path id="footerline2" fill="white" stroke="black" stroke-width="4" class=" reverse-draw complexfooter-2" fill="white" stroke="black" stroke-width="4" d="M11.91,286.97c0-4.93,4.27-10.56,6.56-14.86,4.05-7.6,8.34-15.07,12.61-22.54,3.53-6.18,7.84-11.71,11.65-17.71,3.59-5.66,7.06-10.83,11.58-15.77,4.27-4.66,9.36-9.41,13.07-14.48,4.6-6.26,7.74-13.89,11.67-20.55,4.11-6.98,8.71-13.78,13.02-20.64,4.73-7.53,8.37-15.73,13.71-22.84,5.74-7.64,10.66-15.85,16.39-23.5,4.69-6.26,9.41-11.6,13.02-18.55,2.52-4.85,5.99-8.91,8.66-13.65,2.69-4.77,4.79-9.68,7.8-14.28,3.61-5.52,7.22-10.85,8.74-17.24.59-2.47,1.29-4.17,2.94-6.21,3.93-4.85,9.46-8.07,13.85-12.46,3.18-3.18,5.64-5.82,9.38-8.36,3.23-2.19,7.58-6.06,11.55-6.88,2.62-.54,5.72,0,8.4-.03,4.78-.05,9.23-1.45,14.02-1.54,19.7-.37,39.27-1.39,59.01-1.39,17.5,0,35,0,52.51,0,5.82,0,12.78,1.14,18.47.05,1.95-.37,2.89-1.3,4.97-1.54,1.1-.12,13.08.21,25.73.59"/>
+  <path id="footerline3" fill="white" stroke="black" stroke-width="4" class="complexfooter-2" d="M378.92,74.83c25.06.73,53.61,1.51,55.29.43,0,0-4.69,0,0,0,18.33.01,10.99,0,29.32,0,6.86,0,13.71.05,20.57-.03,5.58-.07,10.85,1.48,16.39,1.6,2.97.07,5.96-.4,8.89.21,9.14,1.89,17.67,6.32,23.72,13.25,3.96,4.54,8.26,8.94,12.4,13.32,3.12,3.29,5.41,7.06,8.27,10.57,7.73,9.47,14.82,19.88,21.08,30.45,4.39,7.41,8.11,15.17,12.64,22.49,5.84,9.44,11.28,20.06,18.07,28.81,5.62,7.26,9.76,15.31,14.41,23.26,7.04,12.03,14.28,23.66,22.44,34.98,6.67,9.25,12.92,18.72,19.3,28.16,4.92,7.28,13.14,14.47,11.65,23.91"/>
+  <path id="footerline4" fill="white" stroke="black" stroke-width="4" class="complexfooter-2" d="M89.06,306.23c-1.49-9.43,6.73-16.62,11.65-23.91,6.38-9.44,12.63-18.92,19.3-28.16,8.16-11.31,15.4-22.95,22.44-34.98,4.66-7.96,8.79-16.01,14.41-23.26,6.79-8.76,12.23-19.37,18.07-28.81,4.53-7.32,8.25-15.08,12.64-22.49,6.26-10.57,13.36-20.98,21.08-30.45,2.86-3.51,5.15-7.27,8.27-10.57,4.14-4.38,8.44-8.78,12.4-13.32,6.05-6.94,14.58-11.37,23.72-13.25,2.93-.6,5.92-.14,8.89-.21,5.54-.12,10.81-1.67,16.39-1.6,6.86.09,13.71.03,20.57.03,18.33,0,10.99.01,29.32,0,4.69,0,8.59-.15,12.95-1.17,1.47-.35,18.59.19,37.76.75"/>
+  <path id="footerline5" fill="white" stroke="black" stroke-width="4" class="complexfooter-2" d="M381.22,132.42c-26.3,0-56.96,0-61.4,0-5.9,0-12.03-.49-17.9-.06-3.02.22-5.93,1.32-8.97,1.94-3.3.67-6.74.74-9.47,2.2-2.17,1.16-4.65,3.01-6.58,4.47-5.98,4.52-8.82,11.16-14.19,15.68-2.84,2.38-3.99,5.49-6.03,8.37-2.91,4.11-5.92,8.05-8.47,12.44-5.17,8.9-8.84,18.4-13.47,27.54-2.29,4.52-5.74,8.16-8.16,12.57-5.76,10.51-10.63,22.21-15.13,33.31-3.97,9.8-8.46,18.38-14.44,27.06-4.89,7.1-18.8,34.09-17.53,43.23"/>
+  <path id="footerline6" fill="white" stroke="black" stroke-width="4" class="complexfooter-2" d="M578.38,317.03c1.27-9.14-8.07-31.99-12.96-39.08-5.98-8.67-10.47-17.25-14.44-27.06-4.5-11.1-9.37-22.8-15.13-33.31-2.42-4.41-5.87-8.05-8.16-12.57-4.63-9.14-8.3-18.64-13.47-27.54-2.55-4.39-5.56-8.32-8.47-12.44-2.04-2.88-3.19-5.99-6.03-8.37-5.37-4.51-8.21-11.15-14.19-15.68-1.93-1.46-4.41-3.31-6.58-4.47-2.72-1.45-6.17-1.53-9.47-2.2-3.04-.62-5.95-1.71-8.97-1.94-5.87-.43-12.01.06-17.9.06-7.62,0-15.24,0-22.87,0-3.18,0-19.74,0-38.54,0"/>
+  <path id="footerline7" fill="white" stroke="black" stroke-width="4" class="complexfooter-2" d="M378.95,195.39c25.94-.12,51.45.02,55.27.02l-15.7-.8c7.82,0,16.53.19,23.52,2.54,3.82,1.29,7.21,2.52,9.5,6.08,2.99,4.66,4.92,10.38,7.56,15.3,5.14,9.56,11.6,17.28,14.57,28,2.37,8.53,6.51,15.55,10.15,23.52,1.27,2.77,1.77,5.83,3.08,8.56,1.39,2.89,3.62,5.66,5.22,8.41,4.96,8.54,7.97,28.36,7.6,38.44"/>
+  <path id="footerline8" fill="white" stroke="black" stroke-width="4" class="complexfooter-2" d="M262.68,324.92c-.37-10.08,2.68-29.36,7.63-37.9,1.6-2.75,3.83-5.52,5.22-8.41,1.31-2.73,1.82-5.79,3.08-8.56,3.64-7.98,7.78-15,10.15-23.52,2.98-10.73,9.44-18.44,14.57-28,2.64-4.92,4.57-10.63,7.56-15.3,2.29-3.57,5.68-4.8,9.5-6.08,3.58-1.21,31.3-1.63,58.54-1.76"/>
+  <polyline id="footerEye1" fill="white" stroke="black" stroke-width="4" class="complexfooter-2" points="375.94 260.05 382.19 260.61 388.44 260.68 394.68 260.52 400.93 260.63 406.99 261.25 413.03 262.21 418.18 264.64 423.42 266.87 427.94 270.32 432.78 273.07 437.08 275.88 441.08 278.46 442.95 280.2 442.18 282.02 438.61 284.75 433.95 288.66 430.38 292.16 426.22 295.56 422.06 298.92 415.9 302.26 409.41 304.72 403.03 306.12 396.46 306.14 390.01 307.2 383.48 307.68 376.95 306.76 385.43 307.2 378.91 307.44 372.4 306.71 365.88 306.58 359.46 305.38 352.99 304.6 346.2 302.81 340.18 299.12 336 295.76 332.58 291.59 328.94 288.11 323.58 285.03 320.47 281.78 319.55 280.22 321.57 279.03 325.4 275.99 329.69 273.23 334.07 269.66 339.17 267.19 344 264.18 349.55 262.92 355.42 261.39 361.49 261.07 367.69 259.92 373.96 260.62 380.2 260.43 386.45 260.68"/>
+  <polygon id="footerEye2"  stroke="black" stroke-width="2" class="complexfooter-2 pupil" points="370.04 281.3 369.37 283.58 369.96 285.81 370.52 288.01 370.44 290.32 370.85 292.56 371.59 294.72 373.18 296.5 373.91 298.65 375.11 300.61 377.06 301.86 379.27 302.74 381.47 301.83 383.46 300.63 384.3 298.43 385.89 296.76 386.9 294.71 386.86 292.33 388.08 290.32 388.66 288.11 388.53 285.81 388.96 283.57 388.89 281.3 388.66 279.04 388.22 276.82 388.63 274.49 387.43 272.42 387.3 270.14 386.9 267.89 385.44 266.06 384.4 264.1 383.15 262.26 381.26 261.17 379.27 260.78 377.15 260.93 375.59 262.46 373.76 263.86 372.82 265.92 372.04 268.03 371.59 270.24 370.98 272.39 370.35 274.56 369.67 276.75 369.37 279.02 370.04 281.3"/>
+</svg>
         </div>
     </div>
     <!------------------->
@@ -953,14 +966,14 @@ import Header from "../components/Header.astro";
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const mtnCont = document.querySelector(".mountain-container");
-        const cloudSect = document.querySelector(".cloud-sect");
+        const cloudSect = document.querySelector(".cloud-reveal-bg");
         const cloudRevealText = document.querySelector(".mountain-reveal-text");
         const topCloud = document.querySelector(".top-cloud-reveal-img");
         const topCloud2 = document.querySelector(".top-cloud-reveal-img-2");
 
         const options = {
             root: null, // Use the viewport as the root
-            threshold: .2 // Trigger when 50% of the element is in view
+            threshold: .5 // Trigger when 50% of the element is in view
         };
 
         function fadeInMountain(entries, observer) {
@@ -974,16 +987,15 @@ import Header from "../components/Header.astro";
                     observer.disconnect();
 
                     window.addEventListener("scroll", () => {
-                        const scrollPosition = window.scrollY;
                         const cloudSectHeight = cloudSect.offsetHeight;
-                        let opacity = 4 - (scrollPosition / (cloudSectHeight * 0.50)); // Adjust the factor here
+                        const scrollPosition = window.pageYOffset; // Use window.pageYOffset to get scroll position
 
-                        // Ensure opacity stays within the range [0, 1]
-                        opacity = Math.min(Math.max(opacity, 0), 1);
+                        const opacity = 4.6 - scrollPosition / cloudSectHeight;
 
                         topCloud.style.opacity = opacity.toFixed(2); // Limit opacity to two decimal places
                         topCloud2.style.opacity = opacity.toFixed(2);
                     });
+
                 }
             });
         }
@@ -1063,68 +1075,77 @@ import Header from "../components/Header.astro";
 <!-- FOOTER -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        var drawingStarted = false;
-        var lastScrollTop = 0;
+            var drawingStarted = false;
+            const normalPath1 = document.querySelector("#footerline1");
+            const reversePath1 = document.querySelector("#footerline2");
+            const normalPath2 = document.querySelector("#footerline3");
+            const reversePath2 = document.querySelector("#footerline4");
+            const normalPath3 = document.querySelector("#footerline5");
+            const reversePath3 = document.querySelector("#footerline6");
+            const normalPath4 = document.querySelector("#footerline7");
+            const reversePath4 = document.querySelector("#footerline8");
+            const footerEye1 = document.querySelector("#footerEye1");
+            const footerEye2 = document.querySelector("#footerEye2");
 
         window.addEventListener('message', function (event) {
-            if (event.data && event.data.type === 'straightFooterPercentage') {
-                var footerscrollpercent = event.data.value;
+            window.addEventListener("scroll", function () {
 
-                if (!drawingStarted && footerscrollpercent > 0.9) {
-                    console.log("footer scroll percentage over 0.54, triggering action...");
-                    drawingStarted = true;
-                    animateFooter();
-                } else if (drawingStarted && footerscrollpercent < 0.9) {
-                    console.log("footer scroll percentage less than 0.9, triggering reverse action...");
-                    drawingStarted = false;
-                    reverseAnimateFooter();
+                if (event.data && event.data.type === 'straightFooterPercentage') {
+                    var footerscrollpercent = event.data.value;
+                    console.log(footerscrollpercent);
+
+                    if ( footerscrollpercent > 0.79) {
+                        console.log('should add now');
+                        // Add animation classes
+                        addAnimationClasses();
+                        drawingStarted = true;
+                    }
                 }
-            }
+
+            });
         });
 
-        // Add scroll event listener outside of message event listener
-        window.addEventListener("scroll", function () {
-            if (drawingStarted) {
-                var currentScrollTop = window.scrollY;
+        // Function to add animation classes with delay
+        const addClassWithDelay = (element, className, delay) => {
+            setTimeout(() => {
+                element.classList.add(className);
+            }, delay);
+        };
 
-                // Determine scroll direction
-                var scrollDirection = currentScrollTop > lastScrollTop ? 'down' : 'up';
-                lastScrollTop = currentScrollTop;
+        // Function to add animation classes
+        const addAnimationClasses = () => {
+            addClassWithDelay(normalPath1, 'path-test', 500);
+            addClassWithDelay(reversePath1, 'path-test-reverse', 0);
+            addClassWithDelay(normalPath2, 'path-test', 500);
+            addClassWithDelay(reversePath2, 'path-test-reverse', 0);
+            addClassWithDelay(normalPath3, 'path-test', 500);
+            addClassWithDelay(reversePath3, 'path-test-reverse', 0);
+            addClassWithDelay(normalPath4, 'path-test', 500);
+            addClassWithDelay(reversePath4, 'path-test-reverse', 0);
+            addClassWithDelay(footerEye1, 'path-test', 800);
+            addClassWithDelay(footerEye2, 'path-test', 800);
+        };
 
-                animateFooter(scrollDirection);
-            }
+        // Function to remove animation class
+        const removeAnimation = (element, className) => {
+            element.classList.remove(className);
+        };
+
+        // Function to remove animation classes
+        const removeAnimationClasses = () => {
+            removeAnimation(normalPath1, 'path-test');
+            removeAnimation(reversePath1, 'path-test-reverse');
+            removeAnimation(normalPath2, 'path-test');
+            removeAnimation(reversePath2, 'path-test-reverse');
+            removeAnimation(normalPath3, 'path-test');
+            removeAnimation(reversePath3, 'path-test-reverse');
+            removeAnimation(normalPath4, 'path-test');
+            removeAnimation(reversePath4, 'path-test-reverse');
+            removeAnimation(footerEye1, 'path-test');
+            removeAnimation(footerEye2, 'path-test');
+        };
         });
 
-        function animateFooter(direction) {
-            // Set transition duration
-            var transitionDuration = '0.5s'; // Adjust the duration as needed
-
-            // Apply transition to reveal divs
-            var revealDivs = document.querySelectorAll('.svg-reveal-left, .svg-reveal-right');
-            revealDivs.forEach(function (div) {
-                div.style.transition = 'width ' + transitionDuration;
-                if (direction === 'down') {
-                    // Collapse the divs
-                    div.style.width = '0px';
-                } else {
-                    // Expand the divs to their original width
-                    div.style.width = '50%'; // Adjust this to the original width
-                }
-            });
-        }
-
-        function reverseAnimateFooter() {
-            // Set transition duration
-            var transitionDuration = '0.5s'; // Adjust the duration as needed
-
-            // Apply transition to reveal divs
-            var revealDivs = document.querySelectorAll('.svg-reveal-left, .svg-reveal-right');
-            revealDivs.forEach(function (div) {
-                div.style.transition = 'width ' + transitionDuration;
-                div.style.width = '50%'; // Expand the divs to their original width
-            });
-        }
-    });
 
 </script>
 
@@ -1243,7 +1264,7 @@ import Header from "../components/Header.astro";
             let monkeyScrollpercent =
                 Math.min(Math.max((window.scrollY - monkeySvg.offsetTop + offset) / (monkeySvg.offsetHeight - offset), 0), 1);
 
-            console.log('Monkey scroll percentage:', monkeyScrollpercent);
+            // console.log('Monkey scroll percentage:', monkeyScrollpercent);
 
             let drawLength = 700 * monkeyScrollpercent * 2 ; // Total length of the path
             footer2.style.strokeDasharray = `${drawLength}, 700`;
@@ -1352,7 +1373,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (bottomScrollpercent >= .54) {
 
                 window.postMessage({ type: 'straightFooterPercentage', value: bottomScrollpercent }, '*');
-                // console.log('should be drawing footer now');
+                console.log('should be drawing footer now');
             }
         });
     }
@@ -1705,22 +1726,32 @@ document.addEventListener("DOMContentLoaded", function () {
 <script>
     document.addEventListener("DOMContentLoaded", function () {
 
-            const topLottiePlayer = document.getElementById("top-wavy").querySelector("dotlottie-player");
-            const bottomLottiePlayer = document.getElementById("bottom-wavy").querySelector("dotlottie-player");
+        const topLottiePlayer = document.getElementById("top-wavy").querySelector("dotlottie-player");
+        const bottomLottiePlayer = document.getElementById("bottom-wavy").querySelector("dotlottie-player");
+        let animationPlayed = false;
 
-            topLottiePlayer.stop();
-            bottomLottiePlayer.stop();
+        topLottiePlayer.stop();
+        bottomLottiePlayer.stop();
 
-            $(window).scroll(function () {
+        $(window).scroll(function () {
+            const bottomTextPlayer = $('.bottom-text-player');
+            const bottomTextOffset = bottomTextPlayer.offset().top;
+            const bottomTextHeight = bottomTextPlayer.outerHeight();
+            const windowHeight = window.innerHeight;
 
-                if ($(window).scrollTop() >= $(
-                    '.bottom-text-player').offset().top + $('.bottom-text-player').
-                        outerHeight() - window.innerHeight) {
-
+            if ($(window).scrollTop() >= bottomTextOffset + bottomTextHeight - windowHeight) {
+                if (!animationPlayed) {
                     topLottiePlayer.play();
                     bottomLottiePlayer.play();
-                    // window.alert('You reached the end of the DIV');
+                    animationPlayed = true;
                 }
-            });
+            } else {
+                // Reset animation when scrolling back
+                animationPlayed = false;
+                topLottiePlayer.stop();
+                bottomLottiePlayer.stop();
+            }
         });
+    });
+
 </script>
