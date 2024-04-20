@@ -1149,9 +1149,9 @@ h1.splitter {
 
 
 /* Testing for stroke animation */
-.complexfooter-2{
+/* .complexfooter-2{
     display:none;
-}
+} */
 .path-test {
     display:block;
     stroke-dasharray: 1000;
