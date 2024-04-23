@@ -62,7 +62,7 @@ h1,h2,h3,h4,h5,h6{
     text-align: center;
 }
 .subtitle-text{
-    line-height: 1rem;
+    line-height: 135%;
     margin-top: 1rem;
     font-family: "Futura";
     text-align: center;
@@ -83,6 +83,44 @@ h1,h2,h3,h4,h5,h6{
     animation: fadeIn 1s ease-in-out forwards;
     opacity: 0;
 }
+
+.serp-left {
+    position: relative;
+    /* Required for left positioning */
+    left: -100%;
+    animation: serpLeftFade 1.5s ease-in-out;
+    }
+    
+@keyframes serpLeftFade {
+    from {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.serp-right {
+    position: relative;
+    /* Required for right positioning */
+    right: -100%;
+    animation: serpRightFade 1.5s ease-in-out;
+}
+
+@keyframes serpRightFade {
+    from {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
 
 .fade-in {
     animation: fadeIn 1s ease-in-out forwards;
@@ -167,7 +205,7 @@ h1,h2,h3,h4,h5,h6{
     position: absolute;
     top: 35%;
     font-size:1.3vw;
-    left:2%;
+    left:-.5%;
     transition:opacity 1s ease;
 }
 .ninety-left.show{
@@ -180,7 +218,7 @@ h1,h2,h3,h4,h5,h6{
     position: absolute;
     top:35%;
     font-size:1.3vw;
-    right:4%;
+    right:1.5%;
     transition:opacity 1s ease;
 }
 .ninety-right.show{
@@ -233,6 +271,14 @@ h1,h2,h3,h4,h5,h6{
 .spacer {
     height: 5vh;
 }
+.counter-container{
+    opacity:0;
+    transition: opacity 1s ease;
+}
+
+.counter-container.show{
+    opacity: 1;
+}
 
 .counter-grid{
     margin-bottom:2%;
@@ -249,18 +295,31 @@ h1,h2,h3,h4,h5,h6{
     margin-top: -16%;
     font-size:1.5vw;
 }
+.cloud-sect{
+    opacity:0;
+    margin-top:-70%;
+    transition: opacity 1s ease;
+}
 
+.cloud-sect.show{
+    opacity:1;
+}
+
+.high-cloud-bg{
+    top:45% !important;
+    width:105% !important;
+}
 .cloud-container {
     overflow: hidden;
-    margin-top: 4rem;
-    min-height: 160vh;
-    position: relative;
+    top:-8%;
+    min-height: 60vh;
+    position: absolute;
     /* background-color: white; */
-    width: 150%;
+    width: 100%;
     /* Adjust as needed */
-    margin-left: -25%;
+    /* margin-left: -25%; */
     /* Half of the excess width to keep it centered */
-    margin-right: -25%;
+    /* margin-right: -25%; */
     /* Half of the excess width to keep it centered */
 }
 
@@ -281,13 +340,14 @@ h1,h2,h3,h4,h5,h6{
 
 .cloud-reveal {
     position: absolute;
-    top: 57%;
+    top: 53%;
     /* Position the element 50% from the top */
     left: 50%;
     /* Position the element 50% from the left */
     transform: translate(-50%, -50%);
+    min-height:70vh;
     z-index: 100000;
-    width: 90%;
+    width: 110%;
     display: inline-block;
     overflow: hidden;
 }
@@ -299,7 +359,7 @@ h1,h2,h3,h4,h5,h6{
     /* Position the element 50% from the left */
     transform: translate(-50%, -50%);
     z-index: 100000;
-    width: 90%;
+    width: 100%;
     display: inline-block;
     overflow: hidden;
 }
@@ -325,7 +385,8 @@ h1,h2,h3,h4,h5,h6{
     /* Half of the excess width to keep it centered */
     margin-right: -5%;
     /* Half of the excess width to keep it centered */
-    margin-top: -70vh;
+    /* margin-top: -70vh; */
+    margin-top:26%;
     opacity: 1;
     /* transform: translateY(75rem); */
     transition:
@@ -334,8 +395,10 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .mountain-reveal-text {
+    line-height:110%;
     opacity: 1;
     transition: opacity 1s ease;
+    width:100%;
     text-align: center;
     font-size: 4vw;
     font-weight: bold;
@@ -500,13 +563,21 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .mountain-sect {
+    opacity: 0;
     margin-top: -17%;
     max-width: 100%;
     /* Adjust as needed */
     position: relative;
     /* height: 120vh;  */
     /* margin-bottom: 18rem; */
+    transition: opacity 1s ease;
 }
+
+.mountain-sect.show{
+     opacity: 1; 
+
+}
+
 
 .gradient-overlay {
     position: absolute;
@@ -628,7 +699,7 @@ h1,h2,h3,h4,h5,h6{
     left: 0;
     opacity: 0;
     transition:
-        opacity 2s ease;
+        opacity 1s ease;
 }
 
 .team-container__left.show {
@@ -650,7 +721,7 @@ h1,h2,h3,h4,h5,h6{
     right: 0;
     opacity: 0;
     transition:
-        opacity 2s ease;
+        opacity 1s ease;
 }
 
 .team-container__right.show {
@@ -690,7 +761,7 @@ h1,h2,h3,h4,h5,h6{
         line-height: 120%;
     opacity: 0;
     transition:
-        opacity 2s ease;
+        opacity 1s ease;
     right: 0;
 }
 #teamdesc.show {
@@ -698,7 +769,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .team-desc-blk{
-    font-size:1.2vw;
+    font-size:1vw;
     line-height: 110%;
 }
 
@@ -708,25 +779,25 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .monkey-sect {
-    margin-top: -20%;
+    margin-top: 16%;
     position: relative;
 }
 
 .left-plant-wrapper {
     position: absolute;
-    bottom:92%;
+    bottom:91%;
     right: -100%;
-    width: 28vw;
+    width: 29vw;
     z-index: -1;
     opacity: 0;
     transition:
         right 1.5s ease,
-        opacity 1.5s ease;
+        opacity 1s ease;
 }
 
 .left-plant-wrapper.show {
     opacity: 1;
-    right: 0;
+    right: 5%;
 }
 
 .right-plant-wrapper {
@@ -738,23 +809,33 @@ h1,h2,h3,h4,h5,h6{
     opacity: 0;
     transition:
         left 1.5s ease,
-        opacity 1.5s ease;
+        opacity 1s ease;
 }
 
 .right-plant-wrapper.show {
     opacity: 1;
-    left: 0;
+    left: 6%;
+}
+
+.monkeylinefooter{
+    stroke-width: 54px !Important;
 }
 
 .monkey-wrapper {
     position: relative;
     z-index: 10000;
-    width: 42rem;
+    width: 100%;
     margin: 0 auto;
-    padding-top: 41%;
+    bottom:.5vh;
+    /* padding-top: 41%; */
     opacity:0;
     transition:
             opacity 1s ease;
+}
+
+.monkey-wrapper img{
+    width:39vw;
+    margin:0 auto;
 }
 
 .monkey-wrapper.show{
@@ -762,8 +843,10 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .bottom-svg {
-    margin-top: -32.5%;
+    margin-top: -36.8%;
     z-index: 1000;
+    width: 115%;
+    margin-left: -8%;
 }
 
 .team-list-container {
@@ -790,12 +873,16 @@ h1,h2,h3,h4,h5,h6{
     left: 6%;
     top: 19%;
     opacity: 0;
-        transition:
-            opacity 2s ease;
+    transition:
+        opacity 1s ease;
 }
 
 .team-blurb.show{
     opacity:1;
+}
+
+.blurb.show {
+    opacity: 1;
 }
 
 .team-blurb .blurb {
@@ -830,7 +917,7 @@ h1,h2,h3,h4,h5,h6{
     width: 75%;
     height: auto;
     text-align: left;
-    top: 75%;
+    top: 75.5%;
     left: 10%;
     margin: 0 auto;
 }
@@ -840,7 +927,7 @@ h1,h2,h3,h4,h5,h6{
     width: 75%;
     height: auto;
     text-align: left;
-    top: 64%;
+    top: 63.2%;
     right: 10%;
     margin: 0 auto;
 }
@@ -850,7 +937,7 @@ h1,h2,h3,h4,h5,h6{
 .team-block-title {
     font-weight:bold;
     font-size: 1.5vw;
-    margin-bottom: 0.2rem;
+    margin-bottom: 1rem;
 }
 
 .vertical-uni {
@@ -962,7 +1049,7 @@ h1,h2,h3,h4,h5,h6{
     text-align: center;
     opacity: 0;
     transition:
-        opacity 2s ease;
+        opacity 1s ease;
 }
 
 .splitter-right-container.show {
@@ -992,9 +1079,9 @@ h1.splitter {
 
 .monkey-arch-text {
     position: absolute;
-    bottom:11%;
-    left: 28%;
-    width: 43vw;
+    bottom:22%;
+    left: 23.5%;
+    width: 52vw;
     opacity: 0;
     transition: 
         opacity 1s ease;
@@ -1045,7 +1132,7 @@ h1.splitter {
 .btm-lft-1,.btm-lft-2,.btm-lft-3,.btm-rt-1,.btm-rt-2{
     opacity: 0;
     transition:
-        opacity 1s ease;
+        opacity .5s ease;
 }
 .btm-lft-1.show,
 .btm-lft-2.show,
@@ -1129,7 +1216,7 @@ h1.splitter {
     opacity: 0;
     transition:
         right 2s ease,
-        opacity 2s ease;
+        opacity 1s ease;
 }
 
 #team-text-block-1.show,
@@ -1245,13 +1332,13 @@ h1.splitter {
 #footerEye1{
     stroke-width:10px !important;
     opacity: 0;
-        transition: opacity 1s ease;
+        transition: opacity .5s ease;
 } 
 #footerEye2{
     stroke-width:10px !important;
     fill:#002235 !important;
     opacity: 0;
-        transition: opacity 1s ease;
+        transition: opacity 2s ease;
 }
 
 #footerEye1.show{
