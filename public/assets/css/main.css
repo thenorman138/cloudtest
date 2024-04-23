@@ -314,7 +314,7 @@ h1,h2,h3,h4,h5,h6{
 .cloud-container {
     overflow: hidden;
     top:-8%;
-    min-height: 60vh;
+    min-height: 65vh;
     position: absolute;
     /* background-color: white; */
     width: 100%;
@@ -423,7 +423,7 @@ h1,h2,h3,h4,h5,h6{
     width: 28%;
     text-align: left;
     margin: 0 auto;
-    font-size: 2vw;
+    font-size: 1.7vw;
     line-height: 145%;
     /* letter-spacing: 0.2rem; */
     top: 15.5%;
@@ -444,7 +444,7 @@ h1,h2,h3,h4,h5,h6{
     max-width:28%;
     text-align: left;
     margin: 0 auto;
-    font-size: 2.5vw;
+    font-size: 2.2vw;
     line-height: 128%;
     letter-spacing: 0.2rem;
     top: 15.5%;
