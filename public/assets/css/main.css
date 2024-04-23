@@ -281,11 +281,12 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .counter-grid{
-    margin-bottom:2%;
+    margin-bottom:4%;
+    margin-top:4%;
 }
 
 .counter-items {
-    padding: 10%;
+    padding: 2% 18% 2% 18%;
     font-weight: bold;
     text-align: center;
     margin-bottom:2%;
@@ -293,11 +294,12 @@ h1,h2,h3,h4,h5,h6{
 
 .counter-text {
     margin-top: -16%;
-    font-size:1.5vw;
+    font-size:1.3vw;
+    line-height: 115%;
 }
 .cloud-sect{
     opacity:0;
-    margin-top:-70%;
+    margin-top:-60%;
     transition: opacity 1s ease;
 }
 
@@ -418,13 +420,13 @@ h1,h2,h3,h4,h5,h6{
 .text-over-mountain__left {
     left: -100%;
     position: absolute;
-    width: 25%;
+    width: 28%;
     text-align: left;
     margin: 0 auto;
-    font-size: 1.3vw;
-    line-height: 134%;
-    letter-spacing: 0.2rem;
-    top: 18%;
+    font-size: 2vw;
+    line-height: 145%;
+    /* letter-spacing: 0.2rem; */
+    top: 15.5%;
     opacity: 0;
     transition:
         left 2s ease,
@@ -433,19 +435,19 @@ h1,h2,h3,h4,h5,h6{
 
 .text-over-mountain__left.show {
     opacity: 1;
-    left: 11%;
+    left: 10.5%;
 }
 
 .text-over-mountain__right {
     right: -100%;
     position: absolute;
-    max-width:33%;
+    max-width:28%;
     text-align: left;
     margin: 0 auto;
-    font-size: 2vw;
+    font-size: 2.5vw;
     line-height: 128%;
     letter-spacing: 0.2rem;
-    top: 16%;
+    top: 15.5%;
     opacity: 0;
     transition:
         right 2s ease,
@@ -454,7 +456,7 @@ h1,h2,h3,h4,h5,h6{
 
 .text-over-mountain__right.show {
     opacity: 1;
-    right: 5%;
+    right: 8.5%;
 }
 
 /* .mountain-container.fade-in {
@@ -592,11 +594,11 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .team-logo-container{
-    width:33vw;
+    width:30vw;
 }
 
 .team-logo__left{
-    width:33vw;
+    width:30vw;
     margin:0 auto;
 }
 
@@ -638,22 +640,22 @@ h1,h2,h3,h4,h5,h6{
 .custom-team-list li.left{
     transform: rotate(-45deg);
     position: absolute;
-    top: 39%;
+    top: 49%;
     left: -8%;
     font-size:1.4vw;
 }
 .custom-team-list li.right {
     transform: rotate(45deg);
     position: absolute;
-    top: 39%;
-    right: -12%;
+    top: 49%;
+    right: -2%;
     font-size:1.4vw;
 }
 .custom-team-list li.bottom {
     /* transform: rotate(-90deg); */
     position: absolute;
-    bottom:-10%;
-    left: 18.5%;
+    bottom:-9%;
+    left: 14.5%;
     font-size:1.4vw;
 }
 
@@ -713,12 +715,12 @@ h1,h2,h3,h4,h5,h6{
 
 .team-container__right {
     position: absolute;
-    width: 35%;
+    width: 37%;
     height: auto;
     text-align: left;
-    top: 3%;
+    top: 2.5%;
     margin: 0 auto;
-    right: 0;
+    right: 2.5%;
     opacity: 0;
     transition:
         opacity 1s ease;
@@ -735,20 +737,28 @@ h1,h2,h3,h4,h5,h6{
 
 .founder-desc {
     line-height: 110%;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
+    margin-bottom:20%;
 }
 
+.board-members{
+    position: relative;
+        left: 1.5%;
+        font-size: 1.8vw;
+        font-weight: regular;
+        margin-bottom: 1.8rem;
+}
 .team-title {
     position: relative;
-    left:6.5%;
-    font-size: 3.6vw;
+    left:1.5%;
+    font-size: 3.7vw;
     font-weight: bold;
-    letter-spacing: 0.5vw;
+    letter-spacing: 0.9vw;
     margin-bottom: 3rem;
 }
 
 .team-description {
-    width:85%;
+    width:71%;
     position: absolute;
     top: 27.5%;
     left: 6%;
@@ -756,7 +766,7 @@ h1,h2,h3,h4,h5,h6{
 
 .team-description #teamdesc {
     font-weight: bold;
-    font-size: 2.5vw;
+    font-size: 2.3vw;
         letter-spacing: 0.1rem;
         line-height: 120%;
     opacity: 0;
@@ -770,7 +780,7 @@ h1,h2,h3,h4,h5,h6{
 
 .team-desc-blk{
     font-size:1vw;
-    line-height: 110%;
+    line-height: 135%;
 }
 
 .splitter-svg {
@@ -857,10 +867,10 @@ h1,h2,h3,h4,h5,h6{
 
 .team-list-item {
     letter-spacing: 0.1rem;
-    line-height: 110%;
+    line-height: 90%;
     font-size: 1.4vw;
     /* padding: 0.5rem; */
-    margin-bottom: .75vh;
+    margin-bottom: 3vh;
 }
 
 .team-subtitle {
@@ -869,9 +879,9 @@ h1,h2,h3,h4,h5,h6{
 
 .team-blurb {
     position: absolute;
-    width: 32%;
+    width: 36%;
     left: 6%;
-    top: 19%;
+    top: 20%;
     opacity: 0;
     transition:
         opacity 1s ease;
@@ -887,7 +897,7 @@ h1,h2,h3,h4,h5,h6{
 
 .team-blurb .blurb {
     font-weight: bold;
-    font-size: 2.1vw;
+    font-size: 1.9vw;
     letter-spacing: 0.1rem;
     line-height: 110%;
 }
@@ -897,7 +907,7 @@ h1,h2,h3,h4,h5,h6{
     width: 75%;
     height: auto;
     text-align: left;
-    top: 51%;
+    top: 50%;
     left: 10%;
     margin: 0 auto;
 }
@@ -907,7 +917,7 @@ h1,h2,h3,h4,h5,h6{
     width: 75%;
     height: auto;
     text-align: left;
-    top: 39%;
+    top: 38.5%;
     right: 10%;
     margin: 0 auto;
 }
@@ -917,7 +927,7 @@ h1,h2,h3,h4,h5,h6{
     width: 75%;
     height: auto;
     text-align: left;
-    top: 75.5%;
+    top: 75%;
     left: 10%;
     margin: 0 auto;
 }
@@ -927,17 +937,20 @@ h1,h2,h3,h4,h5,h6{
     width: 75%;
     height: auto;
     text-align: left;
-    top: 63.2%;
+    top: 63%;
     right: 10%;
     margin: 0 auto;
 }
 
-.team-block-subtitle {}
-
 .team-block-title {
-    font-weight:bold;
-    font-size: 1.5vw;
+    font-weight:regular;
+    font-size: 1.6vw;
     margin-bottom: 1rem;
+}
+
+.team-block-subtitle{
+font-weight: regular;
+    font-size: 1.2vw;
 }
 
 .vertical-uni {
@@ -1024,7 +1037,7 @@ h1,h2,h3,h4,h5,h6{
 
 .splitter-left-container {
     position: absolute;
-    top: 35%;
+    top: 29%;
     left: 5%;
     width: 35%;
     opacity: 0;
@@ -1043,7 +1056,7 @@ h1,h2,h3,h4,h5,h6{
 
 .splitter-right-container {
     position: absolute;
-    top: 35%;
+    top: 29%;
     left: 48%;
     width: 60%;
     text-align: center;
@@ -1095,9 +1108,9 @@ h1.splitter {
 .bottom-left-container {
     text-align: right;
     position: absolute;
-    top: 12.2%;
-    left: 5%;
-    width: 35%;
+    top: 13.2%;
+    left: 11%;
+    width: 30%;
 }
 
 #bottomlineSvg{
@@ -1116,7 +1129,7 @@ h1.splitter {
 }
 
 .bottom-text-paragraph {
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 6rem;
     font-size: 1.4vw;
 }
@@ -1125,8 +1138,8 @@ h1.splitter {
     text-align: left;
     position: absolute;
     top: 6%;
-    right: 5.7%;
-    width: 35%;
+    right: 12%;
+    width: 30%;
 }
 
 .btm-lft-1,.btm-lft-2,.btm-lft-3,.btm-rt-1,.btm-rt-2{
