@@ -308,7 +308,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .high-cloud-bg{
-    top:45% !important;
+    top:48% !important;
     width:105% !important;
 }
 .cloud-container {
@@ -342,7 +342,7 @@ h1,h2,h3,h4,h5,h6{
 
 .cloud-reveal {
     position: absolute;
-    top: 53%;
+    top: 51%;
     /* Position the element 50% from the top */
     left: 50%;
     /* Position the element 50% from the left */
@@ -1131,7 +1131,7 @@ h1.splitter {
 .bottom-text-paragraph {
     margin-top: 2rem;
     margin-bottom: 6rem;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
 }
 
 .bottom-right-container {
