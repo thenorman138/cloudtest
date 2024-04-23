@@ -974,13 +974,13 @@
             const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
             console.log('visible height:', visibleHeight);
             console.log('mtn height:', mtnHeight);
-            const percentage = (visibleHeight / mtnHeight) * 1200;
+            const percentage = (visibleHeight / 600) * 1200;
             console.log('scroll percentage', percentage);
             return percentage;
         }
 
         function fadeElement(scrollPercentage) {
-            const opacity = 1.225 - (scrollPercentage / 1000);
+            const opacity = 1.425 - (scrollPercentage / 1000);
             console.log(opacity);
             topCloud.style.opacity = opacity;
             topCloud2.style.opacity = opacity;
