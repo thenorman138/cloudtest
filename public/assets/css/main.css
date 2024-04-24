@@ -1,22 +1,40 @@
 /* Define Futura font */
-@font-face {
+/* @font-face {
     font-family: "Futura";
     src:
         url("../fonts/Futura.woff2") format("woff2"),
         url("../fonts/Futura.woff") format("woff");
-    /* Add additional font formats if necessary */
 }
 
 @font-face {
     font-family: "Myriad";
     src: url("../fonts/Futura.otf") format("otf");
-    /* Add additional font formats if necessary */
-}
+} */
 
 /* Apply Futura font to body */
+
+/* Define font styles for different weights */
+/* Make sure to adjust font-family names based on the ones provided by Typekit */
+/* Adjust font-weight and font-style accordingly */
+
+/* For bold */
+.bold {
+    font-family: "futura-pt-bold", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* book */
+.book{
+    font-family: "futura-pt", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     color: #002235;
-    font-family: "Futura", sans-serif;
+    font-family: "futura-pt", sans-serif;
     overflow-x: hidden;
     text-transform: uppercase;
 
