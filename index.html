@@ -963,6 +963,9 @@
         const elementToFade = document.querySelector(".element-to-fade");
         const topCloud = document.querySelector(".top-cloud-reveal-img");
         const topCloud2 = document.querySelector(".top-cloud-reveal-img-2");
+        const cloudbg1 = document.querySelector(".cloud-reveal-bg");
+        const cloudbg2 = document.querySelector(".high-cloud-bg");
+        const cloudbg3 = document.querySelector(".cloud-reveal");
         const mtnHeight = mtnCont.offsetHeight;
         const windowHeight = window.innerHeight;
 
@@ -990,6 +993,9 @@
             console.log(opacity);
             topCloud.style.opacity = opacity;
             topCloud2.style.opacity = opacity;
+            cloudbg1.style.opacity = opacity;
+            cloudbg2.style.opacity = opacity;
+            cloudbg3.style.opacity = opacity;
         }
 
         window.addEventListener("scroll", function () {
