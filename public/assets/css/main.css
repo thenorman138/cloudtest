@@ -51,7 +51,7 @@ font-weight:700;
 
 .fut-medium{
     font-family: "futura-pt", sans-serif;
-        font-weight: 500;
+        font-weight: 600;
         font-style: normal;
 
 }
@@ -403,7 +403,7 @@ h1,h2,h3,h4,h5,h6{
     position: absolute;
     top: 51%;
     /* Position the element 50% from the top */
-    left: 50%;
+    left: 47%;
     /* Position the element 50% from the left */
     transform: translate(-50%, -50%);
     min-height:70vh;
@@ -416,7 +416,7 @@ h1,h2,h3,h4,h5,h6{
     position: absolute;
     top: 57%;
     /* Position the element 50% from the top */
-    left: 50%;
+    left: 47%;
     /* Position the element 50% from the left */
     transform: translate(-50%, -50%);
     z-index: 100000;
@@ -459,6 +459,7 @@ h1,h2,h3,h4,h5,h6{
     line-height:110%;
     opacity: 1;
     transition: opacity 1s ease;
+    padding:12%;
     width:100%;
     text-align: center;
     font-size: 4vw;
@@ -479,7 +480,7 @@ h1,h2,h3,h4,h5,h6{
 .text-over-mountain__left {
     left: -100%;
     position: absolute;
-    width: 28%;
+    width: 25%;
     text-align: left;
     margin: 0 auto;
     font-size: 1.7vw;
@@ -821,7 +822,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .founder-desc {
-    line-height: 125%;
+    line-height: 135%;
     font-size: 1.2vw;
     margin-bottom:20%;
 }
