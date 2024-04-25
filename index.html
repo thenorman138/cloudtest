@@ -1471,9 +1471,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // console.log('new scroll percentage');
             // console.log(mtnScrollPercentage);
 
-            let drawLength = 1800 * mtnScrollPercentage * .55 ; // Total length of the path
-            path2Left.style.strokeDasharray = `${drawLength}, 1500`;
-            path2Right.style.strokeDasharray = `${drawLength}, 1500`;
+            let drawLength = 1800 * mtnScrollPercentage * .75 ; // Total length of the path
+            path2Left.style.strokeDasharray = `${drawLength}, 1800`;
+            path2Right.style.strokeDasharray = `${drawLength}, 1800`;
             // Add classes based on current scroll position
             if (mtnScrollPercentage >= 0.6) {
                 mtntext1.classList.add("show");
