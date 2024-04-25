@@ -1280,8 +1280,9 @@ h1.splitter {
 }
 
 .btm-lft-1,.btm-lft-2,.btm-lft-3{
+    position:relative;
     opacity: 0;
-    left:-100%;
+    left:-200%;
     transition:
         left .5s ease,
         opacity .5s ease;
@@ -1289,6 +1290,8 @@ h1.splitter {
 
 .btm-rt-1,
 .btm-rt-2{
+    position:relative;
+    right:-200%;
 opacity: 0;
     transition:
     right .5s ease,
@@ -1305,7 +1308,8 @@ opacity: 0;
 
 .btm-rt-1.show,
 .btm-rt-2.show{
-
+right: 0;
+    opacity: 1;
 }
 
 .bottom-right-headline {
@@ -1315,12 +1319,16 @@ opacity: 0;
     margin-bottom: 5rem;
     line-height: 110%;
     opacity:0;
+    right:-200%;
+    position: relative;
     transition: 
-    opacity 1s ease;
+    right .5s ease,
+    opacity .5s ease;
 }
 
 .bottom-right-headline.show{
     opacity:1;
+    right:0;
 }
 
 .svg-reveal {
