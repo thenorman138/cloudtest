@@ -261,7 +261,9 @@
                 <div class="cloud-reveal" style="z-index:-5;">
                     <img class="cloud-reveal-img" src="./public/assets/img/cloud_test.png" alt="Description of your image" />
                 </div>
-                <div class="mtn-reveal-text-container">
+                <div class="mtn-reveal-text-container" style="    left: 0%;
+    position: absolute;
+    top: 45%; width:100%;">
                     <h1 class="mountain-reveal-text">
                         FROM THE PEAKS TO THE VALLIES,<br />WE WILL NEVER SAY NO
                     </h1>
@@ -270,7 +272,7 @@
                     <img class="cloud-reveal-img top-cloud-reveal-img" src="./public/assets/img/cloud_test.png"
                         alt="Description of your image" />
                 </div> 
-                <div class="cloud-reveal">
+                <div class="cloud-reveal" style="top:41% !important;">
                     <img class="cloud-reveal-img top-cloud-reveal-img-2" src="./public/assets/img/cloud_test.png"
                         alt="Description of your image" />
                 </div>
@@ -989,7 +991,7 @@
         }
 
         function fadeElement(scrollPercentage) {
-            const opacity = 1.425 - (scrollPercentage / 1000);
+            const opacity = 1.625 - (scrollPercentage / 1300);
             console.log(opacity);
             topCloud.style.opacity = opacity;
             topCloud2.style.opacity = opacity;
@@ -1471,9 +1473,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // console.log('new scroll percentage');
             // console.log(mtnScrollPercentage);
 
-            let drawLength = 1800 * mtnScrollPercentage * .75 ; // Total length of the path
-            path2Left.style.strokeDasharray = `${drawLength}, 1800`;
-            path2Right.style.strokeDasharray = `${drawLength}, 1800`;
+            let drawLength = 1700 * mtnScrollPercentage * .75 ; // Total length of the path
+            path2Left.style.strokeDasharray = `${drawLength}, 1700`;
+            path2Right.style.strokeDasharray = `${drawLength}, 1700`;
             // Add classes based on current scroll position
             if (mtnScrollPercentage >= 0.6) {
                 mtntext1.classList.add("show");

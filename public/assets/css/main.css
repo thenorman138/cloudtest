@@ -362,6 +362,20 @@ h1,h2,h3,h4,h5,h6{
     transition: opacity 1s ease;
 }
 
+.cloud-sect::before {
+    content: '';
+    position: absolute;
+    /* Position absolute to overlay gradient on top */
+    top: 0;
+    /* Place gradient at the top of the div */
+    left: 0;
+    width: 100%;
+    /* Make gradient span the entire width of the div */
+    height: 36%;
+    /* Adjust the height of the gradient as needed */
+background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0) 100%);    /* White to transparent gradient */
+}
+
 .cloud-sect.show{
     opacity:1;
 }
@@ -373,7 +387,7 @@ h1,h2,h3,h4,h5,h6{
 .cloud-container {
     overflow: hidden;
     top:-8%;
-    min-height: 68vh;
+    min-height: 100vh;
     position: absolute;
     /* background-color: white; */
     width: 100%;
@@ -401,9 +415,9 @@ h1,h2,h3,h4,h5,h6{
 
 .cloud-reveal {
     position: absolute;
-    top: 51%;
+    top: 38%;
     /* Position the element 50% from the top */
-    left: 47%;
+    left: 48%;
     /* Position the element 50% from the left */
     transform: translate(-50%, -50%);
     min-height:70vh;
@@ -447,7 +461,7 @@ h1,h2,h3,h4,h5,h6{
     margin-right: -5%;
     /* Half of the excess width to keep it centered */
     /* margin-top: -70vh; */
-    margin-top:26%;
+    margin-top:17%;
     opacity: 1;
     /* transform: translateY(75rem); */
     transition:
@@ -462,7 +476,7 @@ h1,h2,h3,h4,h5,h6{
     padding:15%;
     width:100%;
     text-align: center;
-    font-size: 3.7vw;
+    font-size: 3.5vw;
     font-weight: bold;
     position: absolute;
     z-index: 1;
