@@ -263,11 +263,12 @@ h1,h2,h3,h4,h5,h6{
     position: absolute;
     top: 35%;
     font-size:1.3vw;
-    left:-.5%;
-    transition:opacity 1s ease;
+    left:-100%;
+    transition:opacity 1s ease,left 1s ease;
 }
 .ninety-left.show{
     opacity:1;
+    left: -.5%;
 }
 
 .ninety-right{
@@ -276,11 +277,12 @@ h1,h2,h3,h4,h5,h6{
     position: absolute;
     top:35%;
     font-size:1.3vw;
-    right:1.5%;
-    transition:opacity 1s ease;
+    right:-100%;
+    transition:opacity 1s ease, right 1s ease;
 }
 .ninety-right.show{
     opacity:1;
+    right:1.5%;
 }
 
 .topSvgBlurbLeft {
@@ -292,7 +294,7 @@ h1,h2,h3,h4,h5,h6{
     text-align: right;
     left: -100%;
     /* Start off-screen */
-    bottom:18%;
+    bottom:20%;
     opacity: 0;
     transition:
         left 1s ease,
@@ -311,7 +313,7 @@ h1,h2,h3,h4,h5,h6{
     max-width: 32%;
     text-align: left;
     right: -100%;
-    bottom: 12%;    
+    bottom: 14%;    
     opacity: 0;
     transition:
         right 1s ease,
@@ -773,15 +775,16 @@ h1,h2,h3,h4,h5,h6{
     text-align: center;
     top: 2%;
     margin: 0 auto;
-    left: 0;
+    left: -100%;
     opacity: 0;
     transition:
-        opacity 1s ease;
+        opacity 1s ease,
+        left 1s ease;
 }
 
 .team-container__left.show {
     opacity: 1;
-    
+    left: 0;
 }
 
 .team-container__middle {
@@ -795,14 +798,16 @@ h1,h2,h3,h4,h5,h6{
     text-align: left;
     top: 2.5%;
     margin: 0 auto;
-    right: 2.5%;
+    right: -100%;
     opacity: 0;
     transition:
+        right 1s ease,
         opacity 1s ease;
 }
 
 .team-container__right.show {
     opacity: 1;
+    right: 2.5%;
 }
 
 
@@ -841,7 +846,11 @@ h1,h2,h3,h4,h5,h6{
     width:71%;
     position: absolute;
     top: 27.5%;
-    left: 6%;
+    left: -100%;
+        opacity: 0;
+            transition:
+                left 1s ease,
+                opacity 1s ease;
 }
 
 .team-description #teamdesc {
@@ -849,13 +858,11 @@ h1,h2,h3,h4,h5,h6{
     font-size: 2.3vw;
         letter-spacing: 0.1rem;
         line-height: 120%;
-    opacity: 0;
-    transition:
-        opacity 1s ease;
-    right: 0;
+
 }
-#teamdesc.show {
+.team-description.show {
     opacity: 1;
+    left:6%;
 }
 
 .team-desc-blk{
@@ -962,15 +969,17 @@ h1,h2,h3,h4,h5,h6{
 .team-blurb {
     position: absolute;
     width: 36%;
-    left: 6%;
+    left: -100%;
     top: 20%;
     opacity: 0;
     transition:
+        left 1s ease,
         opacity 1s ease;
 }
 
 .team-blurb.show{
     opacity:1;
+    left: 6%;
 }
 
 .blurb.show {
@@ -990,8 +999,16 @@ h1,h2,h3,h4,h5,h6{
     height: auto;
     text-align: left;
     top: 50%;
-    left: 10%;
+    opacity: 0;
+    left:-100%;
+    transition: 
+    left 1s ease,
+    opacity 1s ease;
     margin: 0 auto;
+}
+.team-block-left-1.show{
+    opacity: 1;
+    left:10%;
 }
 
 .team-block-right-1 {
@@ -1000,8 +1017,17 @@ h1,h2,h3,h4,h5,h6{
     height: auto;
     text-align: left;
     top: 38.5%;
-    right: 10%;
+    right: -100%;
+    opacity: 0;
+    transition: 
+    opacity 1s ease,
+    right 1s ease;
     margin: 0 auto;
+}
+
+.team-block-right-1.show{
+    right:10%;
+    opacity:1;
 }
 
 .team-block-left-2 {
@@ -1010,8 +1036,14 @@ h1,h2,h3,h4,h5,h6{
     height: auto;
     text-align: left;
     top: 75%;
-    left: 10%;
+    left: -100%;
     margin: 0 auto;
+    opacity:0;
+    transition: opacity 1s ease, left 1s ease;
+}
+.team-block-left-2.show{
+    opacity:1;
+    left:10%;
 }
 
 .team-block-right-2 {
@@ -1020,8 +1052,14 @@ h1,h2,h3,h4,h5,h6{
     height: auto;
     text-align: left;
     top: 63%;
-    right: 10%;
+    right: -100%;
     margin: 0 auto;
+    opacity:0;
+    transition: opacity 1s ease, right 1s ease;
+}
+.team-block-right-2.show{
+    opacity:1;
+    right:10%;
 }
 
 .team-block-title {
@@ -1040,9 +1078,14 @@ font-weight: regular;
     width: 75%;
     height: auto;
     text-align: left;
-    top: 88%;
-    left: 2%;
+    bottom: -50%;
+    opacity:0;
+    transition: opacity 1s ease, bottom 1s ease;
     margin: 0 auto;
+}
+.vertical-uni.show{
+    bottom:6%;
+    opacity:1;
 }
 
 .vert-uni-text {
@@ -1051,16 +1094,24 @@ font-weight: regular;
     line-height: 110%;
 }
 
+
+
 .vertical-blurb {
     position: absolute;
     width: 35%;
     height: auto;
     text-align: left;
-    top: 89%;
+    bottom:-25%;
     left: 69%;
     margin: 0 auto;
+    transition:opacity 1s ease, bottom 1s ease;
 }
 
+.vertical-blurb.show{
+    opacity:1;
+    bottom:3%;
+
+}
 .vert-blurb-text {
     font-weight: bold;
     font-size: 3.5vw;
@@ -1120,15 +1171,17 @@ font-weight: regular;
 .splitter-left-container {
     position: absolute;
     top: 29%;
-    left: 5%;
+    left: -100%;
     width: 38%;
     opacity: 0;
     transition:
-        opacity 1s ease;
+        opacity 1s ease,
+        left 1s ease;
 }
 
 .splitter-left-container.show {
     opacity: 1;
+    left:5%;
 }
 
 .splitter-left-text {
@@ -1139,16 +1192,18 @@ font-weight: regular;
 .splitter-right-container {
     position: absolute;
     top: 29%;
-    left: 48%;
+    right:-100%;
     width: 60%;
     text-align: center;
     opacity: 0;
     transition:
-        opacity 1s ease;
+        opacity 1s ease,
+        right 1s ease;
 }
 
 .splitter-right-container.show {
     opacity: 1;
+    right:-6%;
 }
 
 .splitter-right-img {
@@ -1224,17 +1279,33 @@ h1.splitter {
     width: 30%;
 }
 
-.btm-lft-1,.btm-lft-2,.btm-lft-3,.btm-rt-1,.btm-rt-2{
+.btm-lft-1,.btm-lft-2,.btm-lft-3{
     opacity: 0;
+    left:-100%;
     transition:
+        left .5s ease,
         opacity .5s ease;
 }
+
+.btm-rt-1,
+.btm-rt-2{
+opacity: 0;
+    transition:
+    right .5s ease,
+        opacity .5s ease;
+}
+
 .btm-lft-1.show,
 .btm-lft-2.show,
-.btm-lft-3.show,
-.btm-rt-1.show,
-.btm-rt-2.show {
+.btm-lft-3.show
+{
+    left:0;
     opacity: 1;
+}
+
+.btm-rt-1.show,
+.btm-rt-2.show{
+
 }
 
 .bottom-right-headline {
@@ -1302,7 +1373,7 @@ h1.splitter {
     top: 5%;
 }
 
-#team-text-block-1,
+/* #team-text-block-1,
 #team-text-block-2,
 #team-text-block-3,
 #team-text-block-4,
@@ -1312,16 +1383,16 @@ h1.splitter {
     transition:
         right 2s ease,
         opacity 1s ease;
-}
+} */
 
-#team-text-block-1.show,
+/* #team-text-block-1.show,
 #team-text-block-2.show,
 #team-text-block-3.show,
 #team-text-block-4.show,
 #vert-blurb-text.show,
 #vert-uni-text.show{
     opacity: 1;
-}
+} */
 
 
 #footerLogoSvg{
