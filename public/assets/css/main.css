@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Futura';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Futura.woff2) format('woff2');
+}
 
 .pt-bold {
     font-family: "futura-pt-bold", sans-serif;
