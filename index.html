@@ -272,8 +272,16 @@
                     <img class="cloud-reveal-img top-cloud-reveal-img" src="./public/assets/img/cloud_test.png"
                         alt="Description of your image" />
                 </div> 
+                <div class="cloud-reveal">
+                    <img class="cloud-reveal-img top-cloud-reveal-img-4" src="./public/assets/img/cloud_test.png"
+                        alt="Description of your image" />
+                </div>
+                <div class="cloud-reveal" style="top:45% !important;">
+                    <img class="cloud-reveal-img top-cloud-reveal-img-2" style="transform: scaleY(-1);"
+                        src="./public/assets/img/cloud_test.png" alt="Description of your image" />
+                </div>
                 <div class="cloud-reveal" style="top:53% !important;">
-                    <img class="cloud-reveal-img top-cloud-reveal-img-2" style="transform: scaleY(-1);" src="./public/assets/img/cloud_test.png"
+                    <img class="cloud-reveal-img top-cloud-reveal-img-3" style="transform: scaleY(-1);" src="./public/assets/img/cloud_test.png"
                         alt="Description of your image" />
                 </div>
 
@@ -624,7 +632,7 @@
             </svg>
             <span class="mtnLogoText left">BORNEO <br>+ <br>NEPAL</span>
             <span class="mtnLogoText right">VERTICAL <br>UNIVERSITY <br>PROJECT</span>
-            <a href="#"><span class="mtnLogoText bottom">Enter Here For More</span></a>
+            <span class="mtnLogoText bottom"><a href="#">Enter Here For More</a></span>
         </div>
         <!-- <img class="mtnLogo" id="mtnLogo" width="35%" height="auto" src="./public/assets/img/mountainOverlayLogo.png"
             alt="Description of your image" /> -->
@@ -969,6 +977,8 @@
         const elementToFade = document.querySelector(".element-to-fade");
         const topCloud = document.querySelector(".top-cloud-reveal-img");
         const topCloud2 = document.querySelector(".top-cloud-reveal-img-2");
+        const topCloud3 = document.querySelector(".top-cloud-reveal-img-3");
+        const topCloud4 = document.querySelector(".top-cloud-reveal-img-4");
         const cloudbg1 = document.querySelector(".cloud-reveal-bg");
         const cloudbg2 = document.querySelector(".high-cloud-bg");
         const cloudbg3 = document.querySelector(".cloud-reveal");
@@ -1009,6 +1019,8 @@
             console.log(opacity);
             topCloud.style.opacity = opacity;
             topCloud2.style.opacity = opacity;
+            topCloud3.style.opacity = opacity;
+            topCloud4.style.opacity = opacity;
             cloudbg1.style.opacity = opacity;
             cloudbg2.style.opacity = opacity;
             cloudbg3.style.opacity = opacity;
