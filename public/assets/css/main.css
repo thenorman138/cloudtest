@@ -90,14 +90,14 @@ h1,h2,h3,h4,h5,h6{
 
 .title-text{
     line-height: 2.5rem;
-    font-family: "Futura";
-    font-weight: bold;
+    /* font-family: "Futura"; */
+    /* font-weight: bold; */
     text-align: center;
 }
 .subtitle-text{
     line-height: 135%;
     margin-top: 1rem;
-    font-family: "Futura";
+    /* font-family: "Futura"; */
     text-align: center;
     font-weight: 50;
 }
