@@ -999,7 +999,7 @@
             const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
             console.log('visible height:', visibleHeight);
             console.log('mtn height:', mtnHeight);
-            const percentage = (visibleHeight / 710) * 1200;
+            const percentage = (visibleHeight / 610) * 1200;
             console.log('scroll percentage', percentage);
             return percentage;
         }
@@ -1015,7 +1015,7 @@
         }
 
         function fadeElement2(scrollPercentage) {
-            const opacity = 1.625 - (scrollPercentage / 1300);
+            const opacity = 1.45 - (scrollPercentage / 1300);
             console.log(opacity);
             cloudLower.style.opacity = opacity;
 
