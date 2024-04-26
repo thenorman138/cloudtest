@@ -117,12 +117,24 @@ h1,h2,h3,h4,h5,h6{
     opacity: 0;
 }
 
-.serp-left {
+.serp-left-1 {
     position: relative;
     /* Required for left positioning */
     left: -100%;
-    animation: serpLeftFade 1.5s ease-in-out;
+    animation: serpLeftFade 1s ease-in-out;
     }
+.serp-left-2 {
+    position: relative;
+    /* Required for left positioning */
+    left: -100%;
+    animation: serpLeftFade 2s ease-in-out;
+}
+.serp-left-3 {
+    position: relative;
+    /* Required for left positioning */
+    left: -100%;
+    animation: serpLeftFade 3s ease-in-out;
+}
     
 @keyframes serpLeftFade {
     from {
@@ -135,11 +147,23 @@ h1,h2,h3,h4,h5,h6{
     }
 }
 
-.serp-right {
+.serp-right-1 {
     position: relative;
     /* Required for right positioning */
     right: -100%;
-    animation: serpRightFade 1.5s ease-in-out;
+    animation: serpRightFade 1s ease-in-out;
+}
+.serp-right-2 {
+    position: relative;
+    /* Required for right positioning */
+    right: -100%;
+    animation: serpRightFade 2s ease-in-out;
+}
+.serp-right-3 {
+    position: relative;
+    /* Required for right positioning */
+    right: -100%;
+    animation: serpRightFade 3s ease-in-out;
 }
 
 @keyframes serpRightFade {
