@@ -1601,8 +1601,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var vertblurb = document.querySelector(".vertical-blurb");
     var teamblurb = document.querySelector(".team-blurb");
     const mountainSect = document.getElementById("mountain-sect");
-        const mountainBack = document.getElementById("mountainBack");
-        const mountainLogo = document.getElementById("mtnLogo");
+    const mountainBack = document.getElementById("mountainBack");
+    const mountainLogo = document.getElementById("mtnLogo");
 
     // Define the offset as a fraction of the container's height
     const offsetFraction = 0.07;
@@ -1622,8 +1622,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // console.log(scrollPercentage);
 
         // Calculate draw length based on scroll percentage
-        let drawLength = 2268.36 * scrollPercentage * 2.25; // Total length of the path
-        path1.style.strokeDasharray = `${drawLength}, 2268.36`;
+        let drawLength = 8000.36 * scrollPercentage * .65; // Total length of the path
+        path1.style.strokeDasharray = `${drawLength}, 8000.36`;
 
         // Perform actions when the target div is reached
         if (scrollPercentage >= 0.06) {
