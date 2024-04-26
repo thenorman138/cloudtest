@@ -1625,11 +1625,11 @@ document.addEventListener("DOMContentLoaded", function () {
         path1.style.strokeDasharray = `${drawLength}, 8000.36`;
 
         // Perform actions when the target div is reached
-        if (scrollPercentage >= 0.06) {
+        if (scrollPercentage >= 0.04) {
             teamleft.classList.add("show");
             teamright.classList.add("show");
         }
-        else if (scrollPercentage < 0.06) {
+        else if (scrollPercentage < 0.04) {
             teamleft.classList.remove("show");
             teamright.classList.remove("show");
         }
