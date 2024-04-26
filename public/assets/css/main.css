@@ -903,7 +903,7 @@ background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 25
     z-index: -1;
     opacity: 0;
     transition:
-        right 1.5s ease,
+        right 1s ease,
         opacity 1s ease;
 }
 
@@ -920,7 +920,7 @@ background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 25
     z-index: -1;
     opacity: 0;
     transition:
-        left 1.5s ease,
+        left 1s ease,
         opacity 1s ease;
 }
 
@@ -1298,8 +1298,8 @@ h1.splitter {
     opacity: 0;
     left:-200%;
     transition:
-        left .5s ease,
-        opacity .5s ease;
+        left 1s ease,
+        opacity 1s ease;
 }
 
 .btm-rt-1,
@@ -1308,8 +1308,8 @@ h1.splitter {
     right:-200%;
 opacity: 0;
     transition:
-    right .5s ease,
-        opacity .5s ease;
+    right 1s ease,
+        opacity 1s ease;
 }
 
 .btm-lft-1.show,
@@ -1336,8 +1336,8 @@ right: 0;
     right:-200%;
     position: relative;
     transition: 
-    right .5s ease,
-    opacity .5s ease;
+    right 1s ease,
+    opacity 1s ease;
 }
 
 .bottom-right-headline.show{
@@ -1352,7 +1352,7 @@ right: 0;
     width: 50%;
     background-color: white;
     z-index: 1;
-    transition: width 0.5s ease;
+    transition: width 1s ease;
     /* Adjust the transition duration as needed */
 }
 
