@@ -563,7 +563,7 @@ background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 25
     width: 100%;
     z-index: 0;
     left: 17%;
-    transition: top 1s ease;
+    transition: top .5s ease;
     /* Add transition for smooth sliding animation */
 }
 
@@ -1088,6 +1088,7 @@ font-weight: regular;
 
 .vertical-uni {
     position: absolute;
+    z-index: -15;
     width: 75%;
     height: auto;
     text-align: left;
@@ -1111,6 +1112,7 @@ font-weight: regular;
 
 .vertical-blurb {
     position: absolute;
+    z-index: -15;
     width: 35%;
     height: auto;
     text-align: left;
