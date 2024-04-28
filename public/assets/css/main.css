@@ -603,6 +603,12 @@ background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 25
     background-color: #002235;
     min-height: 20vh;
     color: white;
+    opacity:0;
+    transition: opacity 1s ease;
+}
+
+.blue-sect.show{
+    opacity:1;
 }
 
 .blue-sect-mountain {

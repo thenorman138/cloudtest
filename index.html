@@ -1049,6 +1049,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cloudbg3 = document.querySelector(".cloud-reveal");
     const cloudLower = document.querySelector(".cloud-reveal-img-low");
     const cloudSect = document.querySelector(".cloud-sect");
+    const blueSect = document.querySelector(".blue-sect");
     const mtnHeight = mtnCont.offsetHeight;
     const windowHeight = window.innerHeight;
 
@@ -1120,6 +1121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (scrollDirection === 'down' && isIntersecting) {
             cloudSect.classList.add("show");
+            blueSect.classList.add('show');
         }
 
         if (scrollDirection === 'up' && isIntersecting) {
@@ -1132,6 +1134,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(function () {
                 // Remove classes after the delay
                 cloudSect.classList.remove('show');
+                blueSect.classList.remove('show');
             }, 1000); // Adjust the delay time as needed
 
         }
