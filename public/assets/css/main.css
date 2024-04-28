@@ -567,7 +567,7 @@ background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 25
     top: 100%;
     /* Initially hide below the mountain-sect container */
     width: 100%;
-    z-index: 0;
+    z-index: -5 !important;
     left: 17%;
     transition: top .5s ease;
     /* Add transition for smooth sliding animation */
@@ -645,6 +645,7 @@ background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 25
 
 .mountain-sect {
     opacity: 0;
+    z-index:1;
     margin-top: -17%;
     max-width: 100%;
     /* Adjust as needed */
@@ -893,6 +894,7 @@ background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 25
 .splitter-svg {
     background-color:white;
     margin-top: -10%;
+    z-index:0;
 }
 
 .monkey-sect {
@@ -1094,7 +1096,7 @@ font-weight: regular;
 
 .vertical-uni {
     position: absolute;
-    z-index: -15;
+    z-index: -1500;
     width: 75%;
     height: auto;
     text-align: left;
@@ -1118,7 +1120,7 @@ font-weight: regular;
 
 .vertical-blurb {
     position: absolute;
-    z-index: -15;
+    z-index: -1500;
     width: 35%;
     height: auto;
     text-align: left;
