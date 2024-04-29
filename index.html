@@ -1232,7 +1232,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const footerEye1      = document.querySelector("#footerEye1");
         const footerEye2      = document.querySelector("#footerEye2");
 
-        if (!drawingStarted) {
+        if(!drawingStarted){
             console.log("footer scroll percentage over 0.99, triggering action...");
             drawingStarted = true;
             animateDrawing();
@@ -1243,19 +1243,20 @@ document.addEventListener("DOMContentLoaded", function () {
         
         function scrollHandler() {            
             const st = window.pageYOffset || document.documentElement.scrollTop;
-            if (st > lastScrollTop) {
+            if(st > lastScrollTop){
                 
                 animateDrawing(true); 
-            } else {
+            }else{
                 
                 animateDrawing(false); 
             }
+
             lastScrollTop = st <= 0 ? 0 : st;
         }
 
         function animateDrawing(scrollingDown) {
             //console.log('in animation now');
-            const offsetFraction = .50;
+            const offsetFraction = .685;
             const offset = footerContainer.offsetHeight * offsetFraction;
 
             let footerScrollPer =
@@ -1263,7 +1264,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // console.log(footerScrollPer);
 
-            let drawLength = 1000 * footerScrollPer * .85;
+            let drawLength = 3100 * footerScrollPer * .219;
             
             normalPath1.style.strokeDasharray = `${drawLength}, 1000`;
             footerline2.style.strokeDasharray = `${drawLength}, 1000`;
@@ -1283,9 +1284,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 footerEye1.classList.remove("show");
                 footerEye2.classList.remove("show"); 
             }
-
         }
-    
     });
 </script>
 
@@ -1464,7 +1463,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function animateDrawing(){
         window.addEventListener("scroll", function () {
-            const offsetFraction = 0.205;
+            const offsetFraction = 0.185;
 
             // Calculate the offset based on the container's height
             const offset = bottomSvg.offsetHeight * offsetFraction;
