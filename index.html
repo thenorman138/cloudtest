@@ -992,34 +992,36 @@ document.addEventListener("DOMContentLoaded", function () {
     const sectionRect = section.getBoundingClientRect();
     const isIntersecting = sectionRect.top < window.innerHeight && sectionRect.bottom > 0;
 
+    if (scrollDirection === 'up' && isIntersecting) {
+        const sectionHeight = sectionRect.bottom - sectionRect.top;
+        const scrollPosition = window.innerHeight - sectionRect.top;
+        const scrollPercentage = (scrollPosition / sectionHeight) * 100;
+        console.log(scrollPercentage);
+
+        if (scrollPercentage > 70) {
+            // Set a timeout to remove the classes after a certain delay
+            setTimeout(function () {
+                // Remove classes after the delay
+                section.classList.remove('show');
+            }, 1000); // Adjust the delay time as needed
+
+            setTimeout(function () {
+                // Remove classes after the delay
+                mountainBack.classList.remove('slide-up');
+            }, 1200); // Adjust the delay time as needed
+
+            mtnActive = false;
+            console.log(mtnActive);
+            console.log('new code');
+        }
+    }
+
     if (scrollDirection === 'down' && isIntersecting) {
         section.classList.add("show");
         mountainBack.classList.add("slide-up");
     }
 
-    if (scrollDirection === 'up' && isIntersecting) {
-        //   // Add classes initially
-        //   section.classList.remove('show');
-        //   mountainBack.classList.remove('slide-up');
-        //   console.log('Scrolling up and intersecting with the section');
 
-          // Set a timeout to remove the classes after 2000 milliseconds (2 seconds)
-          setTimeout(function () {
-            // Remove classes after the delay
-            section.classList.remove('show');
-        }, 1000); // Adjust the delay time as needed
-
-                  setTimeout(function () {
-            // Remove classes after the delay
-                      mountainBack.classList.remove('slide-up');
-        }, 1200); // Adjust the delay time as needed
-
-
-
-        mtnActive = false;
-        console.log(mtnActive);
-        console.log('new code');
-    }
 
 
     previousScrollTop = scrollTop;
@@ -1118,6 +1120,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Check if the section is intersecting with the viewport
         const sectionRect = cloudSect.getBoundingClientRect();
         const isIntersecting = sectionRect.top < window.innerHeight && sectionRect.bottom > 0;
+        
 
         if (scrollDirection === 'down' && isIntersecting) {
             cloudSect.classList.add("show");
@@ -1125,17 +1128,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (scrollDirection === 'up' && isIntersecting) {
-            //   // Add classes initially
-            //   section.classList.remove('show');
-            //   mountainBack.classList.remove('slide-up');
-            //   console.log('Scrolling up and intersecting with the section');
+            
+            const sectionHeight = sectionRect.bottom - sectionRect.top;
+            const scrollPosition = window.innerHeight - sectionRect.top;
+            const scrollPercentage = (scrollPosition / sectionHeight) * 100;
+            console.log(scrollPercentage);
+            if (scrollPercentage > 70) {
 
-            // Set a timeout to remove the classes after 2000 milliseconds (2 seconds)
-            setTimeout(function () {
-                // Remove classes after the delay
-                cloudSect.classList.remove('show');
-                blueSect.classList.remove('show');
-            }, 1000); // Adjust the delay time as needed
+                setTimeout(function () {
+                    // Remove classes after the delay
+                    cloudSect.classList.remove('show');
+                    blueSect.classList.remove('show');
+                }, 1000); // Adjust the delay time as needed
+            }
 
         }
 
@@ -1149,69 +1154,77 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 <!-- COUNTERS -->
-<Script>
+<script>
     document.addEventListener("DOMContentLoaded", function () {
-            // Function to handle intersection
-            function handleIntersection(entries, observer) {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        // Play the animation for the current target
-                        playAnimation(index);
-                        // Unobserve the target to prevent unnecessary triggers
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }
-
-            // Options for the Intersection Observer
-            const options = {
-                root: null,
-                rootMargin: "0px",
-                threshold: 0.9, // Trigger when 50% of the target is visible
-            };
-
-            // Create a new Intersection Observer
-            const observer = new IntersectionObserver(handleIntersection, options);
-
-            // Target elements
-            const svgContainers = [
-                document.getElementById("counter-img-1"),
-                document.getElementById("counter-img-2"),
-                document.getElementById("counter-img-3"),
-                document.getElementById("counter-img-4"),
-                document.getElementById("counter-img-5"),
-            ];
-
-            console.log(svgContainers);
-            // Load animations for each target element
-            const animations = svgContainers.map((svgContainer, index) => {
-                if (svgContainer) { // Add this check
-                    const animItem = bodymovin.loadAnimation({
-                        wrapper: svgContainer,
-                        animType: "svg",
-                        loop: false,
-                        autoplay: false,
-                        path: `https://lottie.host/45a33ab5-2a21-4ad4-89f7-3d7f10157461/w0mxsxxNj3.json`, // Adjust path accordingly
-                    });
-                    // Start observing each target element
-                    observer.observe(svgContainer);
-                    return animItem;
-                } else {
-                    return null; // Return null if element is null
+        // Function to handle intersection
+        function handleIntersection(entries, observer) {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Play or reverse the animation based on scroll direction
+                    playOrReverseAnimation(index, entry.boundingClientRect.y);
+                    // Re-observe the target to continue watching for intersections
+                    observer.observe(entry.target);
                 }
             });
+        }
 
-            // Function to play the animation for the given index
-            function playAnimation(index) {
-                svgContainers[index].classList.remove("counter-hide");
-                animations[index].goToAndPlay(0, true);
-                // Event listener for animation completion
-                animations[index].addEventListener("complete", () => {
-                    svgContainers[index].classList.add("counter-hide");
+        // Options for the Intersection Observer
+        const options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.9, // Trigger when 90% of the target is visible
+        };
+
+        // Create a new Intersection Observer
+        const observer = new IntersectionObserver(handleIntersection, options);
+
+        // Target elements
+        const svgContainers = [
+            document.getElementById("counter-img-1"),
+            document.getElementById("counter-img-2"),
+            document.getElementById("counter-img-3"),
+            document.getElementById("counter-img-4"),
+            document.getElementById("counter-img-5"),
+        ];
+
+        // Load animations for each target element
+        const animations = svgContainers.map((svgContainer, index) => {
+            if (svgContainer) { // Add this check
+                const animItem = bodymovin.loadAnimation({
+                    wrapper: svgContainer,
+                    animType: "svg",
+                    loop: false,
+                    autoplay: false,
+                    path: `https://lottie.host/45a33ab5-2a21-4ad4-89f7-3d7f10157461/w0mxsxxNj3.json`, // Adjust path accordingly
                 });
+                // Start observing each target element
+                observer.observe(svgContainer);
+                return animItem;
+            } else {
+                return null; // Return null if element is null
             }
         });
-</Script>
+
+        // Function to play or reverse the animation for the given index
+        function playOrReverseAnimation(index, scrollDirection) {
+            const direction = scrollDirection > 0 ? 1 : -1; // 1 for scrolling down, -1 for scrolling up
+            const animation = animations[index];
+            svgContainers[index].classList.remove("counter-hide");
+            if (direction === 1) {
+                animation.goToAndPlay(0, true);
+            } else {
+                animation.setDirection(-1);
+                animation.goToAndPlay(animation.totalFrames, true);
+            }
+            // Event listener for animation completion
+            animation.addEventListener("complete", () => {
+                svgContainers[index].classList.add("counter-hide");
+            });
+        }
+    });
+</script>
+
+
 
 <!-- FOOTER -->
 
