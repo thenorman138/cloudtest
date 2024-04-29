@@ -1211,8 +1211,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const animation = animations[index];
             svgContainers[index].classList.remove("counter-hide");
             if (direction === 1) {
+                console.log(direction);
+                animation.setDirection(1);
                 animation.goToAndPlay(0, true);
             } else {
+                console.log(direction);
                 animation.setDirection(-1);
                 animation.goToAndPlay(animation.totalFrames, true);
             }
@@ -1223,6 +1226,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 </script>
+
 
 
 
