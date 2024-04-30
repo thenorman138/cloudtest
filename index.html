@@ -1056,6 +1056,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const windowHeight = window.innerHeight;
 
     let previousCloudScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollDirectionFlag = ''; // Flag to track scroll direction
 
 
     function isElementInViewport(el) {
@@ -1125,6 +1126,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (scrollDirection === 'down' && isIntersecting) {
             cloudSect.classList.add("show");
             blueSect.classList.add('show');
+            scrollDirectionFlag = 'down';
+
         }
 
         if (scrollDirection === 'up' && isIntersecting) {
@@ -1133,13 +1136,15 @@ document.addEventListener("DOMContentLoaded", function () {
             const scrollPosition = window.innerHeight - sectionRect.top;
             const scrollPercentage = (scrollPosition / sectionHeight) * 100;
             console.log(scrollPercentage);
-            if (scrollPercentage > 70) {
-
-                setTimeout(function () {
-                    // Remove classes after the delay
-                    cloudSect.classList.remove('show');
-                    blueSect.classList.remove('show');
-                }, 1000); // Adjust the delay time as needed
+            if (scrollPercentage > 100) {
+                if (scrollDirectionFlag === 'down') {
+                    setTimeout(function () {
+                        cloudSect.classList.remove('show');
+                        blueSect.classList.remove('show');
+                    }, 1000);
+                } else {
+                    scrollDirectionFlag = 'front';
+                }
             }
 
         }
