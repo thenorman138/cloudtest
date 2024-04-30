@@ -267,13 +267,13 @@ h1,h2,h3,h4,h5,h6{
     transform: rotate(-90deg);
     position: absolute;
     top: 35%;
-    font-size:1.3vw;
+    font-size:1.6vw;
     left:-100%;
     transition:opacity 1s ease,left 1s ease;
 }
 .ninety-left.show{
     opacity:1;
-    left: -.5%;
+    left: -3.5%;
 }
 
 .ninety-right{
@@ -281,13 +281,13 @@ h1,h2,h3,h4,h5,h6{
     transform: rotate(90deg);
     position: absolute;
     top:35%;
-    font-size:1.3vw;
+    font-size:1.6vw;
     right:-100%;
     transition:opacity 1s ease, right 1s ease;
 }
 .ninety-right.show{
     opacity:1;
-    right:1.5%;
+    right:-1.3%;
 }
 
 .topSvgBlurbLeft {
@@ -360,7 +360,20 @@ h1,h2,h3,h4,h5,h6{
     margin-top: -16%;
     font-size:1.3vw;
     line-height: 115%;
+
 }
+#counter-text-1,#counter-text-2 ,#counter-text-3,#counter-text-4,#counter-text-5{
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+#counter-text-1.show,
+#counter-text-2.show,
+#counter-text-3.show,
+#counter-text-4.show,
+#counter-text-5.show {
+    opacity:1;
+}
+
 .cloud-sect{
     opacity:0;
     margin-top:-60%;
@@ -1295,9 +1308,9 @@ h1.splitter {
 }
 
 .bottom-text-paragraph {
-    margin-top: 2rem;
+    margin-top: 1.6rem;
     margin-bottom: 6rem;
-    font-size: 1.2vw;
+    font-size: 1.3vw;
 }
 
 .bottom-right-container {

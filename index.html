@@ -166,19 +166,19 @@
                 <div class="counter-img" id="counter-img-1">
                     <!-- <Fragment set:html={CounterCircle} /> -->
                 </div>
-                <div class="counter-text">$1.8 MILLION DIRECT DONATION</div>
+                <div class="counter-text" id="counter-text-1">$1.8 MILLION DIRECT DONATION</div>
             </div>
             <div class="counter-items">
                 <div class="counter-img counter-hide" id="counter-img-2">
                     <!-- <Fragment set:html={CounterCircle} /> -->
                 </div>
-                <div class="counter-text">18 COUNTRIES, 29 PROJECTS</div>
+                <div class="counter-text" id="counter-text-2">18 COUNTRIES, 29 PROJECTS</div>
             </div>
             <div class="counter-items">
                 <div class="counter-img" id="counter-img-3">
                     <!-- <Fragment set:html={CounterCircle} /> -->
                 </div>
-                <div class="counter-text">
+                <div class="counter-text" id="counter-text-3">
                     $2 MILLION RAISED FROM OTHER DONORS FOR PARTNERS
                 </div>
             </div>
@@ -186,13 +186,13 @@
                 <div class="counter-img" id="counter-img-4">
                     <!-- <Fragment set:html={CounterCircle} /> -->
                 </div>
-                <div class="counter-text">2.1 MILLION HECTARES IMPACTED</div>
+                <div class="counter-text" id="counter-text-4">2.1 MILLION HECTARES IMPACTED</div>
             </div>
             <div class="counter-items">
                 <div class="counter-img" id="counter-img-5">
                     <!-- <Fragment set:html={CounterCircle} /> -->
                 </div>
-                <div class="counter-text">47 ENDANGERED SPECIES SUPPORTED</div>
+                <div class="counter-text" id="counter-text-5">47 ENDANGERED SPECIES SUPPORTED</div>
             </div>
         </div>
     </div>
@@ -893,7 +893,7 @@
 
     <!-- footer animation -->
 
-    <div class="footerSvgBackground" id="footerSvgBackground" style=" margin-top:-29%; position:relative;">
+    <div class="footerSvgBackground" id="footerSvgBackground" style=" margin-top:-7%; position:relative;">
         <svg viewBox="0 0 758.57 337.81">
             <defs>
                 <style>
@@ -1156,6 +1156,12 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- COUNTERS -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+
+        const counterText1 = document.querySelector("#counter-text-1");
+        const counterText2 = document.querySelector("#counter-text-2");
+        const counterText3 = document.querySelector("#counter-text-3");
+        const counterText4 = document.querySelector("#counter-text-4");
+        const counterText5 = document.querySelector("#counter-text-5");
         // Function to handle intersection
         function handleIntersection(entries, observer) {
             entries.forEach((entry, index) => {
@@ -1209,20 +1215,30 @@ document.addEventListener("DOMContentLoaded", function () {
         function playOrReverseAnimation(index, scrollDirection) {
             const direction = scrollDirection > 0 ? 1 : -1; // 1 for scrolling down, -1 for scrolling up
             const animation = animations[index];
-            svgContainers[index].classList.remove("counter-hide");
+            // svgContainers[index].classList.remove("counter-hide");
             if (direction === 1) {
                 console.log(direction);
                 animation.setDirection(1);
                 animation.goToAndPlay(0, true);
+                counterText1.classList.add("show");
+                counterText2.classList.add("show");
+                counterText3.classList.add("show");
+                counterText4.classList.add("show");
+                counterText5.classList.add("show");
             } else {
                 console.log(direction);
                 animation.setDirection(-1);
                 animation.goToAndPlay(animation.totalFrames, true);
+                counterText1.classList.remove("show");
+                counterText2.classList.remove("show");
+                counterText3.classList.remove("show");
+                counterText4.classList.remove("show");
+                counterText5.classList.remove("show");
             }
             // Event listener for animation completion
-            animation.addEventListener("complete", () => {
-                svgContainers[index].classList.add("counter-hide");
-            });
+            // animation.addEventListener("complete", () => {
+            //     svgContainers[index].classList.add("counter-hide");
+            // });
         }
     });
 </script>
@@ -1480,7 +1496,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function animateDrawing(){
         window.addEventListener("scroll", function () {
-            const offsetFraction = 0.185;
+            const offsetFraction = 0.135;
 
             // Calculate the offset based on the container's height
             const offset = bottomSvg.offsetHeight * offsetFraction;
@@ -1490,7 +1506,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 Math.min(Math.max((window.scrollY - bottomSvg.offsetTop + offset) / (bottomSvg.offsetHeight - offset), 0), 1);
 
 
-            let drawLength = 1300   * bottomScrollpercent * .85  ; // Total length of the path
+            let drawLength = 1500   * bottomScrollpercent * .85  ; // Total length of the path
             console.log(bottomScrollpercent);
             footer1.style.strokeDasharray = `${drawLength}, 1300`;
 
@@ -1509,19 +1525,19 @@ document.addEventListener("DOMContentLoaded", function () {
             }else if (bottomScrollpercent < 0.16) {
                 btmrt1.classList.remove("show");
             }
-            if (bottomScrollpercent >= 0.28) {
+            if (bottomScrollpercent >= 0.38) {
                 btmlft2.classList.add("show");
-            }else if (bottomScrollpercent < 0.28) {
+            }else if (bottomScrollpercent < 0.38) {
                 btmlft2.classList.remove("show");
             }
-            if (bottomScrollpercent >= 0.42) {
+            if (bottomScrollpercent >= 0.47) {
                 btmrt2.classList.add("show");
-            }else if (bottomScrollpercent < 0.42) {
+            }else if (bottomScrollpercent < 0.47) {
                 btmrt2.classList.remove("show");
             }
-            if (bottomScrollpercent >= 0.56) {
+            if (bottomScrollpercent >= 0.72) {
                 btmlft3.classList.add("show");
-            }else if(bottomScrollpercent < 0.56) {
+            }else if(bottomScrollpercent < 0.72) {
                 btmlft3.classList.remove("show");
             }
 
