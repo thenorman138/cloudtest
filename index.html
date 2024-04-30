@@ -281,12 +281,12 @@
                         src="./public/assets/img/cloud_test.png" alt="Description of your image" />
                 </div>
                 <div class="cloud-reveal" style="top:53% !important;">
-                    <img class="cloud-reveal-img top-cloud-reveal-img-3" style="transform: scaleY(-1);" src="./public/assets/img/cloud_test.png"
+                    <img class="cloud-reveal-img top-cloud-reveal-img-3" style="transform: scale(-1,-1);" src="./public/assets/img/cloud_test.png"
                         alt="Description of your image" />
                 </div>
 
                 <div class="cloud-reveal " style="top:53% !important;">
-                    <img class="cloud-reveal-img top-cloud-reveal-img-2 cloud-reveal-img-low" style="transform: scaleY(-1);"
+                    <img class="cloud-reveal-img top-cloud-reveal-img-2 cloud-reveal-img-low" style="transform: scale(-1,-1);"
                         src="./public/assets/img/cloud_test.png" alt="Description of your image" />
                 </div>
                 
@@ -1072,7 +1072,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
         // console.log('visible height:', visibleHeight);
         // console.log('mtn height:', mtnHeight);
-        const percentage = (visibleHeight / 480) * 1200;
+        const percentage = (visibleHeight / 480) * 1500;
         // console.log('scroll percentage', percentage);
         return percentage;
     }
@@ -1082,7 +1082,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
         // console.log('visible height:', visibleHeight);
         // console.log('mtn height:', mtnHeight);
-        const percentage = (visibleHeight / 610) * 1200;
+        const percentage = (visibleHeight / 610) * 1500;
         // console.log('scroll percentage', percentage);
         return percentage;
     }
@@ -1107,13 +1107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", function () {
-        if (isElementInViewport(mtnCont)) {
-            const scrollPercentage = getScrollPercentage(mtnCont);
-            fadeElement(scrollPercentage);
 
-            const scrollPercentage2 = getScrollPercentage2(mtnCont);
-            fadeElement2(scrollPercentage2);
-        }
 
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const scrollDirection = scrollTop > previousCloudScrollTop ? 'down' : 'up';
@@ -1122,11 +1116,25 @@ document.addEventListener("DOMContentLoaded", function () {
         const sectionRect = cloudSect.getBoundingClientRect();
         const isIntersecting = sectionRect.top < window.innerHeight && sectionRect.bottom > 0;
         
+        // if (isIntersecting && scrollDirection === 'down') {
+        //     const scrollPercentage = getScrollPercentage(mtnCont);
+        //     fadeElement(scrollPercentage);
+
+        //     const scrollPercentage2 = getScrollPercentage2(mtnCont);
+        //     fadeElement2(scrollPercentage2);
+        // }
 
         if (scrollDirection === 'down' && isIntersecting) {
             cloudSect.classList.add("show");
             blueSect.classList.add('show');
             scrollDirectionFlag = 'down';
+
+            const scrollPercentage = getScrollPercentage(mtnCont);
+            // console.log(scrollPercentage);
+            fadeElement(scrollPercentage);
+
+            const scrollPercentage2 = getScrollPercentage2(mtnCont);
+            fadeElement2(scrollPercentage2);
 
         }
 
@@ -1136,7 +1144,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const scrollPosition = window.innerHeight - sectionRect.top;
             const scrollPercentage = (scrollPosition / sectionHeight) * 100;
             console.log(scrollPercentage);
-            if (scrollPercentage > 100) {
+            if (scrollPercentage > 140) {
                 if (scrollDirectionFlag === 'down') {
                     setTimeout(function () {
                         cloudSect.classList.remove('show');

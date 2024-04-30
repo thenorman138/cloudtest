@@ -906,7 +906,7 @@ background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 25
 }
 
 .team-desc-blk{
-    font-size:1.1vw;
+    font-size:1.3vw;
     line-height: 135%;
 }
 
@@ -1035,7 +1035,7 @@ background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 25
 
 .team-block-left-1 {
     position: absolute;
-    width: 75%;
+    width: 80%;
     height: auto;
     text-align: left;
     top: 50%;
@@ -1048,15 +1048,15 @@ background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 25
 }
 .team-block-left-1.show{
     opacity: 1;
-    left:10%;
+    left:5%;
 }
 
 .team-block-right-1 {
     position: absolute;
-    width: 75%;
+    width: 80%;
     height: auto;
     text-align: left;
-    top: 38.5%;
+    top: 38%;
     right: -100%;
     opacity: 0;
     transition: 
@@ -1066,13 +1066,13 @@ background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 25
 }
 
 .team-block-right-1.show{
-    right:10%;
+    right:4%;
     opacity:1;
 }
 
 .team-block-left-2 {
     position: absolute;
-    width: 75%;
+    width: 94%;
     height: auto;
     text-align: left;
     top: 75%;
@@ -1083,12 +1083,12 @@ background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 25
 }
 .team-block-left-2.show{
     opacity:1;
-    left:10%;
+    left:-4%;
 }
 
 .team-block-right-2 {
     position: absolute;
-    width: 75%;
+    width: 85%;
     height: auto;
     text-align: left;
     top: 63%;
@@ -1099,7 +1099,7 @@ background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 25
 }
 .team-block-right-2.show{
     opacity:1;
-    right:10%;
+    right:1%;
 }
 
 .team-block-title {
