@@ -16,10 +16,6 @@
 
 
 <body>
-    <?php
-    // Include the header.php file
-    include 'header.php';
-?>
 
 <div class="main-container" style="margin:0 auto; max-width:100%;">
     <!-- <Header /> -->
@@ -965,10 +961,6 @@
     <div class="mock-header" style="min-height: 15vh;"></div>
 </div>
 
-<?php
-    // Include the footer.php file
-    include 'footer.php';
-?>
 </body>
 </html>
 
@@ -1374,6 +1366,23 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    // Call this function for left fade
+    // function handleLeftFade() {
+    //     handleFade(".blurbContainer", ".topSvgBlurbLeft");
+    //     // handleFade(".mtn-text-container", ".text-over-mountain__left");
+    // }
+
+    // // Call this function for right fade
+    // function handleRightFade() {
+    //     handleFade(".blurbContainer", ".topSvgBlurbRight");
+    //     // handleFade(".mtn-text-container", ".text-over-mountain__right");
+    // }
+
+    // // Add scroll event listeners
+    // window.addEventListener("scroll", handleLeftFade);
+    // window.addEventListener("scroll", handleRightFade);
+ 
 </script>
 
 <!-- MONKEY -->
@@ -1586,6 +1595,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to animate the drawing based on current scroll position
     function animateDrawing() {
         if (drawingStarted) {
+            // console.log('drawing mountain svg now');
             // Establish new scroll percentage based on scroll position within mtnSvg
             // Define the offset as a fraction of the container's height
             const offsetFraction = 0.5;
@@ -1612,7 +1622,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 mtntext2.classList.remove("show");
             }
 
+            // if (mtnScrollPercentage >= 0.9) {
+            //     clouds.classList.add("show");
+            // } else if (mtnScrollPercentage < 0.9) {
+            //     clouds.classList.remove("show");
+            // }
 
+            
         }
     }
 });
@@ -1628,6 +1644,19 @@ document.addEventListener("DOMContentLoaded", function () {
             // Get the mountain-back container
             const mountainBack = document.getElementById("mountainBack");
             const mountainLogo = document.getElementById("mtnLogo");
+
+            // Check if a portion of the target div (e.g., 10% from the top) is in the viewport
+            // if (
+            //     mountainRectTop < window.innerHeight * 0.9 &&
+            //     mountainRectTop + mountainSect.offsetHeight > 0.1 * window.innerHeight
+            // ) {
+            //     // console.log(mountainSect);
+            //     mountainBack.classList.add("slide-up");
+            //     mountainLogo.classList.add("fade-in");
+            // } else {
+            //     mountainBack.classList.remove("slide-up");
+            //     mountainLogo.classList.remove("fade-in");
+            // }
         } else {
             console.log('no mountain element');
         }
@@ -1791,6 +1820,17 @@ document.addEventListener("DOMContentLoaded", function () {
             vertblurb.classList.remove("show");
         }
 
+        // if (scrollPercentage >= 0.89 && !mtnActive) {
+        //     mtnsec.classList.add("show");
+        //     mountainBack.classList.add("slide-up");
+        //     mtnActive = true;
+        //     console.log(mtnActive);
+        // }
+        // else if (scrollPercentage < 0.89) {
+        //     mtnsec.classList.remove("show");
+        //     mountainBack.classList.remove("slide-up")
+        // }
+        
     }
 });
 
@@ -1889,6 +1929,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
             }, 5) // Decreased debounce delay to 5ms
         );
+
+        // function fadeInDivSmoothly(element) {
+        //     var opacity = 0;
+        //     var interval = setInterval(function () {
+        //         opacity += 0.05; // Adjust the increment value as needed for the desired speed
+        //         element.style.opacity = opacity;
+        //         if (opacity >= 1) {
+        //             clearInterval(interval);
+        //         }
+        //     }, 40); // Decreased interval duration for smoother animation
+        // }
         
     });
 
