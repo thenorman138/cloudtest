@@ -57,7 +57,7 @@
   }
 
   .logo {
-    width: 16rem;
+    width: 6vw;
     height: auto;
     padding: 2rem 2rem 2rem 0; /* Adjust padding as needed */
   }
@@ -88,12 +88,12 @@
   }
 
   .menu-icon {
-    width: 6rem; /* Adjust icon size as needed */
+    width: 4vw; /* Adjust icon size as needed */
     height: auto;
     cursor: pointer;
   }
   .menu-icon-internal {
-    width: 5rem; /* Adjust icon size as needed */
+    width: 4vw; /* Adjust icon size as needed */
     height: auto;
     cursor: pointer;
   }

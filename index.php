@@ -18,7 +18,7 @@
 <body>
     <?php
     // Include the header.php file
-    include 'header.php';
+    // include 'header.php';
 ?>
 
 <div class="main-container" style="margin:0 auto; max-width:100%;">
